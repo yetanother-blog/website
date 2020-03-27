@@ -19,7 +19,7 @@ const Date = styled.p`
   margin-top: ${rhythm(-1)};
 `;
 
-const BlogPostTemplate = (props: Props) => {
+const BlogPostTemplate: React.FC<Props> = props => {
   const data = props.data!;
   const post = data.mdx!;
   const excerpt = post.excerpt!;
