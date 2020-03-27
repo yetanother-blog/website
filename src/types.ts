@@ -1,6 +1,7 @@
+import { MdxConnection, SiteSiteMetadata } from "./graphql-types";
 interface PageInput {
   path: string;
-  component: string;
+  component: any;
   layout?: string;
   context?: any;
 }
@@ -20,3 +21,10 @@ export type GatsbyCreatePages = (fns: {
   graphql: any;
   boundActionCreators: BoundActionCreators;
 }) => void;
+
+export interface AllBlogPostsProps {
+  allMdx: MdxConnection;
+  site: {
+    siteMetadata: SiteSiteMetadata;
+  };
+}
