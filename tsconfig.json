@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "es6"
-    ],
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["dom", "es6"],
     "sourceMap": true,
     "jsx": "react",
     "noUnusedLocals": true,
@@ -16,12 +14,8 @@
     "declarationMap": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types"],
     "esModuleInterop": true
   }
 }
