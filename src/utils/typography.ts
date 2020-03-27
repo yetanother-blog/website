@@ -1,18 +1,27 @@
 import { CSSObject } from "styled-components";
 import Typography from "typography";
-import Wordpress2016 from "typography-theme-wordpress-2016";
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`
+const typography = new Typography({
+  googleFonts: [
+    {
+      name: "Source Sans Pro",
+      styles: ["400", "600"]
+    },
+    {
+      name: "Source Code Pro",
+      styles: ["600", "700"]
     }
-  };
-};
-
-delete Wordpress2016.googleFonts;
-
-const typography = new Typography(Wordpress2016);
+  ],
+  baseFontSize: "20px",
+  baseLineHeight: 1.85,
+  bodyFontFamily: ["Source Sans Pro", "sans-serif"],
+  boldWeight: "600",
+  overrideStyles: ({ adjustFontSizeTo }, options, styles) => ({
+    a: {
+      fontFamily: `"Source Code Pro", "sans-serif"`
+    }
+  })
+});
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
@@ -20,6 +29,7 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 export default typography;
+
 export const rhythm = typography.rhythm;
 export const scale = typography.scale;
 
