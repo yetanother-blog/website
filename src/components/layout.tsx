@@ -5,16 +5,11 @@ import { rhythm, styledScale } from '../utils/typography';
 
 interface Props {
   title: string;
-  location: string;
 }
 
 const StyledH1 = styled.h1`
   ${styledScale(1.5)};
   margin-bottom: ${rhythm(1.5)};
-`;
-
-const StyledH3 = styled.h3`
-  color: black;
 `;
 
 const Content = styled.div`
@@ -24,18 +19,15 @@ const Content = styled.div`
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
 `;
 
-export const Layout: React.FC<Props> = (props) => {
-  const { location, title, children } = props;
+export const Layout: React.FC<Props> = ({ title, children }) => {
   const rootPath = `/`;
-
-  const HeaderTitle = location === rootPath ? StyledH1 : StyledH3;
 
   return (
     <Content>
       <header>
-        <HeaderTitle>
-          <Link to={`/`}>{title}</Link>
-        </HeaderTitle>
+        <StyledH1>
+          <Link to={rootPath}>{title}</Link>
+        </StyledH1>
         <nav>
           <Link to="/repos">Repos</Link>
           <Link to="/guides">Guide</Link>
