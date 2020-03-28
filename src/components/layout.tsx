@@ -1,11 +1,11 @@
-import { PageRendererProps, Link } from "gatsby";
-import React, { ReactNode } from "react";
-import styled from "styled-components";
-import { rhythm, styledScale } from "../utils/typography";
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
+import { rhythm, styledScale } from '../utils/typography';
 
-interface Props extends PageRendererProps {
+interface Props {
   title: string;
-  children: ReactNode;
+  location: string;
 }
 
 const StyledH1 = styled.h1`
@@ -24,11 +24,11 @@ const Content = styled.div`
   padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
 `;
 
-export const Layout = (props: Props) => {
+export const Layout: React.FC<Props> = (props) => {
   const { location, title, children } = props;
   const rootPath = `/`;
 
-  const HeaderTitle = location.pathname === rootPath ? StyledH1 : StyledH3;
+  const HeaderTitle = location === rootPath ? StyledH1 : StyledH3;
 
   return (
     <Content>
