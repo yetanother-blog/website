@@ -14,7 +14,7 @@
     "declarationMap": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": ["node"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "typeRoots": ["./node_modules/@types"],
     "esModuleInterop": true
   }

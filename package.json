@@ -19,7 +19,6 @@
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-styled-components": "^3.2.1",
-    "gatsby-plugin-tslint": "^0.0.2",
     "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-plugin-typography": "^2.4.1",
     "gatsby-remark-copy-linked-files": "^2.2.1",
@@ -47,18 +46,20 @@
     "@graphql-codegen/typescript": "1.13.1",
     "@graphql-codegen/typescript-operations": "1.13.1",
     "@graphql-codegen/typescript-react-apollo": "1.13.1",
+    "@testing-library/jest-dom": "^5.3.0",
+    "@testing-library/react": "^10.0.1",
+    "@types/jest": "^25.1.4",
     "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^5.0.1",
+    "@types/testing-library__jest-dom": "^5.0.2",
     "@types/typography": "^0.16.3",
+    "babel-jest": "^25.2.3",
+    "babel-preset-gatsby": "^0.3.1",
     "graphql": "^14.6.0",
+    "jest": "^25.2.3",
     "prettier": "^2.0.2",
-    "tslint": "^6.1.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "tslint-plugin-prettier": "^2.2.0",
-    "tslint-react": "^4.2.0",
     "typescript": "^3.8.3"
   },
   "homepage": "https://yetanother.blog",
@@ -73,13 +74,36 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "test": "jest",
     "tsc": "tsc --noEmit",
-    "lint": "tslint --project .",
+    "lint": "eslint --ext .tsx,.ts src/",
     "gql-codegen": "graphql-codegen --config codegen.yml"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests/setupTests.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.[jt]sx?$": "<rootDir>/src/setupTests/jest-preprocess.ts"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache"
+    ]
   }
 }
