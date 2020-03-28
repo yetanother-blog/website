@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders a header 1`] = `
+<div>
+  <div
+    class="sc-AxiKw eFnXoy"
+  >
+    <header>
+      <h3
+        class="sc-AxirZ hqPbQZ"
+      >
+        <a
+          href="/"
+        >
+          bla
+        </a>
+      </h3>
+      <nav>
+        <a
+          href="/repos"
+        >
+          Repos
+        </a>
+        <a
+          href="/guides"
+        >
+          Guide
+        </a>
+      </nav>
+    </header>
+    <main>
+      <main>
+        <h1>
+          hello
+        </h1>
+      </main>
+    </main>
+    <footer>
+      <a
+        href="/about"
+      >
+        About
+      </a>
+      <a
+        href="/imprint"
+      >
+        Imprint
+      </a>
+    </footer>
+  </div>
+</div>
+`;
