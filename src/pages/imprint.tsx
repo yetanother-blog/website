@@ -3,7 +3,7 @@ import React from 'react';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 
-const BlogIndex: React.FC<PageRendererProps> = (props) => {
+const Imprint: React.FC<PageRendererProps> = (props) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -17,11 +17,12 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout title={siteTitle}>
+    <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-      <p>Here comes some content ✨</p>
+      <p>Imprint ✨</p>
+      <small>coming soon...</small>
     </Layout>
   );
 };
 
-export default BlogIndex;
+export default Imprint;
