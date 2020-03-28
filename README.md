@@ -21,7 +21,7 @@ yarn
 **Local Development**
 
 ```
-yarn develop
+yarn start
 ```
 
 The Blog is available on port `:8000`:
@@ -47,7 +47,7 @@ yarn gql-codegen
 together with:
 
 ```
-yarn develop
+yarn start
 ```
 
 **Build for Production**
@@ -113,29 +113,16 @@ pubslished: true
 ## Gatsby Plugin Overview
 
 - [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/?=mdx)
-
 - [gatsby-remark-smartypants](https://www.gatsbyjs.org/packages/gatsby-remark-smartypants/)
-
 - [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/)
-
 - [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
-
 - [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/)
-
 - [gatsby-transformer-sharp](https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/)
-
 - [gatsby-plugin-sharp](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/)
-
 - [gatsby-plugin-google-analytics](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/)
-
 - [gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/)
-
 - [gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/)
-
 - [gatsby-plugin-react-helmet](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/)
-
 - [gatsby-plugin-typography](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/)
-
 - [gatsby-plugin-typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/)
-
 - [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
