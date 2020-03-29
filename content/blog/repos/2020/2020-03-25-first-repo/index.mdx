@@ -1,9 +1,9 @@
 ---
 title: First Repo Post
-date: "2020-05-25T23:36:03.284Z"
-slug: "/first-repo"
-format: "repo"
-description: "huiashduioah"
+date: '2020-05-25T23:36:03.284Z'
+slug: '/first-repo'
+format: 'repo'
+description: 'huiashduioah'
 pubslished: true
 ---
 
@@ -26,7 +26,7 @@ const BlogPostTemplate: React.FC<Props> = props => {
   const siteTitle = data.site!.siteMetadata!.title!;
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={"/"} title={siteTitle}>
       <SEO
         title={frontmatter.title!}
         description={frontmatter.description || excerpt}

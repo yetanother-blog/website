@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql, useStaticQuery, Link, PageRendererProps } from "gatsby";
-import { Layout } from "../components/layout";
-import { AllBlogPostsProps } from "../types";
+import React from 'react';
+import { graphql, useStaticQuery, Link, PageRendererProps } from 'gatsby';
+import { Layout } from '../components/layout';
+import { AllBlogPostsProps } from '../types';
 
 const Guides: React.FC<PageRendererProps> = ({ location }) => {
   const data = useStaticQuery<AllBlogPostsProps>(graphql`
@@ -28,8 +28,8 @@ const Guides: React.FC<PageRendererProps> = ({ location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle!}>
-      {posts.map(node => {
+    <Layout title={siteTitle!}>
+      {posts.map((node) => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;

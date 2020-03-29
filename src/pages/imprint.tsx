@@ -17,7 +17,7 @@ const Imprint: React.FC<PageRendererProps> = (props) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout title={siteTitle}>
       <SEO title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <p>Imprint ✨</p>
       <small>coming soon...</small>
