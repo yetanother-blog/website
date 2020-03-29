@@ -2,7 +2,7 @@
 
 # Yet Another Blog
 
-Yet another Gatsby Blog build with **Typescript**, **StyledComponents** and **MDX**
+Yet another Gatsby Blog build with **Typescript**, **Storybook**, **StyledComponents** with **Styled System** and **MDX**
 
 ## Features
 
@@ -11,6 +11,7 @@ Yet another Gatsby Blog build with **Typescript**, **StyledComponents** and **MD
 - [Graphql Codegen](https://github.com/dotansimha/graphql-code-generator)
 - [MDX](https://www.gatsbyjs.org/docs/mdx/writing-pages/)
 - [Prism](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
+- [Storybook](https://storybook.js.org/)
 
 ## Getting Started
 
@@ -24,7 +25,7 @@ yarn
 yarn start
 ```
 
-The Blog is available on port `:8000`:
+The Blog is available at:
 
 ```
 http://localhost:8000/
@@ -110,6 +111,26 @@ pubslished: true
 
 ```
 
+## Storybook
+
+We use Storybook for developing UI components in isolation.
+
+**Local Development**
+
+```
+yarn storybook
+```
+
+That's it. Storybook is available at:
+
+```
+http://localhost:6006/
+```
+
+## Contribution
+
+You want to help us and fix bugs, improve our docs or provide some feedback. Feel free to open an issue ✨❤️
+
 ## Gatsby Plugin Overview
 
 - [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/?=mdx)
@@ -126,3 +147,5 @@ pubslished: true
 - [gatsby-plugin-typography](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/)
 - [gatsby-plugin-typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/)
 - [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
+
+Licensed under the [MIT License](./LICENSE).
