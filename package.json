@@ -89,7 +89,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "test": "jest",
+    "test": "jest --watchAll",
     "tsc": "tsc --noEmit",
     "lint": "eslint --ext .tsx,.ts src/",
     "gql-codegen": "graphql-codegen --config codegen.yml",
