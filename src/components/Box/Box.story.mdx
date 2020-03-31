@@ -1,0 +1,53 @@
+import { Box } from './Box';
+import { Story, Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+import { ThemeContext } from 'styled-components';
+
+<Meta title="Components|Box" />
+
+# Box
+
+Flexible allrounder beast...
+
+<Preview>
+  <Story name="default">
+    <ThemeContext.Consumer>
+      {(theme) => (
+        <React.Fragment>
+          <Box
+            as="span"
+            color={theme.colors.green}
+            backgroundColor={theme.colors.grey300}
+            padding={theme.space.l}
+            display="flex"
+            flexDirection={['column', 'row']}
+            justifyContent="space-between"
+            borderRadius={theme.radii.s}
+            mb={theme.space.xl}
+          >
+            <span>Hello Box 🎉</span>
+            <a href="#">some link</a>
+          </Box>
+          <Box
+            as="aside"
+            color={theme.colors.grey300}
+            backgroundColor={theme.colors.grey500}
+            padding={theme.space.l}
+            display="flex"
+            flexDirection={['column', 'row']}
+            justifyContent="space-between"
+            borderRadius={theme.radii.s}
+            marginBottom={theme.space.xl}
+            minHeight="400px"
+          >
+            <span>Hello Box II 🎉</span>
+            <a href="#">some link</a>
+          </Box>
+        </React.Fragment>
+      )}
+    </ThemeContext.Consumer>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Box} />

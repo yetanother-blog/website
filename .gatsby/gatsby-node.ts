@@ -1,7 +1,8 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
+import { createBlogPosts } from '../src/lib/createBlogPosts';
 
-require("source-map-support").install();
-require("ts-node").register();
+require('source-map-support').install();
+require('ts-node').register();
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -11,9 +12,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };
 
-exports.createPages = require("./src/lib/createBlogPosts").createBlogPosts;
+exports.createPages = createBlogPosts;

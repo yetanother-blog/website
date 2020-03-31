@@ -6,15 +6,21 @@ exports[`Layout renders a header 1`] = `
     class="sc-AxiKw eFnXoy"
   >
     <header>
-      <h3
-        class="sc-AxirZ hqPbQZ"
+      <h1
+        class="sc-AxirZ gJvjvM"
       >
         <a
           href="/"
         >
           bla
         </a>
-      </h3>
+      </h1>
+      <div
+        class="sc-AxjAm cZFuew"
+        role="presentation"
+      >
+        lolikopter
+      </div>
       <nav>
         <a
           href="/repos"

@@ -1,7 +1,7 @@
-import React from "react";
-import { graphql, useStaticQuery, Link, PageRendererProps } from "gatsby";
-import { Layout } from "../components/layout";
-import { AllBlogPostsProps } from "../types";
+import React from 'react';
+import { graphql, useStaticQuery, Link, PageRendererProps } from 'gatsby';
+import { Layout } from '../components/layout';
+import { AllBlogPostsProps } from '../types';
 
 const Repos: React.FC<PageRendererProps> = ({ location }) => {
   const data = useStaticQuery<AllBlogPostsProps>(graphql`
@@ -11,7 +11,7 @@ const Repos: React.FC<PageRendererProps> = ({ location }) => {
           title
         }
       }
-      allMdx(filter: { frontmatter: { format: { eq: "repo" } } }) {
+      allMdx(filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }) {
         nodes {
           excerpt
           frontmatter {
@@ -28,8 +28,8 @@ const Repos: React.FC<PageRendererProps> = ({ location }) => {
   const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle!}>
-      {posts.map(node => {
+    <Layout title={siteTitle!}>
+      {posts.map((node) => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;

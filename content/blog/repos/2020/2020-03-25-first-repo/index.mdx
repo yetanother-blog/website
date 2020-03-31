@@ -1,10 +1,10 @@
 ---
 title: First Repo Post
-date: "2020-05-25T23:36:03.284Z"
-slug: "/first-repo"
-format: "repo"
-description: "huiashduioah"
-pubslished: true
+date: '2020-05-25T23:36:03.284Z'
+slug: '/first-repo'
+format: 'repo'
+description: 'huiashduioah'
+draft: true
 ---
 
 Wow! I love blogging so much already.
@@ -16,8 +16,8 @@ egg yolk will be less rich."?
 
 Yeah, I didn't either.
 
-```javascript
-const BlogPostTemplate: React.FC<Props> = props => {
+```tsx
+const BlogPostTemplate: React.FC<Props> = (props) => {
   const data = props.data!;
   const post = data.mdx!;
   const excerpt = post.excerpt!;
@@ -26,11 +26,8 @@ const BlogPostTemplate: React.FC<Props> = props => {
   const siteTitle = data.site!.siteMetadata!.title!;
 
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={frontmatter.title!}
-        description={frontmatter.description || excerpt}
-      />
+    <Layout location={'/'} title={siteTitle}>
+      <SEO title={frontmatter.title!} description={frontmatter.description || excerpt} />
       <h1>{post.frontmatter!.title}</h1>
       <Date>{frontmatter.date}</Date>
       <MDXRenderer>{body}</MDXRenderer>

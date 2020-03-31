@@ -1,11 +1,11 @@
-import { graphql, PageRendererProps } from "gatsby";
-import React from "react";
-import styled from "styled-components";
-import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
-import { SitePageContext } from "../graphql-types";
-import { rhythm, styledScale } from "../utils/typography";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { graphql, PageRendererProps } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
+import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
+import { SitePageContext } from '../graphql-types';
+import { rhythm, styledScale } from '../utils/typography';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
@@ -19,7 +19,7 @@ const Date = styled.p`
   margin-top: ${rhythm(-1)};
 `;
 
-const BlogPostTemplate: React.FC<Props> = props => {
+const BlogPostTemplate: React.FC<Props> = (props) => {
   const data = props.data!;
   const post = data.mdx!;
   const excerpt = post.excerpt!;
@@ -28,11 +28,8 @@ const BlogPostTemplate: React.FC<Props> = props => {
   const siteTitle = data.site!.siteMetadata!.title!;
 
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO
-        title={frontmatter.title!}
-        description={frontmatter.description || excerpt}
-      />
+    <Layout title={siteTitle}>
+      <SEO title={frontmatter.title!} description={frontmatter.description || excerpt} />
       <h1>{post.frontmatter!.title}</h1>
       <Date>{frontmatter.date}</Date>
       <MDXRenderer>{body}</MDXRenderer>
