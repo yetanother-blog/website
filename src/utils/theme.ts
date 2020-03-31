@@ -22,6 +22,11 @@ export const theme: DefaultTheme = {
     xxxl: 120,
   },
   radii: {
-    s: 4,
+    s: 3,
+  },
+  width: {
+    m: '620px',
+    l: '940px',
+    xl: '1200px',
   },
 };

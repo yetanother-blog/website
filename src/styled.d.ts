@@ -25,5 +25,10 @@ declare module 'styled-components' {
     radii: {
       s: number;
     };
+    width: {
+      m: string;
+      l: string;
+      xl: string;
+    };
   }
 }
