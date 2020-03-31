@@ -11,7 +11,7 @@ const Repos: React.FC<PageRendererProps> = ({ location }) => {
           title
         }
       }
-      allMdx(filter: { frontmatter: { format: { eq: "repo" } } }) {
+      allMdx(filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }) {
         nodes {
           excerpt
           frontmatter {

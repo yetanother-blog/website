@@ -11,13 +11,14 @@ const Guides: React.FC<PageRendererProps> = ({ location }) => {
           title
         }
       }
-      allMdx(filter: { frontmatter: { format: { eq: "guide" } } }) {
+      allMdx(filter: { fileAbsolutePath: { regex: "/.+content/blog/guides.+/" } }) {
         nodes {
           excerpt
           frontmatter {
             title
             slug
             format
+            description
           }
         }
       }
@@ -33,6 +34,9 @@ const Guides: React.FC<PageRendererProps> = ({ location }) => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
+        const description = node!.frontmatter!.description;
+
+        console.log('description', description);
 
         const title = frontmatter.title || slug;
         return (
