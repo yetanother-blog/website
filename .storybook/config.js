@@ -1,5 +1,8 @@
-import { addParameters } from '@storybook/react';
+import { addParameters, addDecorator } from '@storybook/react';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../src/utils/theme';
+import React from 'react';
 
 addParameters({
   docs: {
@@ -7,6 +10,8 @@ addParameters({
     page: DocsPage,
   },
 });
+
+addDecorator((storyFn) => <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>);
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
