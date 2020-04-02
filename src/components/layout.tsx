@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { rhythm, styledScale } from '../utils/typography';
 import { theme } from '../utils/theme';
 import { Box } from './Box/Box';
+import { Typography } from './Typography/Typography';
 
 interface Props {
   title: string;
@@ -35,7 +36,24 @@ export const Layout: React.FC<Props> = ({ title, children }) => {
           <StyledH1>
             <Link to={rootPath}>{title}</Link>
           </StyledH1>
-          <Box role="presentation">lolikopter</Box>
+          <Typography variant="title" marginBottom={theme.space.l}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="headline" marginBottom={theme.space.l}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="subheadline" marginBottom={theme.space.l}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="text" marginBottom={theme.space.l}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="smallText" marginBottom={theme.space.l}>
+            Hallo Typography
+          </Typography>
+          <Box role="presentation" marginBottom={theme.space.l}>
+            lolikopter
+          </Box>
           <nav>
             <Link to="/repos">Repos</Link>
             <Link to="/guides">Guide</Link>
