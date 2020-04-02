@@ -1,4 +1,5 @@
-import { MdxConnection, SiteSiteMetadata } from "./graphql-types";
+import { MdxConnection, SiteSiteMetadata } from './graphql-types';
+import { StyledComponentProps } from 'styled-components';
 interface PageInput {
   path: string;
   component: any;
@@ -17,10 +18,7 @@ interface BoundActionCreators {
   }) => void;
 }
 
-export type GatsbyCreatePages = (fns: {
-  graphql: any;
-  boundActionCreators: BoundActionCreators;
-}) => void;
+export type GatsbyCreatePages = (fns: { graphql: any; boundActionCreators: BoundActionCreators }) => void;
 
 export interface AllBlogPostsProps {
   allMdx: MdxConnection;
@@ -28,3 +26,11 @@ export interface AllBlogPostsProps {
     siteMetadata: SiteSiteMetadata;
   };
 }
+
+// Dear reader please feel free to improve this... 🕵️‍♂️
+export type StyledComponentPropsWithAs<
+  C extends keyof JSX.IntrinsicElements | React.ComponentType<any>,
+  T extends object,
+  O extends object,
+  A extends keyof any
+> = StyledComponentProps<C, T, O, A> & { as?: C; forwardedAs?: C };

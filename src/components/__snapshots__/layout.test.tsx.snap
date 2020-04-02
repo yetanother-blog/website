@@ -3,11 +3,11 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-AxiKw eFnXoy"
+    class="sc-Axmtr zTZFI"
   >
     <header>
       <h1
-        class="sc-AxirZ gJvjvM"
+        class="sc-AxheI gNpcXR"
       >
         <a
           href="/"
@@ -15,8 +15,33 @@ exports[`Layout renders a header 1`] = `
           bla
         </a>
       </h1>
+      <h1
+        class="sc-AxirZ kDfwhj"
+      >
+        Hallo Typography
+      </h1>
+      <h2
+        class="sc-AxiKw iWnvAG"
+      >
+        Hallo Typography
+      </h2>
+      <h3
+        class="sc-AxhCb hJLWjC"
+      >
+        Hallo Typography
+      </h3>
+      <p
+        class="sc-AxhUy ikaLBS"
+      >
+        Hallo Typography
+      </p>
+      <p
+        class="sc-AxgMl aQOSp"
+      >
+        Hallo Typography
+      </p>
       <div
-        class="sc-AxjAm cZFuew"
+        class="sc-AxjAm QXKVf"
         role="presentation"
       >
         lolikopter
