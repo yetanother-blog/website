@@ -1,0 +1,39 @@
+import { Story, Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Typography } from './Typography';
+import { ThemeContext } from 'styled-components';
+
+<Meta title="Components|Typography" />
+
+# Typography
+
+Typogrpahy component to wrap pages and posts.
+
+<Preview>
+  <Story name="default">
+    <ThemeContext.Consumer>
+      {(theme) => (
+        <React.Fragment>
+          <Typography variant="title" marginBottom={theme.space.xl}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="headline" marginBottom={theme.space.xl}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="subheadline" marginBottom={theme.space.xl}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="text" marginBottom={theme.space.xl}>
+            Hallo Typography
+          </Typography>
+          <Typography variant="smallText" marginBottom={theme.space.xl}>
+            Hallo Typography
+          </Typography>
+        </React.Fragment>
+      )}
+    </ThemeContext.Consumer>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Typography} />
