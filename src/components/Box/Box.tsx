@@ -1,7 +1,6 @@
 import styled, { DefaultTheme } from 'styled-components';
 import React from 'react';
-import { StyledSystemBoxProps, StyledComponentPropsWithAs } from './types';
-
+import { StyledComponentPropsWithAs } from '../../types';
 import {
   color,
   backgroundColor,
@@ -15,9 +14,10 @@ import {
   width,
   minHeight,
 } from 'styled-system';
+import { StyledSystemBoxProps } from './types';
 
-type BoxProps = StyledSystemBoxProps &
-  StyledComponentPropsWithAs<'span' | 'aside' | 'main' | 'section' | 'nav' | 'footer', DefaultTheme, {}, any>;
+type HtmlTags = 'span' | 'aside' | 'main' | 'section' | 'nav' | 'footer';
+type BoxProps = StyledSystemBoxProps & StyledComponentPropsWithAs<HtmlTags, DefaultTheme, {}, any>;
 
 export const StyledBox = styled.div`
     ${color}
