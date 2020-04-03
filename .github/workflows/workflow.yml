@@ -1,0 +1,29 @@
+name: Yet another blog
+
+on: [push, repository_dispatch]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 13.x
+
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Generate Schema
+        run: yarn gql-codegen
+
+      - name: Test
+        run: yarn test
+
+      - name: Build
+        run: yarn build
