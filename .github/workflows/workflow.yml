@@ -16,9 +16,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --prod --pure-lockfile
 
-      - name: Lint
-        run: yarn lint
-
       - name: Generate Schema
         run: yarn gql-codegen
 
