@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { variant, TypographyProps, typography, margin, MarginBottomProps } from 'styled-system';
+import {
+  variant,
+  TypographyProps,
+  typography,
+  margin,
+  MarginBottomProps,
+  DisplayProps,
+  display,
+  color,
+} from 'styled-system';
 import { StyledComponentPropsWithAs } from '../../types';
 import { DefaultTheme } from 'styled-components';
 
@@ -9,9 +18,9 @@ export interface TypographyTypeProps {
 }
 
 type FormattingTags = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'em' | 'blockquote' | 'pre';
-type TestProps = TypographyProps &
+type TypoProps = TypographyProps &
   MarginBottomProps &
-  TypographyTypeProps &
+  DisplayProps &
   StyledComponentPropsWithAs<FormattingTags, DefaultTheme, {}, any>;
 
 const variants = variant({
@@ -44,36 +53,45 @@ const variants = variant({
 });
 
 const StyledTitle = styled.h1`
+  ${display}
+  ${color}
   ${typography}
   ${variants}
   ${margin}
 `;
 
 const StyledHeadline = styled.h2`
+  ${display}
+  ${color}
   ${typography}
   ${variants}
   ${margin}
 `;
 
 const StyledSubheadline = styled.h3`
+  ${display}
+  ${color}
   ${typography}
   ${variants}
   ${margin}
 `;
 
 const StyledText = styled.p`
+  ${display}
+  ${color}
   ${typography}
   ${variants}
   ${margin}
 `;
 
 const StyledSmallText = styled.p`
-  ${typography}
+  ${display}
+  ${color}
   ${variants}
   ${margin}
 `;
 
-export const Typography: React.FC<TestProps> = (props) => {
+export const Typography: React.FC<TypoProps> = (props) => {
   switch (props.variant) {
     case 'title': {
       return <StyledTitle {...props} />;
