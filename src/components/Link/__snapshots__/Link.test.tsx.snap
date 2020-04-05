@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography component should render a link w/ gatsby link 1`] = `
+<div>
+  <a
+    class="sc-AxirZ dRPKqT"
+    href="/"
+  >
+    <span
+      class="sc-AxjAm jDzBZS"
+    >
+      Hello Link 🎉
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Typography component should render a link w/ href 1`] = `
+<div>
+  <a
+    class="sc-AxirZ dRPKqT"
+    href="/some-link"
+  >
+    <span
+      class="sc-AxjAm jDzBZS"
+    >
+      Hello Link 🎉
+    </span>
+  </a>
+</div>
+`;

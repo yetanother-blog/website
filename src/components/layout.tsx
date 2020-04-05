@@ -1,10 +1,11 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { rhythm, styledScale } from '../utils/typography';
 import { theme } from '../utils/theme';
 import { Box } from './Box/Box';
 import { Typography } from './Typography/Typography';
+import { Link } from './Link/Link';
+import { Link as GatsbyLink } from 'gatsby';
 
 interface Props {
   title: string;
@@ -34,35 +35,52 @@ export const Layout: React.FC<Props> = ({ title, children }) => {
       <Content>
         <header>
           <StyledH1>
-            <Link to={rootPath}>{title}</Link>
+            <Link variant="primary" component={GatsbyLink} to={rootPath}>
+              {title}
+            </Link>
           </StyledH1>
-          <Typography variant="title" marginBottom={theme.space.l}>
-            Hallo Typography
-          </Typography>
-          <Typography variant="headline" marginBottom={theme.space.l}>
-            Hallo Typography
-          </Typography>
-          <Typography variant="subheadline" marginBottom={theme.space.l}>
-            Hallo Typography
-          </Typography>
-          <Typography variant="text" marginBottom={theme.space.l}>
-            Hallo Typography
-          </Typography>
-          <Typography variant="smallText" marginBottom={theme.space.l}>
-            Hallo Typography
-          </Typography>
-          <Box role="presentation" marginBottom={theme.space.l}>
-            lolikopter
-          </Box>
           <nav>
-            <Link to="/repos">Repos</Link>
-            <Link to="/guides">Guide</Link>
+            <Link variant="tertiary" component={GatsbyLink} to="/repos">
+              Repos
+            </Link>
+            <Link variant="tertiary" component={GatsbyLink} to="/guides">
+              Guide
+            </Link>
           </nav>
         </header>
-        <main>{children}</main>
+        <main>
+          <Box role="presentation" marginBottom={theme.space.l}>
+            <Typography variant="title" marginBottom={theme.space.l}>
+              Hallo Typography
+            </Typography>
+            <Typography variant="headline" marginBottom={theme.space.l}>
+              Hallo Typography
+            </Typography>
+            <Typography variant="subheadline" marginBottom={theme.space.l}>
+              Hallo Typography
+            </Typography>
+            <Typography variant="text" marginBottom={theme.space.l}>
+              Hallo Typography
+            </Typography>
+            <Typography variant="smallText" marginBottom={theme.space.l}>
+              Hallo Typography
+            </Typography>
+          </Box>
+          {children}
+        </main>
         <footer>
-          <Link to="/about">About</Link>
-          <Link to="/imprint">Imprint</Link>
+          <Link variant="quaternary" component={GatsbyLink} to="/about">
+            About
+          </Link>
+          <Link variant="quaternary" href="#">
+            Imprint
+          </Link>
+          <Link variant="primary" href="#">
+            hallo
+          </Link>
+          <Link variant="secondary" component={GatsbyLink} to="/imprint">
+            hallo
+          </Link>
         </footer>
       </Content>
     </ThemeProvider>
