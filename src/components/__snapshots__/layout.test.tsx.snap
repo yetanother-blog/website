@@ -3,63 +3,77 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-Axmtr zTZFI"
+    class="sc-fzplWN cQimVj"
   >
     <header>
       <h1
-        class="sc-AxheI gNpcXR"
+        class="sc-fzpans fPlQCI"
       >
         <a
+          class="sc-Axmtr eUGlNR"
           href="/"
         >
-          bla
+          <span
+            class="sc-AxheI kUxkPg"
+          >
+            bla
+          </span>
         </a>
       </h1>
-      <h1
-        class="sc-AxirZ kDfwhj"
-      >
-        Hallo Typography
-      </h1>
-      <h2
-        class="sc-AxiKw iWnvAG"
-      >
-        Hallo Typography
-      </h2>
-      <h3
-        class="sc-AxhCb hJLWjC"
-      >
-        Hallo Typography
-      </h3>
-      <p
-        class="sc-AxhUy ikaLBS"
-      >
-        Hallo Typography
-      </p>
-      <p
-        class="sc-AxgMl aQOSp"
-      >
-        Hallo Typography
-      </p>
-      <div
-        class="sc-AxjAm QXKVf"
-        role="presentation"
-      >
-        lolikopter
-      </div>
       <nav>
         <a
+          class="sc-fzozJi cbOssv"
           href="/repos"
         >
-          Repos
+          <span
+            class="sc-AxheI kUxkPg"
+          >
+            Repos
+          </span>
         </a>
         <a
-          href="/guides"
+          class="sc-fzozJi cbOssv"
+          href="/"
         >
-          Guide
+          <span
+            class="sc-AxheI kUxkPg"
+          >
+            Guide
+          </span>
         </a>
       </nav>
     </header>
     <main>
+      <div
+        class="sc-AxjAm QXKVf"
+        role="presentation"
+      >
+        <h1
+          class="sc-AxirZ jlHCjU"
+        >
+          Hallo Typography
+        </h1>
+        <h2
+          class="sc-AxiKw bMUuJZ"
+        >
+          Hallo Typography
+        </h2>
+        <h3
+          class="sc-AxhCb eOEewp"
+        >
+          Hallo Typography
+        </h3>
+        <p
+          class="sc-AxhUy cGiiNJ"
+        >
+          Hallo Typography
+        </p>
+        <p
+          class="sc-AxgMl lmjBng"
+        >
+          Hallo Typography
+        </p>
+      </div>
       <main>
         <h1>
           hello
@@ -68,14 +82,44 @@ exports[`Layout renders a header 1`] = `
     </main>
     <footer>
       <a
+        class="sc-fzoLsD etpXIW"
         href="/about"
       >
-        About
+        <span
+          class="sc-AxheI kUxkPg"
+        >
+          About
+        </span>
       </a>
       <a
+        class="sc-fzoLsD etpXIW"
+        href="#"
+      >
+        <span
+          class="sc-AxheI kUxkPg"
+        >
+          Imprint
+        </span>
+      </a>
+      <a
+        class="sc-Axmtr eUGlNR"
+        href="#"
+      >
+        <span
+          class="sc-AxheI kUxkPg"
+        >
+          hallo
+        </span>
+      </a>
+      <a
+        class="sc-AxmLO eHiLRA"
         href="/imprint"
       >
-        Imprint
+        <span
+          class="sc-AxheI kUxkPg"
+        >
+          hallo
+        </span>
       </a>
     </footer>
   </div>
