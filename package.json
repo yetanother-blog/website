@@ -69,7 +69,7 @@
     "gatsby-plugin-ts-config": "^0.2.1",
     "graphql": "^14.6.0",
     "jest": "^25.2.3",
-    "prettier": "^2.0.2",
+    "prettier": "^2.0.4",
     "react-docgen-typescript-loader": "^3.7.1",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3"
