@@ -2188,16 +2188,6 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@jest/types@^25.2.6":
-  version "25.2.6"
-  resolved "https://registry.yarnpkg.com/@jest/types/-/types-25.2.6.tgz#c12f44af9bed444438091e4b59e7ed05f8659cb6"
-  integrity sha512-myJTTV37bxK7+3NgKc4Y/DlQ5q92/NOwZsZ+Uch7OXdElxOg61QYc72fPYNAjlvbnJ2YvbXLamIsa9tj48BmyQ==
-  dependencies:
-    "@types/istanbul-lib-coverage" "^2.0.0"
-    "@types/istanbul-reports" "^1.1.1"
-    "@types/yargs" "^15.0.0"
-    chalk "^3.0.0"
-
 "@jimp/bmp@^0.9.8":
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.9.8.tgz#5933ab8fb359889bec380b0f7802163374933624"
@@ -2554,11 +2544,6 @@
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.5.8.tgz#fc38fe0eb278ae24666b2df3c751e726e33f5fac"
   integrity sha512-L3rehITVxqDHOPJFGBSHKt3Mv/p3MENYlGIwLNYU89/iVqTLMD/vz8hL9RQtKqRoMbKuWpzzLlKIObqJzthNYg==
-
-"@mdx-js/react@^1.5.7":
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.5.7.tgz#dd7e08c9cdd3c3af62c9594c2c9003a3d05e34fd"
-  integrity sha512-OxX/GKyVlqY7WqyRcsIA/qr7i1Xq3kAVNUhSSnL1mfKKNKO+hwMWcZX4WS2OItLtoavA2/8TVDHpV/MWKWyfvw==
 
 "@mdx-js/util@^1.5.8":
   version "1.5.8"
