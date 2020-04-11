@@ -2,19 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { PolymorphicLink, PolymorphicLinkProps } from './PolymorphicLink';
 import { sharedStyles, defaultFontLinkStyles, smallFontLinkStyles, StyledUnderline } from './LinkStyles';
-import { display, DisplayProps, margin, MarginBottomProps } from 'styled-system';
+import { display, DisplayProps, margin, MarginProps } from 'styled-system';
 
 export type LinkVariant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 
 export type LinkProps<C extends React.ElementType> = PolymorphicLinkProps<C> &
   DisplayProps &
-  MarginBottomProps & {
+  MarginProps & {
     variant?: LinkVariant;
     children: React.ReactNode;
   };
 
 const StyledPrimaryLink = styled(PolymorphicLink)`
-  ${display}
+  ${display}  
   ${sharedStyles}
   ${defaultFontLinkStyles}
   ${margin}

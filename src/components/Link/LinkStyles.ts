@@ -7,6 +7,7 @@ export const sharedStyles = css`
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   cursor: pointer;
+  font-family: 'Source Code Pro';
 
   &:hover,
   &:focus {

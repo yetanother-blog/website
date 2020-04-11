@@ -1,88 +1,85 @@
-import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import { rhythm, styledScale } from '../utils/typography';
-import { theme } from '../utils/theme';
-import { Box } from './Box/Box';
-import { Typography } from './Typography/Typography';
+import React, { useContext } from 'react';
+import { useTheme } from 'styled-components';
 import { Link } from './Link/Link';
 import { Link as GatsbyLink } from 'gatsby';
+import { Navigation } from './Navigation/Navigation';
+import { SocialLink } from './SocialLink/SocialLink';
+import { Twitter } from './SocialLink/Twitter';
+import { Github } from './SocialLink/Github';
+import { Box } from './Box/Box';
+import { MobileNavigationContext } from '../context/MobileNavigationContext/MobileNavigationContext';
 
-interface Props {
-  title: string;
+interface LayoutProps {
+  size?: 'narrow';
 }
 
-const StyledH1 = styled.h1`
-  ${styledScale(1.5)};
-  margin-bottom: ${rhythm(1.5)};
-`;
-
-const Content = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-width: ${rhythm(24)};
-  padding: ${`${rhythm(1.5)} ${rhythm(3 / 4)}`};
-`;
-
-export const MyComponent = styled.div`
-  color: ${(props) => props.theme.colors.primary};
-`;
-
-export const Layout: React.FC<Props> = ({ title, children }) => {
-  const rootPath = `/`;
+export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
+  const theme = useTheme();
+  const { isMobileNavigationOpen } = useContext(MobileNavigationContext);
+  const isNarrow = size === 'narrow';
 
   return (
-    <ThemeProvider theme={theme}>
-      <Content>
-        <header>
-          <StyledH1>
-            <Link variant="primary" component={GatsbyLink} to={rootPath}>
-              {title}
-            </Link>
-          </StyledH1>
-          <nav>
-            <Link variant="tertiary" component={GatsbyLink} to="/repos">
-              Repos
-            </Link>
-            <Link variant="tertiary" component={GatsbyLink} to="/guides">
-              Guide
-            </Link>
-          </nav>
-        </header>
-        <main>
-          <Box role="presentation" marginBottom={theme.space.l}>
-            <Typography variant="title" marginBottom={theme.space.l}>
-              Hallo Typography
-            </Typography>
-            <Typography variant="headline" marginBottom={theme.space.l}>
-              Hallo Typography
-            </Typography>
-            <Typography variant="subheadline" marginBottom={theme.space.l}>
-              Hallo Typography
-            </Typography>
-            <Typography variant="text" marginBottom={theme.space.l}>
-              Hallo Typography
-            </Typography>
-            <Typography variant="smallText" marginBottom={theme.space.l}>
-              Hallo Typography
-            </Typography>
-          </Box>
-          {children}
-        </main>
-        <footer>
-          <Link variant="quaternary" component={GatsbyLink} to="/about">
-            About
-          </Link>
-          <Link variant="quaternary" href="#">
-            Imprint
-          </Link>
-          <Link variant="primary" href="#">
-            hallo
-          </Link>
-          <Link variant="secondary" component={GatsbyLink} to="/imprint">
-            hallo
-          </Link>
-        </footer>
-      </Content>
-    </ThemeProvider>
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      height="100vh"
+      m="0 auto"
+      maxWidth="940px"
+      pl={theme.space.l}
+      pr={theme.space.l}
+      overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
+    >
+      <Navigation>
+        <Link
+          variant="tertiary"
+          component={GatsbyLink}
+          to="/repos"
+          partiallyActive
+          marginBottom={[theme.space.l, 0]}
+        >
+          Repos
+        </Link>
+        <Link
+          variant="tertiary"
+          component={GatsbyLink}
+          to="/guides"
+          marginBottom={[theme.space.l, 0]}
+        >
+          Guide
+        </Link>
+        <SocialLink href="https://twitter.com/_yetanotherblog">
+          <Twitter />
+        </SocialLink>
+        <SocialLink href="https://github.com/yetanother-blog">
+          <Github />
+        </SocialLink>
+      </Navigation>
+      <Box as="main" width="100%" flex="1 0 auto" maxWidth={isNarrow ? '640px' : '940px'}>
+        {children}
+      </Box>
+      <Box
+        as="footer"
+        display="flex"
+        justifyContent="flex-end"
+        maxWidth="940px"
+        width="100%"
+        pt={theme.space.xl}
+        pb={theme.space.xl}
+      >
+        <Link
+          display="flex"
+          variant="quaternary"
+          component={GatsbyLink}
+          to="/about"
+          mr={theme.space.l}
+        >
+          About
+        </Link>
+        <Link variant="quaternary" component={GatsbyLink} to="/imprint">
+          Imprint
+        </Link>
+      </Box>
+    </Box>
   );
 };

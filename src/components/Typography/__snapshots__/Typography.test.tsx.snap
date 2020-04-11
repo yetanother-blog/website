@@ -3,7 +3,7 @@
 exports[`Typography component should render a box w/ content 1`] = `
 <div>
   <h1
-    class="sc-AxjAm CtOBg"
+    class="sc-AxjAm iOXbnc"
   >
     Hello Typography 🎉
   </h1>

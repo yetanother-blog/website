@@ -25,10 +25,9 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
   const excerpt = post.excerpt!;
   const frontmatter = post.frontmatter!;
   const body = post.body!;
-  const siteTitle = data.site!.siteMetadata!.title!;
 
   return (
-    <Layout title={siteTitle}>
+    <Layout size="narrow">
       <SEO title={frontmatter.title!} description={frontmatter.description || excerpt} />
       <h1>{post.frontmatter!.title}</h1>
       <Date>{frontmatter.date}</Date>
@@ -41,12 +40,6 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     mdx(frontmatter: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)

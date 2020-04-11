@@ -8,6 +8,7 @@ export const theme: DefaultTheme = {
     grey500: '#1C1C1C',
     grey400: '#ACADAC',
     grey300: '#F6F6F6',
+    grey200: '#FBFBFB',
   },
   breakpoints: ['576px', '768px', '992px', '1200px'],
   space: {
@@ -22,7 +23,7 @@ export const theme: DefaultTheme = {
     xxxl: 120,
   },
   radii: {
-    s: 3,
+    s: '4px',
   },
   width: {
     m: '620px',

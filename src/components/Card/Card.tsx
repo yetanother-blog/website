@@ -9,7 +9,6 @@ import {
   MarginProps,
   WidthProps,
   BorderRadiusProps,
-  BackgroundColorProps,
   PaddingProps,
 } from 'styled-system';
 
@@ -19,7 +18,7 @@ interface Props {
 
 export type CardProps = Props & MarginProps & WidthProps;
 
-export type StyledSystemProps = Props & BorderRadiusProps & BackgroundColorProps & PaddingProps & Omit<CardProps, 'to'>;
+export type StyledSystemProps = Props & BorderRadiusProps & PaddingProps & Omit<CardProps, 'to'>;
 
 export const StyledCard = styled(GatsbyLink)<StyledSystemProps>`
     background-color: ${(props) => props.theme.colors.grey200};
