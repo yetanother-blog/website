@@ -40,11 +40,11 @@ export const StyledCard = styled(GatsbyLink)<StyledSystemProps>`
     }
 `;
 
-export const Card: React.FC<CardProps> = ({ children, to, width, marginBottom }) => {
+export const Card: React.FC<CardProps> = ({ children, to, ...styledProps }) => {
   const theme = useTheme();
 
   return (
-    <StyledCard padding={[theme.space.l, theme.space.xl]} to={to} width={width} mb={marginBottom}>
+    <StyledCard p={[theme.space.l, theme.space.xl]} to={to} {...styledProps}>
       {children}
     </StyledCard>
   );
