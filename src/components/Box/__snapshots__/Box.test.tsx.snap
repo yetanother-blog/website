@@ -3,7 +3,7 @@
 exports[`Box component should render a box w/ content 1`] = `
 <div>
   <div
-    class="sc-AxjAm bgFAIf"
+    class="sc-AxjAm llBHaX"
     display="flex"
   >
     <span>

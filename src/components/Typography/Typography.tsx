@@ -18,8 +18,9 @@ export interface TypographyTypeProps {
 }
 
 type FormattingTags = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'em' | 'blockquote' | 'pre';
-type TypoProps = TypographyProps &
+export type TypoProps = TypographyProps &
   MarginBottomProps &
+  TypographyTypeProps &
   DisplayProps &
   StyledComponentPropsWithAs<FormattingTags, DefaultTheme, {}, any>;
 
@@ -39,6 +40,7 @@ const variants = variant({
     },
     subheadline: {
       fontSize: 25,
+      lineHeight: 1.3,
       marginBottom: 0,
     },
     text: {
@@ -47,12 +49,14 @@ const variants = variant({
     },
     smallText: {
       fontSize: 16,
+      lineHeight: 1.4,
       marginBottom: 0,
     },
   },
 });
 
 const StyledTitle = styled.h1`
+  -webkit-font-smoothing: antialiased;
   ${display}
   ${color}
   ${typography}
@@ -61,6 +65,7 @@ const StyledTitle = styled.h1`
 `;
 
 const StyledHeadline = styled.h2`
+  -webkit-font-smoothing: antialiased;
   ${display}
   ${color}
   ${typography}
@@ -69,6 +74,7 @@ const StyledHeadline = styled.h2`
 `;
 
 const StyledSubheadline = styled.h3`
+  -webkit-font-smoothing: antialiased;
   ${display}
   ${color}
   ${typography}
@@ -77,6 +83,7 @@ const StyledSubheadline = styled.h3`
 `;
 
 const StyledText = styled.p`
+  -webkit-font-smoothing: antialiased;
   ${display}
   ${color}
   ${typography}
@@ -85,8 +92,10 @@ const StyledText = styled.p`
 `;
 
 const StyledSmallText = styled.p`
+  -webkit-font-smoothing: antialiased;
   ${display}
   ${color}
+  ${typography}
   ${variants}
   ${margin}
 `;

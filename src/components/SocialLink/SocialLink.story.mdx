@@ -1,0 +1,27 @@
+import { Story, Meta, Preview, Props } from '@storybook/addon-docs/blocks';
+import { SocialLink } from './SocialLink';
+import { Github } from './Github';
+import { Twitter } from './Twitter';
+
+<Meta title="Components|SocialLink" />
+
+# SocialLink
+
+SocialLink component to socialize a bit 🤨.
+
+<Preview>
+  <Story name="default">
+    <React.Fragment>
+      <SocialLink href="https://twitter.com/_yetanotherblog">
+        <Twitter />
+      </SocialLink>
+      <SocialLink href="https://github.com/yetanother-blog">
+        <Github />
+      </SocialLink>
+    </React.Fragment>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={SocialLink} />

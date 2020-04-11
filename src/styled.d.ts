@@ -14,13 +14,14 @@ declare module 'styled-components' {
 export interface ColorTheme {
   primary: string;
   secondary: string;
+  grey200: string;
   grey300: string;
   grey400: string;
   grey500: string;
 }
 
 export interface RadiiTheme {
-  s: number;
+  s: string;
 }
 
 export interface SizeTheme {

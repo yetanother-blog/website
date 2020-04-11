@@ -1,18 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Layout } from './layout';
 import { ThemeContext } from 'styled-components';
-import { theme } from '../utils/theme';
+import { theme } from '../../utils/theme';
+import { Card } from './Card';
 
-describe(`Layout`, () => {
-  it(`renders a header`, () => {
+describe('SocialLink component', () => {
+  it('should render social link for twitter', () => {
     const { container } = render(
       <ThemeContext.Provider value={theme}>
-        <Layout>
-          <main>
-            <h1>hello</h1>
-          </main>
-        </Layout>
+        <Card to="/">Some Content</Card>
       </ThemeContext.Provider>
     );
 
