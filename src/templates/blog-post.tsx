@@ -1,23 +1,15 @@
 import { graphql, PageRendererProps } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { SitePageContext } from '../graphql-types';
-import { rhythm, styledScale } from '../utils/typography';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { Typography } from '../components/Typography/Typography';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
   data: any;
 }
-
-const Date = styled.p`
-  display: block;
-  ${styledScale(-1 / 5)};
-  margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(-1)};
-`;
 
 const BlogPostTemplate: React.FC<Props> = (props) => {
   const data = props.data!;
@@ -29,8 +21,10 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
   return (
     <Layout size="narrow">
       <SEO title={frontmatter.title!} description={frontmatter.description || excerpt} />
-      <h1>{post.frontmatter!.title}</h1>
-      <Date>{frontmatter.date}</Date>
+      <Typography variant="title">{post.frontmatter!.title}</Typography>
+      <Typography variant="tinyText" fontFamily="Source Code Pro" fontWeight="600">
+        {frontmatter.date}
+      </Typography>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );
