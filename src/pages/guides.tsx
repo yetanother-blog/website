@@ -12,7 +12,9 @@ const Guides: React.FC = () => {
   const theme = useTheme();
   const data = useStaticQuery<AllBlogPostsProps>(graphql`
     query allGuideBlogPosts {
-      allMdx(filter: { fileAbsolutePath: { regex: "/.+content/blog/guides.+/" } }) {
+      allMdx(
+        filter: { fileAbsolutePath: { regex: "/.+content/blog/guides.+/" } }
+      ) {
         nodes {
           excerpt
           frontmatter {
@@ -39,21 +41,22 @@ const Guides: React.FC = () => {
 
   return (
     <Layout size="narrow">
-      <SEO title="Guides ✨" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Guides ✨"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
       <Typography variant="title" mb={theme.space.l}>
         Guide of the Month ✨
       </Typography>
       <Typography variant="subheadline" fontWeight="400" mb={theme.space.xxl}>
-        We introduce a detailed guide every month about the latest trends on the web.
+        We introduce a detailed guide every month about the latest trends on the
+        web.
       </Typography>
       {posts.map((node) => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
         const date = node!.frontmatter!.date!;
-        const description = node!.frontmatter!.description;
-
-        console.log('description', description);
 
         const title = frontmatter.title || slug;
 
@@ -72,7 +75,11 @@ const Guides: React.FC = () => {
             <Typography variant="text" mb={theme.space.m}>
               {excerpt}
             </Typography>
-            <Link display="block" component="span" marginBottom={theme.space.xxxl}>
+            <Link
+              display="block"
+              component="span"
+              marginBottom={theme.space.xxxl}
+            >
               read more
             </Link>
           </StyledGatsbyLink>

@@ -27,7 +27,7 @@ export type TypoProps = TypographyProps &
 const variants = variant({
   variants: {
     title: {
-      fontSize: [32, 48],
+      fontSize: [30, 48],
       fontWeight: 600,
       letterSpacing: 0.5,
       lineHeight: 1.25,
