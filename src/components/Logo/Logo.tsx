@@ -23,7 +23,12 @@ const StyledTypography = styled(Typography)`
 export const Logo: React.FC<LogoProps> = ({ to }) => {
   return (
     <StyledGatsbyLink to={to} role="logo">
-      <StyledTypography fontWeight={600} fontFamily="Source Code Pro" marginBottom="0">
+      <StyledTypography
+        variant="text"
+        fontWeight={600}
+        fontFamily="Source Code Pro"
+        marginBottom="0"
+      >
         yetanother.blog
       </StyledTypography>
     </StyledGatsbyLink>

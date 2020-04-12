@@ -15,8 +15,15 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   const theme = useTheme();
-  const { isMobileNavigationOpen } = useContext(MobileNavigationContext);
+  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(MobileNavigationContext);
   const isNarrow = size === 'narrow';
+
+  const handleMobileNavigation = () => {
+    if (isMobileNavigationOpen) {
+      return setIsMobileNavigationOpen(false);
+    }
+    return;
+  };
 
   return (
     <Box
@@ -34,6 +41,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         <Link
           variant="tertiary"
           component={GatsbyLink}
+          onClick={handleMobileNavigation}
           to="/repos"
           partiallyActive
           marginBottom={[theme.space.l, 0]}
@@ -43,6 +51,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         <Link
           variant="tertiary"
           component={GatsbyLink}
+          onClick={handleMobileNavigation}
           to="/guides"
           marginBottom={[theme.space.l, 0]}
         >

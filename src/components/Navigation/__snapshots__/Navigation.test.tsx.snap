@@ -3,18 +3,18 @@
 exports[`Navigation component should render social link for twitter 1`] = `
 <div>
   <nav
-    class="sc-fzozJi jisnmZ"
+    class="sc-fzoLsD gUxsAj"
     display="flex"
     height="64,80"
     width="100%"
   >
     <a
-      class="sc-AxgMl duRVW"
+      class="sc-AxheI ioazkw"
       href="/"
       role="logo"
     >
       <p
-        class="sc-AxhUy lIybT sc-AxheI iWsIYG"
+        class="sc-AxhCb cHVtzT sc-Axmtr hJiVbd"
         font-family="Source Code Pro"
         font-weight="600"
       >
@@ -22,36 +22,36 @@ exports[`Navigation component should render social link for twitter 1`] = `
       </p>
     </a>
     <div
-      class="sc-fzpans ewIGdv"
+      class="sc-fzplWN eBQxwW"
       display="none,flex"
     >
       <a
-        class="sc-fznZeY eiWQgf"
+        class="sc-fzokOt bRBsdx"
       >
         <span
-          class="sc-fzplWN fSwFDk"
+          class="sc-fznyAO cmHpzD"
         >
           Repos
         </span>
       </a>
       <a
-        class="sc-fznZeY eiWQgf"
+        class="sc-fzokOt bRBsdx"
       >
         <span
-          class="sc-fzplWN fSwFDk"
+          class="sc-fznyAO cmHpzD"
         >
           Guide
         </span>
       </a>
     </div>
     <button
-      class="sc-AxmLO iyYmQp"
+      class="sc-fzozJi dosPPM"
       display="flex,none"
       height="48px"
       width="48px"
     >
       <div
-        class="sc-Axmtr eBwkIg"
+        class="sc-AxmLO dsHhXh"
       />
     </button>
   </nav>
