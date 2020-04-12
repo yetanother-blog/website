@@ -7,7 +7,7 @@ exports[`Typography component should render a link w/ gatsby link 1`] = `
     href="/"
   >
     <span
-      class="sc-AxjAm jDzBZS"
+      class="sc-AxjAm hxcjNF"
     >
       Hello Link 🎉
     </span>
@@ -22,7 +22,7 @@ exports[`Typography component should render a link w/ href 1`] = `
     href="/some-link"
   >
     <span
-      class="sc-AxjAm jDzBZS"
+      class="sc-AxjAm hxcjNF"
     >
       Hello Link 🎉
     </span>

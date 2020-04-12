@@ -21,6 +21,7 @@ export type CardProps = Props & MarginProps & WidthProps;
 export type StyledSystemProps = Props & BorderRadiusProps & PaddingProps & Omit<CardProps, 'to'>;
 
 export const StyledCard = styled(GatsbyLink)<StyledSystemProps>`
+    display: block;
     background-color: ${(props) => props.theme.colors.grey200};
     text-decoration: none;
     border-radius: ${(props) => props.theme.radii.s};

@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { PolymorphicLink, PolymorphicLinkProps } from './PolymorphicLink';
-import { sharedStyles, defaultFontLinkStyles, smallFontLinkStyles, StyledUnderline } from './LinkStyles';
+import {
+  sharedStyles,
+  defaultFontLinkStyles,
+  smallFontLinkStyles,
+  StyledUnderline,
+} from './LinkStyles';
 import { display, DisplayProps, margin, MarginProps } from 'styled-system';
 
 export type LinkVariant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
@@ -43,6 +48,27 @@ const StyledTertiaryLink = styled(PolymorphicLink)`
   ${smallFontLinkStyles}
   ${margin}
   color: ${(props) => props.theme.colors.grey500};
+
+  @keyframes pulse {
+    0% {
+      transform: scaleY(4);
+    }
+    100% {
+      transform: scale(1.3, 8);
+    }
+
+  }
+
+  &[aria-current="page"] {
+    span {
+      &:after {
+        animation: pulse 1000ms forwards;
+        animation-delay: 300ms;
+        transform: scaleY(4);
+
+      }
+    }
+  }
 `;
 
 const StyledQuaternaryLink = styled(PolymorphicLink)`

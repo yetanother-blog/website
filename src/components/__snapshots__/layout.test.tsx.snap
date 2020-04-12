@@ -3,24 +3,24 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-fzqNJr kWioUC"
+    class="sc-fzoyAV DFlPp"
     display="flex"
     height="100vh"
     overflow="visible"
   >
     <nav
-      class="sc-fznKkj gwPbBv"
+      class="sc-fznZeY cPRwPz"
       display="flex"
       height="64,80"
       width="100%"
     >
       <a
-        class="sc-fzoLsD iSFhJV"
+        class="sc-fzpans jNJyGJ"
         href="/"
         role="logo"
       >
         <p
-          class="sc-fzozJi eZIIzc sc-fzpans bOgtjb"
+          class="sc-AxmLO iODOfY sc-fzplWN hFAfpW"
           font-family="Source Code Pro"
           font-weight="600"
         >
@@ -28,31 +28,31 @@ exports[`Layout renders a header 1`] = `
         </p>
       </a>
       <div
-        class="sc-fzokOt kephec"
+        class="sc-fzqBZW cHQdAR"
         display="none,flex"
       >
         <a
-          class="sc-AxhCb hPuBqW"
+          class="sc-AxhCb jbRlRn"
           href="/repos"
         >
           <span
-            class="sc-AxjAm jDzBZS"
+            class="sc-AxjAm hxcjNF"
           >
             Repos
           </span>
         </a>
         <a
-          class="sc-AxhCb hPuBqW"
+          class="sc-AxhCb jbRlRn"
           href="/guides"
         >
           <span
-            class="sc-AxjAm jDzBZS"
+            class="sc-AxjAm hxcjNF"
           >
             Guide
           </span>
         </a>
         <a
-          class="sc-fzqBZW gjvsXu"
+          class="sc-fzqNJr jBlmjD"
           href="https://twitter.com/_yetanotherblog"
           rel="noopener"
           target="_blank"
@@ -82,7 +82,7 @@ exports[`Layout renders a header 1`] = `
           </span>
         </a>
         <a
-          class="sc-fzqBZW gjvsXu"
+          class="sc-fzqNJr jBlmjD"
           href="https://github.com/yetanother-blog"
           rel="noopener"
           target="_blank"
@@ -113,18 +113,18 @@ exports[`Layout renders a header 1`] = `
         </a>
       </div>
       <button
-        class="sc-fznyAO iessoT"
+        class="sc-fznKkj hZHRVC"
         display="flex,none"
         height="48px"
         width="48px"
       >
         <div
-          class="sc-fzplWN hopaxz"
+          class="sc-fznyAO ksIcwb"
         />
       </button>
     </nav>
     <main
-      class="sc-fzqNJr kVZeNI"
+      class="sc-fzoyAV jLWyWj"
       width="100%"
     >
       <main>
@@ -134,7 +134,7 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-fzqNJr hgYJTS"
+      class="sc-fzoyAV bwqReh"
       display="flex"
       width="100%"
     >
@@ -144,7 +144,7 @@ exports[`Layout renders a header 1`] = `
         mr="20"
       >
         <span
-          class="sc-AxjAm jDzBZS"
+          class="sc-AxjAm hxcjNF"
         >
           About
         </span>
@@ -154,7 +154,7 @@ exports[`Layout renders a header 1`] = `
         href="/imprint"
       >
         <span
-          class="sc-AxjAm jDzBZS"
+          class="sc-AxjAm hxcjNF"
         >
           Imprint
         </span>

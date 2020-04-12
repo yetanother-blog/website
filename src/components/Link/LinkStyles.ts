@@ -63,7 +63,7 @@ export const StyledUnderline = styled.span`
     left: 0;
     z-index: -1;
     transform-origin: bottom;
-    transition: transform 100ms ease-in;
+    transition: transform 100ms ease-in-out;
   }
 
   &:hover,

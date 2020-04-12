@@ -14,7 +14,7 @@ import { StyledComponentPropsWithAs } from '../../types';
 import { DefaultTheme } from 'styled-components';
 
 export interface TypographyTypeProps {
-  variant: 'title' | 'headline' | 'subheadline' | 'text' | 'smallText';
+  variant: 'title' | 'headline' | 'subheadline' | 'text' | 'smallText' | 'tinyText';
 }
 
 type FormattingTags = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'em' | 'blockquote' | 'pre';
@@ -27,7 +27,7 @@ export type TypoProps = TypographyProps &
 const variants = variant({
   variants: {
     title: {
-      fontSize: [32, 42],
+      fontSize: [32, 48],
       fontWeight: 600,
       letterSpacing: 0.5,
       lineHeight: 1.25,
@@ -36,10 +36,12 @@ const variants = variant({
     headline: {
       fontSize: [26, 30],
       lineHeight: 1.25,
+      fontWeight: 600,
       marginBottom: 0,
     },
     subheadline: {
       fontSize: 25,
+      fontWeight: 400,
       lineHeight: 1.3,
       marginBottom: 0,
     },
@@ -49,6 +51,12 @@ const variants = variant({
     },
     smallText: {
       fontSize: 16,
+      lineHeight: 1.4,
+      marginBottom: 0,
+    },
+    tinyText: {
+      fontSize: 14,
+      fontWeight: 700,
       lineHeight: 1.4,
       marginBottom: 0,
     },
@@ -100,6 +108,16 @@ const StyledSmallText = styled.p`
   ${margin}
 `;
 
+const StyledTinyText = styled.p`
+  -webkit-font-smoothing: antialiased;
+  ${display}
+  ${color}
+  ${typography}
+  ${variants}
+  ${margin}
+  color: ${(props) => props.theme.colors.grey400};
+`;
+
 export const Typography: React.FC<TypoProps> = (props) => {
   switch (props.variant) {
     case 'title': {
@@ -114,8 +132,11 @@ export const Typography: React.FC<TypoProps> = (props) => {
     case 'text': {
       return <StyledText {...props} />;
     }
-    default: {
+    case 'smallText': {
       return <StyledSmallText {...props} />;
+    }
+    default: {
+      return <StyledTinyText {...props} />;
     }
   }
 };
