@@ -89,6 +89,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "test": "jest --watchAll",
+    "test:ci": "jest --maxWorkers=50%",
     "tsc": "tsc --noEmit",
     "gql-codegen": "graphql-codegen --config codegen.yml",
     "storybook": "start-storybook -p 6006",
