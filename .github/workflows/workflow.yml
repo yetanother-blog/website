@@ -1,26 +1,27 @@
 name: Deploy app every day (for now every 5 minutes)
 
-on:
-  schedule:
-    - cron: '*/5 * * * *'
-
-defaults: &defaults
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - run: yarn
+on: push
 
 jobs:
   test:
-    <<: *defaults
-    - run: yarn test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: yarn
+      - run: yarn test
 
   storybook:
-    <<: *defaults
-    - run: yarn storybook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: yarn
+      - run: yarn storybook
 
   build:
     runs-on: ubuntu-latest
