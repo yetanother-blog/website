@@ -1,26 +1,25 @@
-name: Yet another blog
+name: Build and Deploy to Gatsby every hour
 
-on: [push, repository_dispatch]
+on:
+  schedule:
+    - cron: '0 */2 * * *'
 
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Set Node.js
-        uses: actions/setup-node@master
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: 13.x
-
-      - name: Install dependencies
-        run: yarn install --prod --pure-lockfile
-
-      - name: Generate Schema
-        run: yarn gql-codegen
-
-      - name: Test
-        run: yarn test
-
-      - name: Build
-        run: yarn build
+          node-version: '12.x'
+      - run: yarn
+      - run: yarn build
+      # Deploy the gatsby build to Netlify
+      - uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=public --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
