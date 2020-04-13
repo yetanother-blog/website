@@ -70,7 +70,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         as="main"
         width="100%"
         flex="1 0 auto"
-        maxWidth={isNarrow ? '640px' : '940px'}
+        maxWidth={isNarrow ? '680px' : '940px'}
       >
         {children}
       </Box>
