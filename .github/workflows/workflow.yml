@@ -1,10 +1,27 @@
-name: Build and Deploy to Gatsby every hour
+name: Deploy app every day (for now every 5 minutes)
 
 on:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/5 * * * *'
+
+defaults: &defaults
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - run: yarn
 
 jobs:
+  test:
+    <<: *defaults
+    - run: yarn test
+
+  storybook:
+    <<: *defaults
+    - run: yarn storybook
+
   build:
     runs-on: ubuntu-latest
 
