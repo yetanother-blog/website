@@ -24,9 +24,9 @@ const Imprint: React.FC<PageRendererProps> = () => {
         <br />
         André Rusakow
         <br />
-        Alsterdorfer Str. 159
+        Shanghaiallee 19
         <br />
-        22297 Hamburg
+        20457 Hamburg
       </Typography>
       <Typography variant="headline" marginBottom={20}>
         Contact Information
