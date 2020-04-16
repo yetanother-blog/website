@@ -15,7 +15,9 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   const theme = useTheme();
-  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(MobileNavigationContext);
+  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
+    MobileNavigationContext
+  );
   const isNarrow = size === 'narrow';
 
   const handleMobileNavigation = () => {
@@ -64,7 +66,12 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
           <Github />
         </SocialLink>
       </Navigation>
-      <Box as="main" width="100%" flex="1 0 auto" maxWidth={isNarrow ? '640px' : '940px'}>
+      <Box
+        as="main"
+        width="100%"
+        flex="1 0 auto"
+        maxWidth={isNarrow ? '640px' : '940px'}
+      >
         {children}
       </Box>
       <Box
@@ -85,8 +92,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         >
           About
         </Link>
-        <Link variant="quaternary" component={GatsbyLink} to="/imprint">
-          Imprint
+        <Link variant="quaternary" component={GatsbyLink} to="/legal-details">
+          Legal Details
         </Link>
       </Box>
     </Box>
