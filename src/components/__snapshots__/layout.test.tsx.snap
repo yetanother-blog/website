@@ -150,13 +150,37 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy fvLNgB"
-        href="/imprint"
+        class="sc-AxhUy djosfx"
+        href="https://www.iubenda.com/privacy-policy/46807218"
+        mr="20"
+        target="_blank"
       >
         <span
           class="sc-AxjAm hxcjNF"
         >
-          Imprint
+          Privacy Policy
+        </span>
+      </a>
+      <a
+        class="sc-AxhUy djosfx"
+        href="https://www.iubenda.com/privacy-policy/46807218/cookie-policy"
+        mr="20"
+        target="_blank"
+      >
+        <span
+          class="sc-AxjAm hxcjNF"
+        >
+          Cookie Policy
+        </span>
+      </a>
+      <a
+        class="sc-AxhUy fvLNgB"
+        href="/legal-details"
+      >
+        <span
+          class="sc-AxjAm hxcjNF"
+        >
+          Legal Details
         </span>
       </a>
     </footer>
