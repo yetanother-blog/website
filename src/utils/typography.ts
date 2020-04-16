@@ -1,6 +1,6 @@
 import { CSSObject } from 'styled-components';
 import Typography from 'typography';
-import { theme } from './theme';
+import { theme } from '../ui/theme';
 
 const typography = new Typography({
   googleFonts: [

@@ -1,18 +1,25 @@
 import React from 'react';
-import { graphql, useStaticQuery, PageRendererProps, Link as GatsbyLink } from 'gatsby';
-import { Layout } from '../components/layout';
-import { AllBlogPostsProps } from '../types';
-import { SEO } from '../components/seo';
-import { Typography } from '../components/Typography/Typography';
+import {
+  graphql,
+  useStaticQuery,
+  PageRendererProps,
+  Link as GatsbyLink,
+} from 'gatsby';
+import { Layout } from '../ui/Layout/Layout';
+import { SEO } from '../containers/SEO/SEO';
+import { Typography } from '../ui/Typography/Typography';
 import { useTheme } from 'styled-components';
-import { Link } from '../components/Link/Link';
+import { Link } from '../ui/Link/Link';
 import styled from 'styled-components';
+import { AllReposBlogPostsQuery } from '../../graphql-types';
 
 const Repos: React.FC<PageRendererProps> = () => {
   const theme = useTheme();
-  const data = useStaticQuery<AllBlogPostsProps>(graphql`
-    query allRepoBlogPosts {
-      allMdx(filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }) {
+  const data = useStaticQuery<AllReposBlogPostsQuery>(graphql`
+    query AllReposBlogPosts {
+      allMdx(
+        filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }
+      ) {
         nodes {
           excerpt
           frontmatter {
@@ -38,12 +45,20 @@ const Repos: React.FC<PageRendererProps> = () => {
 
   return (
     <Layout size="narrow">
-      <SEO title="Repos 🌟" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Repos 🌟"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
       <Typography variant="title" mb={theme.space.l}>
         Repo of the Week 🌟
       </Typography>
-      <Typography variant="subheadline" fontWeight="400" marginBottom={theme.space.xxl}>
-        We introduce independent repositories on a weekly basis and provide opinionated feedback.
+      <Typography
+        variant="subheadline"
+        fontWeight="400"
+        marginBottom={theme.space.xxl}
+      >
+        We introduce independent repositories on a weekly basis and provide
+        opinionated feedback.
       </Typography>
 
       {posts.map((node) => {
@@ -68,7 +83,11 @@ const Repos: React.FC<PageRendererProps> = () => {
             <Typography variant="text" mb={theme.space.m}>
               {excerpt}
             </Typography>
-            <Link display="block" component="span" marginBottom={theme.space.xxxl}>
+            <Link
+              display="block"
+              component="span"
+              marginBottom={theme.space.xxxl}
+            >
               read more
             </Link>
           </StyledGatsbyLink>

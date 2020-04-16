@@ -10,14 +10,28 @@ import {
   display,
   color,
 } from 'styled-system';
-import { StyledComponentPropsWithAs } from '../../types';
+import { StyledComponentPropsWithAs } from '../types';
 import { DefaultTheme } from 'styled-components';
 
 export interface TypographyTypeProps {
-  variant: 'title' | 'headline' | 'subheadline' | 'text' | 'smallText' | 'tinyText';
+  variant:
+    | 'title'
+    | 'headline'
+    | 'subheadline'
+    | 'text'
+    | 'smallText'
+    | 'tinyText';
 }
 
-type FormattingTags = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'em' | 'blockquote' | 'pre';
+type FormattingTags =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'p'
+  | 'span'
+  | 'em'
+  | 'blockquote'
+  | 'pre';
 export type TypoProps = TypographyProps &
   MarginBottomProps &
   TypographyTypeProps &

@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
-import { Typography } from '../components/Typography/Typography';
+import { Layout } from '../ui/Layout/Layout';
+import { SEO } from '../containers/SEO/SEO';
+import { Typography } from '../ui/Typography/Typography';
 import { useTheme } from 'styled-components';
 import { PrivacyPolicyQuery } from '../../graphql-types';
 

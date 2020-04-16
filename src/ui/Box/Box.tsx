@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from 'styled-components';
 import React from 'react';
-import { StyledComponentPropsWithAs } from '../../types';
+import { StyledComponentPropsWithAs } from '../types';
 import {
   color,
   padding,
@@ -21,7 +21,14 @@ import {
 } from 'styled-system';
 import { StyledSystemBoxProps } from './types';
 
-type HtmlTags = 'span' | 'aside' | 'main' | 'section' | 'nav' | 'footer' | React.ElementType<any>;
+type HtmlTags =
+  | 'span'
+  | 'aside'
+  | 'main'
+  | 'section'
+  | 'nav'
+  | 'footer'
+  | React.ElementType<any>;
 export type BoxProps = StyledSystemBoxProps &
   StyledComponentPropsWithAs<HtmlTags, DefaultTheme, {}, any>;
 

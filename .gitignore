@@ -53,3 +53,4 @@ yarn-error.log
 .yarn-integrity
 
 graphql-types.ts
+storybook-static

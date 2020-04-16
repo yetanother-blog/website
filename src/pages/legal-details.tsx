@@ -1,8 +1,8 @@
 import { PageRendererProps } from 'gatsby';
 import React from 'react';
-import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
-import { Typography } from '../components/Typography/Typography';
+import { Layout } from '../ui/Layout/Layout';
+import { SEO } from '../containers/SEO/SEO';
+import { Typography } from '../ui/Typography/Typography';
 
 const Imprint: React.FC<PageRendererProps> = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeContext } from 'styled-components';
-import { theme } from '../../utils/theme';
+import { theme } from '../theme';
 import { Navigation } from './Navigation';
 import { Link } from '../Link/Link';
 

@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useTheme } from 'styled-components';
-import { Link } from './Link/Link';
+import { Link } from '../Link/Link';
 import { Link as GatsbyLink } from 'gatsby';
-import { Navigation } from './Navigation/Navigation';
-import { SocialLink } from './SocialLink/SocialLink';
-import { Twitter } from './SocialLink/Twitter';
-import { Github } from './SocialLink/Github';
-import { Box } from './Box/Box';
-import { MobileNavigationContext } from '../context/MobileNavigationContext/MobileNavigationContext';
+import { Navigation } from '../Navigation/Navigation';
+import { SocialLink } from '../SocialLink/SocialLink';
+import { Twitter } from '../SocialLink/Twitter';
+import { Github } from '../SocialLink/Github';
+import { Box } from '../Box/Box';
 
 interface LayoutProps {
   size?: 'narrow';
@@ -15,17 +14,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   const theme = useTheme();
-  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
-    MobileNavigationContext
-  );
   const isNarrow = size === 'narrow';
-
-  const handleMobileNavigation = () => {
-    if (isMobileNavigationOpen) {
-      return setIsMobileNavigationOpen(false);
-    }
-    return;
-  };
 
   return (
     <Box
@@ -37,13 +26,13 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
       maxWidth="940px"
       pl={theme.space.l}
       pr={theme.space.l}
-      overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
+      // overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
     >
       <Navigation>
         <Link
           variant="tertiary"
           component={GatsbyLink}
-          onClick={handleMobileNavigation}
+          // onClick={handleMobileNavigation}
           to="/repos"
           partiallyActive
           marginBottom={[theme.space.l, 0]}
@@ -53,7 +42,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         <Link
           variant="tertiary"
           component={GatsbyLink}
-          onClick={handleMobileNavigation}
+          // onClick={handleMobileNavigation}
           to="/guides"
           marginBottom={[theme.space.l, 0]}
         >

@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { SocialLink } from './SocialLink';
 import { Twitter } from './Twitter';
 import { ThemeContext } from 'styled-components';
-import { theme } from '../../utils/theme';
+import { theme } from '../theme';
 
 describe('SocialLink component', () => {
   it('should render social link for twitter', () => {

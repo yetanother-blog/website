@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es2017",
-    "lib": ["dom", "es6"],
+    "lib": ["dom", "es6", "ESNext.AsyncIterable"],
     "sourceMap": true,
     "jsx": "react",
     "noUnusedLocals": true,
@@ -16,7 +16,8 @@
     "strict": true,
     "types": ["node", "jest", "@testing-library/jest-dom"],
     "typeRoots": ["./node_modules/@types"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules",

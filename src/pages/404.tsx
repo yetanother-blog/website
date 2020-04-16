@@ -1,7 +1,7 @@
 import { PageRendererProps } from 'gatsby';
 import React from 'react';
-import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
+import { Layout } from '../ui/Layout/Layout';
+import { SEO } from '../containers/SEO/SEO';
 
 type Props = PageRendererProps;
 

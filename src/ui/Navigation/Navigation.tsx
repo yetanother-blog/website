@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import {
   size,
@@ -16,7 +16,6 @@ import {
   MarginBottomProps,
 } from 'styled-system';
 import { Logo } from '../Logo/Logo';
-import { MobileNavigationContext } from '../../context/MobileNavigationContext/MobileNavigationContext';
 
 interface HamburgerProps {
   isActive: boolean;
@@ -63,7 +62,12 @@ const StyledMobileNavigationButton = styled.button<LayoutProps & FlexboxProps>`
 `;
 
 const StyledNav = styled.nav<
-  WidthProps & HeightProps & LayoutProps & FlexboxProps & PaddingProps & MarginBottomProps
+  WidthProps &
+    HeightProps &
+    LayoutProps &
+    FlexboxProps &
+    PaddingProps &
+    MarginBottomProps
 >`
   ${layout}
   ${height}
@@ -105,7 +109,7 @@ const StyledDesktopWrapper = styled.div<LayoutProps>`
 `;
 
 export const Navigation: React.FC = ({ children }) => {
-  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(MobileNavigationContext);
+  const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false);
   const theme = useTheme();
 
   return (
@@ -120,15 +124,19 @@ export const Navigation: React.FC = ({ children }) => {
       width="100%"
     >
       <Logo to="/" />
-      {isMobileNavigationOpen && <StyledMobileWrapper>{children}</StyledMobileWrapper>}
-      <StyledDesktopWrapper display={['none', 'flex']}>{children}</StyledDesktopWrapper>
+      {isMobileNavigationOpen && (
+        <StyledMobileWrapper>{children}</StyledMobileWrapper>
+      )}
+      <StyledDesktopWrapper display={['none', 'flex']}>
+        {children}
+      </StyledDesktopWrapper>
       <StyledMobileNavigationButton
         display={['flex', 'none']}
         height="48px"
         width="48px"
         justifyContent="center"
         alignItems="center"
-        onClick={() => setIsMobileNavigationOpen(!isMobileNavigationOpen)}
+        onClick={() => setIsMobileNavigationOpen((prev) => !prev)}
       >
         <Hamburger isActive={isMobileNavigationOpen} />
       </StyledMobileNavigationButton>

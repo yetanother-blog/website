@@ -1,17 +1,17 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
-import { Layout } from '../components/layout';
-import { AllBlogPostsProps } from '../types';
-import { SEO } from '../components/seo';
-import { Typography } from '../components/Typography/Typography';
+import { Layout } from '../ui/Layout/Layout';
+import { SEO } from '../containers/SEO/SEO';
+import { Typography } from '../ui/Typography/Typography';
 import { useTheme } from 'styled-components';
 import styled from 'styled-components';
-import { Link } from '../components/Link/Link';
+import { Link } from '../ui/Link/Link';
+import { AllGuidesBlogPostsQuery } from '../../graphql-types';
 
 const Guides: React.FC = () => {
   const theme = useTheme();
-  const data = useStaticQuery<AllBlogPostsProps>(graphql`
-    query allGuideBlogPosts {
+  const data = useStaticQuery<AllGuidesBlogPostsQuery>(graphql`
+    query AllGuidesBlogPosts {
       allMdx(
         filter: { fileAbsolutePath: { regex: "/.+content/blog/guides.+/" } }
       ) {
