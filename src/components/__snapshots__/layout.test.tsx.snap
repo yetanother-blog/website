@@ -151,9 +151,8 @@ exports[`Layout renders a header 1`] = `
       </a>
       <a
         class="sc-AxhUy djosfx"
-        href="https://www.iubenda.com/privacy-policy/46807218"
+        href="/privacy-policy"
         mr="20"
-        target="_blank"
       >
         <span
           class="sc-AxjAm hxcjNF"
@@ -163,9 +162,8 @@ exports[`Layout renders a header 1`] = `
       </a>
       <a
         class="sc-AxhUy djosfx"
-        href="https://www.iubenda.com/privacy-policy/46807218/cookie-policy"
+        href="/cookie-policy"
         mr="20"
-        target="_blank"
       >
         <span
           class="sc-AxjAm hxcjNF"
