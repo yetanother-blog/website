@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-graphql-codegen`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -62,5 +63,11 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-iubenda`,
+      options: {
+        documentIds: [`46807218`],
+      },
+    },
   ],
 };

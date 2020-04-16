@@ -2,7 +2,7 @@ import { graphql, PageRendererProps } from 'gatsby';
 import React from 'react';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
-import { SitePageContext } from '../graphql-types';
+import { SitePageContext } from '../../graphql-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography } from '../components/Typography/Typography';
 
@@ -20,9 +20,16 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
 
   return (
     <Layout size="narrow">
-      <SEO title={frontmatter.title!} description={frontmatter.description || excerpt} />
+      <SEO
+        title={frontmatter.title!}
+        description={frontmatter.description || excerpt}
+      />
       <Typography variant="title">{post.frontmatter!.title}</Typography>
-      <Typography variant="tinyText" fontFamily="Source Code Pro" fontWeight="600">
+      <Typography
+        variant="tinyText"
+        fontFamily="Source Code Pro"
+        fontWeight="600"
+      >
         {frontmatter.date}
       </Typography>
       <MDXRenderer>{body}</MDXRenderer>
