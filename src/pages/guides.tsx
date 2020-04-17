@@ -17,6 +17,10 @@ const Guides: React.FC = () => {
       ) {
         nodes {
           excerpt
+          timeToRead
+          wordCount {
+            words
+          }
           frontmatter {
             title
             slug
@@ -70,22 +74,23 @@ const Guides: React.FC = () => {
               variant="tinyText"
               marginBottom={theme.space.l}
             >
-              {date}
+              {date} • {node.timeToRead}min to read • {node.wordCount?.words}{' '}
+              words
             </Typography>
             <Typography variant="text" mb={theme.space.m}>
               {excerpt}
             </Typography>
             <Link
               display="block"
+              variant="secondary"
               component="span"
-              marginBottom={theme.space.xxxl}
+              marginBottom={theme.space.xxl}
             >
               read more
             </Link>
           </StyledGatsbyLink>
         );
       })}
-      <Typography variant="headline">Recent posts</Typography>
     </Layout>
   );
 };

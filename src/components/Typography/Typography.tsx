@@ -56,7 +56,7 @@ const variants = variant({
     },
     tinyText: {
       fontSize: 14,
-      fontWeight: 700,
+      fontWeight: 600,
       lineHeight: 1.4,
       marginBottom: 0,
     },

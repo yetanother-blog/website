@@ -37,7 +37,8 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
         fontWeight="600"
         mb={theme.space.xl}
       >
-        {frontmatter.date}
+        {frontmatter.date} • {post.timeToRead}min to read •{' '}
+        {post.wordCount?.words} words
       </Typography>
       <MDXProvider components={mxdComponents}>
         <MDXRenderer>{body}</MDXRenderer>
@@ -54,6 +55,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       body
+      timeToRead
+      wordCount {
+        words
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
