@@ -7,6 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography } from '../components/Typography/Typography';
 import { MDXProvider } from '@mdx-js/react';
 import { mxdComponents } from './mdx-components';
+import { useTheme } from 'styled-components';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
@@ -16,6 +17,7 @@ interface Props extends PageRendererProps {
 }
 
 const BlogPostTemplate: React.FC<Props> = (props) => {
+  const theme = useTheme();
   const data = props.data!;
   const post = data.mdx!;
   const excerpt = post.excerpt!;
@@ -33,6 +35,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
         variant="tinyText"
         fontFamily="Source Code Pro"
         fontWeight="600"
+        mb={theme.space.xl}
       >
         {frontmatter.date}
       </Typography>
