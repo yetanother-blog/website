@@ -6,6 +6,7 @@ import {
   defaultFontLinkStyles,
   smallFontLinkStyles,
   StyledUnderline,
+  tinyFontLinkStyles,
 } from './LinkStyles';
 import { display, DisplayProps, margin, MarginProps } from 'styled-system';
 
@@ -74,7 +75,7 @@ const StyledTertiaryLink = styled(PolymorphicLink)`
 const StyledQuaternaryLink = styled(PolymorphicLink)`
   ${display}
   ${sharedStyles}
-  ${smallFontLinkStyles}
+  ${tinyFontLinkStyles}
   ${margin}
   color: ${(props) => props.theme.colors.grey400};
 `;

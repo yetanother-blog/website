@@ -50,6 +50,13 @@ export const smallFontLinkStyles = css`
   margin-bottom: 0;
 `;
 
+export const tinyFontLinkStyles = css`
+  font-size: ${(props) => props.theme.fontSizes[1]};
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 0;
+`;
+
 export const StyledUnderline = styled.span`
   position: relative;
 
