@@ -2,13 +2,17 @@ import { graphql, PageRendererProps } from 'gatsby';
 import React from 'react';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
-import { SitePageContext } from '../../graphql-types';
+import { SitePageContext, Mdx } from '../../graphql-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography } from '../components/Typography/Typography';
+import { MDXProvider } from '@mdx-js/react';
+import { mxdComponents } from './mdx-components';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
-  data: any;
+  data: {
+    mdx: Mdx;
+  };
 }
 
 const BlogPostTemplate: React.FC<Props> = (props) => {
@@ -32,7 +36,9 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
       >
         {frontmatter.date}
       </Typography>
-      <MDXRenderer>{body}</MDXRenderer>
+      <MDXProvider components={mxdComponents}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
     </Layout>
   );
 };
