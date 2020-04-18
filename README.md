@@ -37,20 +37,6 @@ GraphQL Schema
 http://localhost:8000/___graphql
 ```
 
-**GraphQL Code Generator**
-
-Currently, the type graphql type definition file has everything as nullable, so a lot of nested non-null assertions are used when accessing data from queries. To generate the types run:
-
-```
-yarn gql-codegen
-```
-
-together with:
-
-```
-yarn start
-```
-
 **Build for Production**
 
 ```

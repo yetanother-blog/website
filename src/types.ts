@@ -1,4 +1,4 @@
-import { MdxConnection, SiteSiteMetadata } from './graphql-types';
+import { MdxConnection, SiteSiteMetadata } from '../../graphql-types';
 import { StyledComponentProps } from 'styled-components';
 interface PageInput {
   path: string;
@@ -18,7 +18,10 @@ interface BoundActionCreators {
   }) => void;
 }
 
-export type GatsbyCreatePages = (fns: { graphql: any; boundActionCreators: BoundActionCreators }) => void;
+export type GatsbyCreatePages = (fns: {
+  graphql: any;
+  boundActionCreators: BoundActionCreators;
+}) => void;
 
 export interface AllBlogPostsProps {
   allMdx: MdxConnection;
