@@ -1,4 +1,4 @@
-import { MdxConnection, SiteSiteMetadata } from '../../graphql-types';
+import { MdxConnection, SiteSiteMetadata } from '../graphql-types';
 import { StyledComponentProps } from 'styled-components';
 interface PageInput {
   path: string;
