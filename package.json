@@ -13,6 +13,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.23",
     "gatsby-image": "^2.3.2",
+    "gatsby-plugin-graphql-codegen": "^2.7.1",
     "gatsby-plugin-manifest": "^2.3.5",
     "gatsby-plugin-mdx": "^1.1.7",
     "gatsby-plugin-offline": "^3.1.4",
@@ -43,10 +44,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@graphql-codegen/cli": "^1.13.2",
-    "@graphql-codegen/typescript": "1.13.2",
-    "@graphql-codegen/typescript-operations": "1.13.2",
-    "@graphql-codegen/typescript-react-apollo": "1.13.2",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.17",
@@ -91,7 +88,6 @@
     "test": "jest --watchAll",
     "test:ci": "jest --maxWorkers=50%",
     "tsc": "tsc --noEmit",
-    "gql-codegen": "graphql-codegen --config codegen.yml",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
