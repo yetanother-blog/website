@@ -77,8 +77,6 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('yarn.lock') }}-${{ env.CACHE_VERSION }}
       - name: Build website
         run: yarn build
-      - name: Do we have uncommitted GraphQL types?
-        run: git diff --exit-code graphql-types.ts
 
   deploy-production:
     needs: [dependencies, test, build-storybook, build]
