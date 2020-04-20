@@ -134,13 +134,14 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-fzoyAV bwqReh"
+      class="sc-fzoyAV gMumkd"
       display="flex"
       width="100%"
     >
       <a
-        class="sc-AxhUy jQUdTJ"
+        class="sc-AxhUy bsqlHi"
         href="/about"
+        mb="20"
         mr="20"
       >
         <span
@@ -150,8 +151,9 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy djosfx"
+        class="sc-AxhUy bsqlHi"
         href="https://www.iubenda.com/privacy-policy/46807218"
+        mb="20"
         mr="20"
         target="_blank"
       >
@@ -162,8 +164,9 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy djosfx"
+        class="sc-AxhUy bsqlHi"
         href="https://www.iubenda.com/privacy-policy/46807218/cookie-policy"
+        mb="20"
         mr="20"
         target="_blank"
       >
@@ -174,8 +177,9 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy fvLNgB"
+        class="sc-AxhUy kCsLie"
         href="/legal-details"
+        mb="20"
       >
         <span
           class="sc-AxjAm hxcjNF"

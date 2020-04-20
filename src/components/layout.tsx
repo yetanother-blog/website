@@ -8,6 +8,7 @@ import { Twitter } from './SocialLink/Twitter';
 import { Github } from './SocialLink/Github';
 import { Box } from './Box/Box';
 import { MobileNavigationContext } from '../context/MobileNavigationContext/MobileNavigationContext';
+import { Footer } from './Footer/Footer';
 
 interface LayoutProps {
   size?: 'narrow';
@@ -74,21 +75,13 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
       >
         {children}
       </Box>
-      <Box
-        as="footer"
-        display="flex"
-        justifyContent="flex-end"
-        maxWidth="940px"
-        width="100%"
-        pt={theme.space.xl}
-        pb={theme.space.xl}
-      >
+      <Footer>
         <Link
-          display="flex"
           variant="quaternary"
           component={GatsbyLink}
           to="/about"
           mr={theme.space.l}
+          mb={theme.space.l}
         >
           About
         </Link>
@@ -97,6 +90,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
           href="https://www.iubenda.com/privacy-policy/46807218"
           target="_blank"
           mr={theme.space.l}
+          mb={theme.space.l}
         >
           Privacy Policy
         </Link>
@@ -105,13 +99,19 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
           href="https://www.iubenda.com/privacy-policy/46807218/cookie-policy"
           target="_blank"
           mr={theme.space.l}
+          mb={theme.space.l}
         >
           Cookie Policy
         </Link>
-        <Link variant="quaternary" component={GatsbyLink} to="/legal-details">
+        <Link
+          variant="quaternary"
+          component={GatsbyLink}
+          to="/legal-details"
+          mb={theme.space.l}
+        >
           Legal Details
         </Link>
-      </Box>
+      </Footer>
     </Box>
   );
 };

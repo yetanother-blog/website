@@ -696,10 +696,10 @@ export type FileFieldsEnum =
   'childMdx___frontmatter___title' |
   'childMdx___frontmatter___date' |
   'childMdx___frontmatter___slug' |
-  'childMdx___frontmatter___desription' |
-  'childMdx___frontmatter___draft' |
-  'childMdx___frontmatter___format' |
   'childMdx___frontmatter___description' |
+  'childMdx___frontmatter___draft' |
+  'childMdx___frontmatter___desription' |
+  'childMdx___frontmatter___format' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -1434,10 +1434,10 @@ export type MdxFieldsEnum =
   'frontmatter___title' |
   'frontmatter___date' |
   'frontmatter___slug' |
-  'frontmatter___desription' |
-  'frontmatter___draft' |
-  'frontmatter___format' |
   'frontmatter___description' |
+  'frontmatter___draft' |
+  'frontmatter___desription' |
+  'frontmatter___format' |
   'body' |
   'excerpt' |
   'headings' |
@@ -1559,10 +1559,10 @@ export type MdxFrontmatter = {
   title: Scalars['String'];
   date?: Maybe<Scalars['Date']>;
   slug?: Maybe<Scalars['String']>;
-  desription?: Maybe<Scalars['String']>;
-  draft?: Maybe<Scalars['Boolean']>;
-  format?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
+  draft?: Maybe<Scalars['Boolean']>;
+  desription?: Maybe<Scalars['String']>;
+  format?: Maybe<Scalars['String']>;
 };
 
 
@@ -1577,10 +1577,10 @@ export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  desription?: Maybe<StringQueryOperatorInput>;
-  draft?: Maybe<BooleanQueryOperatorInput>;
-  format?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
+  draft?: Maybe<BooleanQueryOperatorInput>;
+  desription?: Maybe<StringQueryOperatorInput>;
+  format?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
