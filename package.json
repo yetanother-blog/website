@@ -64,7 +64,7 @@
     "babel-preset-gatsby": "^0.3.1",
     "gatsby-plugin-ts-config": "^0.2.2",
     "graphql": "^15.0.0",
-    "jest": "^25.3.0",
+    "jest": "^25.4.0",
     "prettier": "^2.0.4",
     "react-docgen-typescript-loader": "^3.7.2",
     "ts-loader": "^7.0.0",
