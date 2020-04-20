@@ -2,16 +2,22 @@ import { graphql, PageRendererProps } from 'gatsby';
 import React from 'react';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
-import { SitePageContext } from '../../graphql-types';
+import { SitePageContext, Mdx } from '../../graphql-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography } from '../components/Typography/Typography';
+import { MDXProvider } from '@mdx-js/react';
+import { mxdComponents } from './mdx-components';
+import { useTheme } from 'styled-components';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
-  data: any;
+  data: {
+    mdx: Mdx;
+  };
 }
 
 const BlogPostTemplate: React.FC<Props> = (props) => {
+  const theme = useTheme();
   const data = props.data!;
   const post = data.mdx!;
   const excerpt = post.excerpt!;
@@ -29,10 +35,14 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
         variant="tinyText"
         fontFamily="Source Code Pro"
         fontWeight="600"
+        mb={theme.space.xl}
       >
-        {frontmatter.date}
+        {frontmatter.date} • {post.timeToRead}min to read •{' '}
+        {post.wordCount?.words} words
       </Typography>
-      <MDXRenderer>{body}</MDXRenderer>
+      <MDXProvider components={mxdComponents}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
     </Layout>
   );
 };
@@ -45,6 +55,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       body
+      timeToRead
+      wordCount {
+        words
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

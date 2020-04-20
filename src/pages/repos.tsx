@@ -1,5 +1,10 @@
 import React from 'react';
-import { graphql, useStaticQuery, PageRendererProps, Link as GatsbyLink } from 'gatsby';
+import {
+  graphql,
+  useStaticQuery,
+  PageRendererProps,
+  Link as GatsbyLink,
+} from 'gatsby';
 import { Layout } from '../components/layout';
 import { AllBlogPostsProps } from '../types';
 import { SEO } from '../components/seo';
@@ -12,9 +17,15 @@ const Repos: React.FC<PageRendererProps> = () => {
   const theme = useTheme();
   const data = useStaticQuery<AllBlogPostsProps>(graphql`
     query allRepoBlogPosts {
-      allMdx(filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }) {
+      allMdx(
+        filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }
+      ) {
         nodes {
           excerpt
+          timeToRead
+          wordCount {
+            words
+          }
           frontmatter {
             title
             slug
@@ -38,12 +49,20 @@ const Repos: React.FC<PageRendererProps> = () => {
 
   return (
     <Layout size="narrow">
-      <SEO title="Repos 🌟" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO
+        title="Repos 🌟"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
       <Typography variant="title" mb={theme.space.l}>
         Repo of the Week 🌟
       </Typography>
-      <Typography variant="subheadline" fontWeight="400" marginBottom={theme.space.xxl}>
-        We introduce independent repositories on a weekly basis and provide opinionated feedback.
+      <Typography
+        variant="subheadline"
+        fontWeight="400"
+        marginBottom={theme.space.xxl}
+      >
+        We introduce independent repositories on a weekly basis and provide
+        opinionated feedback.
       </Typography>
 
       {posts.map((node) => {
@@ -63,18 +82,22 @@ const Repos: React.FC<PageRendererProps> = () => {
               variant="tinyText"
               marginBottom={theme.space.l}
             >
-              {date}
+              {date} • {node.timeToRead}min to read • {node.wordCount?.words}{' '}
+              words
             </Typography>
             <Typography variant="text" mb={theme.space.m}>
               {excerpt}
             </Typography>
-            <Link display="block" component="span" marginBottom={theme.space.xxxl}>
+            <Link
+              display="block"
+              component="span"
+              marginBottom={theme.space.xxl}
+            >
               read more
             </Link>
           </StyledGatsbyLink>
         );
       })}
-      <Typography variant="headline">Recent posts</Typography>
     </Layout>
   );
 };

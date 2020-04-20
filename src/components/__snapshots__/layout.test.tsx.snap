@@ -3,9 +3,8 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-fzoyAV DFlPp"
+    class="sc-fzoyAV jLnWnW"
     display="flex"
-    height="100vh"
     overflow="visible"
   >
     <nav
@@ -139,7 +138,7 @@ exports[`Layout renders a header 1`] = `
       width="100%"
     >
       <a
-        class="sc-AxhUy bsqlHi"
+        class="sc-AxhUy ekjyds"
         href="/about"
         mb="20"
         mr="20"
@@ -151,7 +150,7 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy bsqlHi"
+        class="sc-AxhUy ekjyds"
         href="https://www.iubenda.com/privacy-policy/46807218"
         mb="20"
         mr="20"
@@ -164,7 +163,7 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy bsqlHi"
+        class="sc-AxhUy ekjyds"
         href="https://www.iubenda.com/privacy-policy/46807218/cookie-policy"
         mb="20"
         mr="20"
@@ -177,7 +176,7 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-AxhUy kCsLie"
+        class="sc-AxhUy cdXcPc"
         href="/legal-details"
         mb="20"
       >

@@ -33,7 +33,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      height="100vh"
+      minHeight="100vh"
       m="0 auto"
       maxWidth="940px"
       pl={theme.space.l}
