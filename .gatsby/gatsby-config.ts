@@ -25,6 +25,7 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
+          `gatsby-remark-slug`,
         ],
       },
     },

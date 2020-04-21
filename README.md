@@ -133,5 +133,6 @@ You want to help us and fix bugs, improve our docs or provide some feedback. Fee
 - [gatsby-plugin-typography](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/)
 - [gatsby-plugin-typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/)
 - [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
+- [gatsby-remark-slug](https://www.gatsbyjs.org/packages/gatsby-remark-slug/)
 
 Licensed under the [MIT License](./LICENSE).
