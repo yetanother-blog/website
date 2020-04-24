@@ -37,7 +37,7 @@ export const mxdComponents: MDXProviderComponentsProp = {
   },
   p: (props) => {
     const theme = useTheme();
-    return <Typography variant="text" mb={theme.space.xl} {...props} />;
+    return <Typography variant="text" mb={theme.space.l} {...props} />;
   },
   blockquote: StyledBlockquote,
 };

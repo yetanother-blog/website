@@ -42,6 +42,7 @@
     "gatsby-source-filesystem": "^2.2.4",
 >>>>>>> feat: add gatsby-remark plugin
     "gatsby-transformer-sharp": "^2.4.6",
+    "github-slugger-typescript": "^1.0.1",
     "gsap": "^3.2.6",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
