@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+
+[[plugins]]
+package = "./.plugins/ci"
+
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
