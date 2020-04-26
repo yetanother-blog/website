@@ -696,10 +696,10 @@ export type FileFieldsEnum =
   'childMdx___frontmatter___title' |
   'childMdx___frontmatter___date' |
   'childMdx___frontmatter___slug' |
+  'childMdx___frontmatter___desription' |
+  'childMdx___frontmatter___draft' |
   'childMdx___frontmatter___format' |
   'childMdx___frontmatter___description' |
-  'childMdx___frontmatter___draft' |
-  'childMdx___frontmatter___desription' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -1357,6 +1357,180 @@ export type IntQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
 
+export type IubendaDocument = Node & {
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  privacyPolicy?: Maybe<IubendaDocumentPrivacyPolicy>;
+  cookiePolicy?: Maybe<IubendaDocumentCookiePolicy>;
+  content?: Maybe<Scalars['String']>;
+};
+
+export type IubendaDocumentConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<IubendaDocumentEdge>;
+  nodes: Array<IubendaDocument>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<IubendaDocumentGroupConnection>;
+};
+
+
+export type IubendaDocumentConnectionDistinctArgs = {
+  field: IubendaDocumentFieldsEnum;
+};
+
+
+export type IubendaDocumentConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: IubendaDocumentFieldsEnum;
+};
+
+export type IubendaDocumentCookiePolicy = {
+  title?: Maybe<Scalars['String']>;
+  content?: Maybe<Scalars['String']>;
+};
+
+export type IubendaDocumentCookiePolicyFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<StringQueryOperatorInput>;
+};
+
+export type IubendaDocumentEdge = {
+  next?: Maybe<IubendaDocument>;
+  node: IubendaDocument;
+  previous?: Maybe<IubendaDocument>;
+};
+
+export type IubendaDocumentFieldsEnum = 
+  'id' |
+  'parent___id' |
+  'parent___parent___id' |
+  'parent___parent___parent___id' |
+  'parent___parent___parent___children' |
+  'parent___parent___children' |
+  'parent___parent___children___id' |
+  'parent___parent___children___children' |
+  'parent___parent___internal___content' |
+  'parent___parent___internal___contentDigest' |
+  'parent___parent___internal___description' |
+  'parent___parent___internal___fieldOwners' |
+  'parent___parent___internal___ignoreType' |
+  'parent___parent___internal___mediaType' |
+  'parent___parent___internal___owner' |
+  'parent___parent___internal___type' |
+  'parent___children' |
+  'parent___children___id' |
+  'parent___children___parent___id' |
+  'parent___children___parent___children' |
+  'parent___children___children' |
+  'parent___children___children___id' |
+  'parent___children___children___children' |
+  'parent___children___internal___content' |
+  'parent___children___internal___contentDigest' |
+  'parent___children___internal___description' |
+  'parent___children___internal___fieldOwners' |
+  'parent___children___internal___ignoreType' |
+  'parent___children___internal___mediaType' |
+  'parent___children___internal___owner' |
+  'parent___children___internal___type' |
+  'parent___internal___content' |
+  'parent___internal___contentDigest' |
+  'parent___internal___description' |
+  'parent___internal___fieldOwners' |
+  'parent___internal___ignoreType' |
+  'parent___internal___mediaType' |
+  'parent___internal___owner' |
+  'parent___internal___type' |
+  'children' |
+  'children___id' |
+  'children___parent___id' |
+  'children___parent___parent___id' |
+  'children___parent___parent___children' |
+  'children___parent___children' |
+  'children___parent___children___id' |
+  'children___parent___children___children' |
+  'children___parent___internal___content' |
+  'children___parent___internal___contentDigest' |
+  'children___parent___internal___description' |
+  'children___parent___internal___fieldOwners' |
+  'children___parent___internal___ignoreType' |
+  'children___parent___internal___mediaType' |
+  'children___parent___internal___owner' |
+  'children___parent___internal___type' |
+  'children___children' |
+  'children___children___id' |
+  'children___children___parent___id' |
+  'children___children___parent___children' |
+  'children___children___children' |
+  'children___children___children___id' |
+  'children___children___children___children' |
+  'children___children___internal___content' |
+  'children___children___internal___contentDigest' |
+  'children___children___internal___description' |
+  'children___children___internal___fieldOwners' |
+  'children___children___internal___ignoreType' |
+  'children___children___internal___mediaType' |
+  'children___children___internal___owner' |
+  'children___children___internal___type' |
+  'children___internal___content' |
+  'children___internal___contentDigest' |
+  'children___internal___description' |
+  'children___internal___fieldOwners' |
+  'children___internal___ignoreType' |
+  'children___internal___mediaType' |
+  'children___internal___owner' |
+  'children___internal___type' |
+  'internal___content' |
+  'internal___contentDigest' |
+  'internal___description' |
+  'internal___fieldOwners' |
+  'internal___ignoreType' |
+  'internal___mediaType' |
+  'internal___owner' |
+  'internal___type' |
+  'privacyPolicy___title' |
+  'privacyPolicy___content' |
+  'cookiePolicy___title' |
+  'cookiePolicy___content' |
+  'content';
+
+export type IubendaDocumentFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  privacyPolicy?: Maybe<IubendaDocumentPrivacyPolicyFilterInput>;
+  cookiePolicy?: Maybe<IubendaDocumentCookiePolicyFilterInput>;
+  content?: Maybe<StringQueryOperatorInput>;
+};
+
+export type IubendaDocumentGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<IubendaDocumentEdge>;
+  nodes: Array<IubendaDocument>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type IubendaDocumentPrivacyPolicy = {
+  title?: Maybe<Scalars['String']>;
+  content?: Maybe<Scalars['String']>;
+};
+
+export type IubendaDocumentPrivacyPolicyFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<StringQueryOperatorInput>;
+};
+
+export type IubendaDocumentSortInput = {
+  fields?: Maybe<Array<Maybe<IubendaDocumentFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
 
 export type JsonQueryOperatorInput = {
   eq?: Maybe<Scalars['JSON']>;
@@ -1434,10 +1608,10 @@ export type MdxFieldsEnum =
   'frontmatter___title' |
   'frontmatter___date' |
   'frontmatter___slug' |
+  'frontmatter___desription' |
+  'frontmatter___draft' |
   'frontmatter___format' |
   'frontmatter___description' |
-  'frontmatter___draft' |
-  'frontmatter___desription' |
   'body' |
   'excerpt' |
   'headings' |
@@ -1559,10 +1733,10 @@ export type MdxFrontmatter = {
   title: Scalars['String'];
   date?: Maybe<Scalars['Date']>;
   slug?: Maybe<Scalars['String']>;
+  desription?: Maybe<Scalars['String']>;
+  draft?: Maybe<Scalars['Boolean']>;
   format?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
-  draft?: Maybe<Scalars['Boolean']>;
-  desription?: Maybe<Scalars['String']>;
 };
 
 
@@ -1577,10 +1751,10 @@ export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
+  desription?: Maybe<StringQueryOperatorInput>;
+  draft?: Maybe<BooleanQueryOperatorInput>;
   format?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
-  draft?: Maybe<BooleanQueryOperatorInput>;
-  desription?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -1684,6 +1858,8 @@ export type Query = {
   allImageSharp: ImageSharpConnection;
   mdx?: Maybe<Mdx>;
   allMdx: MdxConnection;
+  iubendaDocument?: Maybe<IubendaDocument>;
+  allIubendaDocument: IubendaDocumentConnection;
   siteBuildMetadata?: Maybe<SiteBuildMetadata>;
   allSiteBuildMetadata: SiteBuildMetadataConnection;
   sitePlugin?: Maybe<SitePlugin>;
@@ -1884,6 +2060,25 @@ export type QueryMdxArgs = {
 export type QueryAllMdxArgs = {
   filter?: Maybe<MdxFilterInput>;
   sort?: Maybe<MdxSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryIubendaDocumentArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  privacyPolicy?: Maybe<IubendaDocumentPrivacyPolicyFilterInput>;
+  cookiePolicy?: Maybe<IubendaDocumentCookiePolicyFilterInput>;
+  content?: Maybe<StringQueryOperatorInput>;
+};
+
+
+export type QueryAllIubendaDocumentArgs = {
+  filter?: Maybe<IubendaDocumentFilterInput>;
+  sort?: Maybe<IubendaDocumentSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -2448,6 +2643,7 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___display' |
   'pluginCreator___pluginOptions___icon' |
   'pluginCreator___pluginOptions___pathToConfigModule' |
+  'pluginCreator___pluginOptions___documentIds' |
   'pluginCreator___pluginOptions___configDir' |
   'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
@@ -2646,6 +2842,7 @@ export type SitePluginFieldsEnum =
   'pluginOptions___display' |
   'pluginOptions___icon' |
   'pluginOptions___pathToConfigModule' |
+  'pluginOptions___documentIds' |
   'pluginOptions___configDir' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
@@ -2772,6 +2969,7 @@ export type SitePluginPluginOptions = {
   display?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
   pathToConfigModule?: Maybe<Scalars['String']>;
+  documentIds?: Maybe<Array<Maybe<Scalars['String']>>>;
   configDir?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
@@ -2794,6 +2992,7 @@ export type SitePluginPluginOptionsFilterInput = {
   display?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
   pathToConfigModule?: Maybe<StringQueryOperatorInput>;
+  documentIds?: Maybe<StringQueryOperatorInput>;
   configDir?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
@@ -2863,6 +3062,11 @@ export type Unnamed_2_QueryVariables = {};
 
 export type Unnamed_2_Query = { allMdx: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug'>> }> } };
 
+export type CookiePolicyQueryVariables = {};
+
+
+export type CookiePolicyQuery = { iubendaDocument?: Maybe<{ cookiePolicy?: Maybe<Pick<IubendaDocumentCookiePolicy, 'content'>> }> };
+
 export type AllGuideBlogPostsQueryVariables = {};
 
 
@@ -2870,6 +3074,11 @@ export type AllGuideBlogPostsQuery = { allMdx: { nodes: Array<(
       Pick<Mdx, 'excerpt' | 'timeToRead'>
       & { wordCount?: Maybe<Pick<MdxWordCount, 'words'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug' | 'format' | 'date' | 'description'>> }
     )> } };
+
+export type PrivacyPolicyQueryVariables = {};
+
+
+export type PrivacyPolicyQuery = { iubendaDocument?: Maybe<{ privacyPolicy?: Maybe<Pick<IubendaDocumentPrivacyPolicy, 'content'>> }> };
 
 export type AllRepoBlogPostsQueryVariables = {};
 
