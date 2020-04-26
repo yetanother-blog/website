@@ -4,11 +4,11 @@ module.exports = {
   async onEnd({ utils, error }) {
     console.log(JSON.stringify(utils.git.commits));
 
-    let message = 'Success';
-
-    if (error) {
-      message = 'Error';
-    }
+    let text = '*Whoop Whoop new release for yetanother.blog! 🎉* \n\n';
+    text += 'Commits: \n\n';
+    text += utils.git.commits
+      .map((commit) => `* ${commit.message} (${commit.committer.name})`)
+      .join(' \n');
 
     await fetch('https://slack.com/api/chat.postMessage', {
       method: 'POST',
@@ -18,7 +18,7 @@ module.exports = {
       },
       body: JSON.stringify({
         channel: 'C012K6XJEH1',
-        text: message,
+        text,
       }),
     });
   },
