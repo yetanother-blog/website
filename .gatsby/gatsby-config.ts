@@ -63,5 +63,11 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-graphql-codegen`,
+    {
+      resolve: `gatsby-source-iubenda`,
+      options: {
+        documentIds: [`46807218`],
+      },
+    },
   ],
 };

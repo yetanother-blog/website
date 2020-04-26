@@ -87,8 +87,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         </Link>
         <Link
           variant="quaternary"
-          href="https://www.iubenda.com/privacy-policy/46807218"
-          target="_blank"
+          component={GatsbyLink}
+          to="/privacy-policy"
           mr={theme.space.l}
           mb={theme.space.l}
         >
@@ -96,8 +96,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         </Link>
         <Link
           variant="quaternary"
-          href="https://www.iubenda.com/privacy-policy/46807218/cookie-policy"
-          target="_blank"
+          component={GatsbyLink}
+          to="/cookie-policy"
           mr={theme.space.l}
           mb={theme.space.l}
         >

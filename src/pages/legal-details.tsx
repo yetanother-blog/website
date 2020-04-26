@@ -7,9 +7,9 @@ import { Typography } from '../components/Typography/Typography';
 const Imprint: React.FC<PageRendererProps> = () => {
   return (
     <Layout>
-      <SEO title="👩‍⚖️ legal details" />
+      <SEO title="Legal Details 👩‍⚖️" />
       <Typography variant="title" marginBottom={20}>
-        Legal Disclosure
+        Legal Details 👩‍⚖️
       </Typography>
       <Typography variant="text" marginBottom={40}>
         Information in accordance with Section 5 TMG
