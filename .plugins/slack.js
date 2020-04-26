@@ -1,12 +1,12 @@
 const fetch = require('node-fetch');
 
 module.exports = {
-  async onEnd(input) {
-    console.log(input);
+  async onEnd({ utils, error }) {
+    console.log(JSON.stringify(utils.git.commits));
 
     let message = 'Success';
 
-    if (input.error) {
+    if (error) {
       message = 'Error';
     }
 
