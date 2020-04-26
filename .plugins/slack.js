@@ -7,7 +7,15 @@ module.exports = {
     let text = '*Whoop Whoop new release for yetanother.blog! 🎉* \n\n';
     text += 'Commits: \n\n';
     text += utils.git.commits
-      .map((commit) => `* ${commit.message} (${commit.committer.name})`)
+      .map(
+        (commit) =>
+          `* ${commit.message} by _${
+            commit.committer.name
+          }_ ((${commit.sha.substring(
+            0,
+            7
+          )})[https://github.com/yetanother-blog/website/commit/${commit.sha}])`
+      )
       .join(' \n');
 
     await fetch('https://slack.com/api/chat.postMessage', {
