@@ -5,4 +5,7 @@
 package = "./.plugins/ci"
 
 [[plugins]]
+package = "./.plugins/slack"
+
+[[plugins]]
 package = "netlify-plugin-gatsby-cache"

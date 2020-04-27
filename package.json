@@ -69,6 +69,7 @@
     "jest": "^25.4.0",
     "netlify-cli": "^2.48.0",
     "netlify-plugin-gatsby-cache": "^0.2.1",
+    "node-fetch": "^2.6.0",
     "prettier": "^2.0.5",
     "react-docgen-typescript-loader": "^3.7.2",
     "ts-loader": "^7.0.1",
