@@ -79,15 +79,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         <Link
           variant="quaternary"
           component={GatsbyLink}
-          to="/about"
-          mr={theme.space.l}
-          mb={theme.space.l}
-        >
-          About
-        </Link>
-        <Link
-          variant="quaternary"
-          component={GatsbyLink}
           to="/privacy-policy"
           mr={theme.space.l}
           mb={theme.space.l}
