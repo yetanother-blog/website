@@ -27,7 +27,7 @@
     "gatsby-remark-prismjs": "^3.4.5",
     "gatsby-remark-responsive-iframe": "^2.3.4",
     "gatsby-remark-smartypants": "^2.2.4",
-    "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-source-filesystem": "^2.3.0",
     "gatsby-source-iubenda": "^1.0.2",
     "gatsby-transformer-sharp": "^2.4.6",
     "gsap": "^3.2.6",
