@@ -2,7 +2,7 @@
 title: Continuous Integration with Netlify Build Plugins
 date: '2020-04-28T19:15:38.655Z'
 slug: '/continuous-integration-with-netlify-build-plugins'
-desription: 'foo bar'
+desription: 'With the new Netlify build plugins it just got super simple to create a CI pipeline'
 draft: true
 ---
 
@@ -40,9 +40,9 @@ module.exports = {
 	try {
 		await utils.run.command('yarn lint');
 		await utils.run.command('yarn test:ci');
-    	await utils.run.command('yarn build-storybook');
+    await utils.run.command('yarn build-storybook');
 	} catch (error) {
-  		utils.build.failBuild('CI failed!');
+    utils.build.failBuild('CI failed!');
   }
 };
 ```
