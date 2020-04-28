@@ -1,0 +1,82 @@
+---
+title: Continuous Integration with Netlify Build Plugins
+date: '2020-04-28T19:15:38.655Z'
+slug: '/continuous-integration-with-netlify-build-plugins'
+desription: 'foo bar'
+draft: true
+---
+
+## What are you talking about?
+
+Okay, so let me get this straight: This blog is deployed on Netlify because we love Netlify ❤️. Seriously, they put just a nice focus on everything you need to be a happy developer: It’s well integrated with GitHub, you get fancy preview URLs for every single pull request, you can run your website with zero configuration and beyond that they offer a great Netlify CLI and API in case you want to hack their system. So everything is great? Almost! The thing is, I don’t work on this blog alone and so we needed a continuous integration (CI) pipeline to keep our blog running smoothly. We do boring stuff like running unit tests, linting the code or check the `yarn.lock` file for uncommitted changes. As I said, boring stuff but really important. In order to get this pipeline we configured a GitHub workflow to run all the checks for every pull request. We, of course, also run the workflow with every merge on master so we ended up disabling Netlify’s great **auto publishing** feature and used a GitHub action to deploy the blog manually within the workflow. Sure it works, but it feels messy and I was super unhappy to loose the full power of the Netlify ecosystem.
+
+## So, what are Netlify Build Plugins?
+
+It’s such a hot topic! They just released the beta version and you can enable it for your website right in the Netlify app. With that, you can basically extend the build pipeline and do whatever you want (well more or less).
+
+There are already good examples like:
+
+- Running Cypress end-to-end tests
+- Cache your Gatsby cache and improve the build time significantly
+- Automatically generate a sitemap
+
+I can’t wait to see more awesome plugins written by the open source community, but besides that, we can also use it to define our own flow. So coming back to the CI pipeline I mentioned earlier.
+
+## The pipeline is just a plugin
+
+Netlify plugins are basically just a JavaScript object defining certain hooks. So in this example I want to run some tasks before Netlify actually builds my application:
+
+```javascript
+module.exports = {
+  async onPreBuild({ utils }) {
+    try {
+      await utils.run.command('git diff --exit-code yarn.lock');
+    } catch (error) {
+      utils.build.failBuild(
+        'Please commit the latest updates in your yarn.lock file!'
+      );
+    }
+
+	try {
+		await utils.run.command('yarn lint');
+		await utils.run.command('yarn test:ci');
+    	await utils.run.command('yarn build-storybook');
+	} catch (error) {
+  		utils.build.failBuild('CI failed!');
+  }
+};
+```
+
+What do I do here?
+
+1. First, I check my `yarn.lock` file for uncommitted changes after installing the dependencies. That way I ensure the integrity of the dependencies.
+2. After that, we build our Storybook and then run the unit tests
+
+Finally, just tell Netlify you have a plugin you want to execute by extending the `netlify.toml` file:
+
+```toml
+[[plugins]]
+package = "./.plugins/ci"
+```
+
+That’s it! Our CI pipeline written in pure JavaScript! Of course, it’s a simple example, but enough for us to validate our application. Netlify passes some input to our plugin we can use to interact with the build pipeline. As you can see, we use a helper function to run shell scripts or use another helper to fail the build.
+
+## It opens Pandora’s box
+
+Just a list of things I could come up with:
+
+- Run integration tests or visual regressions tests after build
+- Generate a Changelog after deployment and publish it somewhere
+- Report failed deployments
+- Do any kind of post-build optimisation (like compression, minifying etc.)
+- …
+
+## So now everything is great?
+
+What do you think? It’s still beta and I have stuff on my wish list. I would love to see running plugins in parallel so we could speed up our build pipeline. Another thing would be to have GitHub pull request checks on a plugins bases so I can easily identify the failing plugins within my GitHub workflow and probably get the error directly in GitHub so I don’t need to scroll through a horrible debug log. But overall, I guess it’s a great step in the right direction to stay in the Netlify ecosystem and don’t mess up different tools to get things done like a simple CI pipeline or notifying you on Slack.
+
+In case you are totally excited now, here is a reading list:
+
+- [Build Plugins | Netlify Docs](https://docs.netlify.com/configure-builds/build-plugins/#enable-build-plugins-beta)
+- [GitHub - netlify/build: Netlify Build Plugins. Join the early access beta 👉](https://github.com/netlify/build)
+- [Run plugins in parallel issue](https://github.com/netlify/build/issues/168)
