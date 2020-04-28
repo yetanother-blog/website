@@ -1,19 +1,20 @@
 import React from 'react';
 import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
 import { Layout } from '../components/layout';
-import { AllBlogPostsProps } from '../types';
 import { SEO } from '../components/seo';
 import { Typography } from '../components/Typography/Typography';
 import { useTheme } from 'styled-components';
 import styled from 'styled-components';
 import { Link } from '../components/Link/Link';
+import { AllGuideBlogPostsQuery } from '../../graphql-types';
 
 const Guides: React.FC = () => {
   const theme = useTheme();
-  const data = useStaticQuery<AllBlogPostsProps>(graphql`
+  const data = useStaticQuery<AllGuideBlogPostsQuery>(graphql`
     query allGuideBlogPosts {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/.+content/blog/guides.+/" } }
+        filter: { fileAbsolutePath: { regex: "/.+content/guides.+/" } }
+        sort: { fields: [frontmatter___date], order: DESC }
       ) {
         nodes {
           excerpt
@@ -23,10 +24,11 @@ const Guides: React.FC = () => {
           }
           frontmatter {
             title
-            slug
             format
             date(formatString: "MMMM DD, YYYY")
-            description
+            slug
+            dateUrl: date(formatString: "YYYY-MM-DD")
+            draft
           }
         }
       }
@@ -50,7 +52,7 @@ const Guides: React.FC = () => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <Typography variant="title" mb={theme.space.l}>
-        Guide of the Month ✨
+        Guides ✨
       </Typography>
       <Typography variant="subheadline" fontWeight="400" mb={theme.space.xxl}>
         We introduce a detailed guide every month about the latest trends on the
@@ -61,11 +63,17 @@ const Guides: React.FC = () => {
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
         const date = node!.frontmatter!.date!;
+        const dateUrl = node!.frontmatter!.dateUrl!;
 
-        const title = frontmatter.title || slug;
+        const title = frontmatter.title!;
+        const url = `guides/${dateUrl}-${slug}`;
+
+        if (frontmatter.draft === true) {
+          return null;
+        }
 
         return (
-          <StyledGatsbyLink to={slug} key={slug}>
+          <StyledGatsbyLink to={url} key={slug}>
             <Typography variant="headline" mb={theme.space.m}>
               {title}
             </Typography>

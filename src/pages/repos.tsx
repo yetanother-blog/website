@@ -6,19 +6,20 @@ import {
   Link as GatsbyLink,
 } from 'gatsby';
 import { Layout } from '../components/layout';
-import { AllBlogPostsProps } from '../types';
 import { SEO } from '../components/seo';
 import { Typography } from '../components/Typography/Typography';
 import { useTheme } from 'styled-components';
 import { Link } from '../components/Link/Link';
 import styled from 'styled-components';
+import { AllRepoBlogPostsQuery } from '../../graphql-types';
 
 const Repos: React.FC<PageRendererProps> = () => {
   const theme = useTheme();
-  const data = useStaticQuery<AllBlogPostsProps>(graphql`
+  const data = useStaticQuery<AllRepoBlogPostsQuery>(graphql`
     query allRepoBlogPosts {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/.+content/blog/repos.+/" } }
+        filter: { fileAbsolutePath: { regex: "/.+content/repos.+/" } }
+        sort: { fields: [frontmatter___date], order: DESC }
       ) {
         nodes {
           excerpt
@@ -30,7 +31,9 @@ const Repos: React.FC<PageRendererProps> = () => {
             title
             slug
             date(formatString: "MMMM DD, YYYY")
+            dateUrl: date(formatString: "YYYY-MM-DD")
             format
+            draft
           }
         }
       }
@@ -54,7 +57,7 @@ const Repos: React.FC<PageRendererProps> = () => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <Typography variant="title" mb={theme.space.l}>
-        Repo of the Week 🌟
+        Repos 🌟
       </Typography>
       <Typography
         variant="subheadline"
@@ -70,10 +73,17 @@ const Repos: React.FC<PageRendererProps> = () => {
         const slug = node!.frontmatter!.slug!;
         const date = node!.frontmatter!.date!;
         const excerpt = node!.excerpt!;
+        const dateUrl = node!.frontmatter!.dateUrl!;
+        const url = `repos/${dateUrl}-${slug}`;
 
         const title = frontmatter.title || slug;
+
+        if (frontmatter.draft === true) {
+          return null;
+        }
+
         return (
-          <StyledGatsbyLink to={slug} key={slug}>
+          <StyledGatsbyLink to={url} key={slug}>
             <Typography variant="headline" mb={theme.space.xs}>
               {title}
             </Typography>

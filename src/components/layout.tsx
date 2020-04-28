@@ -58,7 +58,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
           to="/guides"
           marginBottom={[theme.space.l, 0]}
         >
-          Guide
+          Guides
         </Link>
         <SocialLink href="https://twitter.com/_yetanotherblog">
           <Twitter />

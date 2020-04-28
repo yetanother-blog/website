@@ -31,21 +31,40 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
         justifyContent="space-between"
         mb={theme.space.m}
       >
-        <Card width={['100%', 'calc(50% - 10px)']} to="/repos" mb={theme.space.l}>
-          <Link display="block" variant="primary" component="span" mb={theme.space.m}>
-            repo of the week
+        <Card
+          width={['100%', 'calc(50% - 10px)']}
+          to="/repos"
+          mb={theme.space.l}
+        >
+          <Link
+            display="block"
+            variant="primary"
+            component="span"
+            mb={theme.space.m}
+          >
+            repos
           </Link>
           <Typography variant="smallText">
-            Check out the latest indipendent repository on the internet. We provide you opinionated
-            information.
+            Check out the latest indipendent repository on the internet. We
+            provide you opinionated information.
           </Typography>
         </Card>
-        <Card width={['100%', 'calc(50% - 10px)']} to="/guides" mb={theme.space.l}>
-          <Link display="block" variant="secondary" component="span" mb={theme.space.m}>
-            guide of the month
+        <Card
+          width={['100%', 'calc(50% - 10px)']}
+          to="/guides"
+          mb={theme.space.l}
+        >
+          <Link
+            display="block"
+            variant="secondary"
+            component="span"
+            mb={theme.space.m}
+          >
+            guides
           </Link>
           <Typography variant="smallText">
-            On a monthly basis we create valueble guides about the latest technologies on the web.
+            On a monthly basis we create valueble guides about the latest
+            technologies on the web.
           </Typography>
         </Card>
       </Box>

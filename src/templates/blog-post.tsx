@@ -26,10 +26,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
 
   return (
     <Layout size="narrow">
-      <SEO
-        title={frontmatter.title!}
-        description={frontmatter.description || excerpt}
-      />
+      <SEO title={frontmatter.title!} description={excerpt} />
       <Typography variant="title">{post.frontmatter!.title}</Typography>
       <Typography
         variant="tinyText"
@@ -62,7 +59,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }
