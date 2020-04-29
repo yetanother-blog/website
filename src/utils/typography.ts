@@ -3,16 +3,6 @@ import Typography from 'typography';
 import { theme } from './theme';
 
 const typography = new Typography({
-  googleFonts: [
-    {
-      name: 'Source Sans Pro',
-      styles: ['400', '600'],
-    },
-    {
-      name: 'Source Code Pro',
-      styles: ['600', '700'],
-    },
-  ],
   baseFontSize: '20px',
   baseLineHeight: 1.85,
   headerColor: theme.colors.grey500,
