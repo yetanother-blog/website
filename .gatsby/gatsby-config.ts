@@ -1,9 +1,18 @@
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = `https://yetanother.blog`,
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: `yetanother.blog`,
     author: `Henrik Fricke & André Rusakow`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://yetanother.blog`,
+    siteUrl,
     social: {
       twitter: `@_yetanotherblog`,
     },
@@ -99,6 +108,27 @@ module.exports = {
       options: {
         rule: {
           include: /src\/.*\.svg/,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => process.env.NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
         },
       },
     },
