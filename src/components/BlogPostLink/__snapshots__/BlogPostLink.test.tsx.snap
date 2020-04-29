@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPostLink component should render a BlogPostLink w/ content 1`] = `
+<div>
+  <a
+    class="sc-fzpans faoBU"
+    href="/some-url"
+  >
+    <h2
+      class="sc-AxirZ epqEum"
+    >
+      some title
+    </h2>
+    <div>
+      Some Content 
+    </div>
+    <p
+      class="sc-AxhCb gYeYR"
+    >
+      Some more text...
+    </p>
+    <span
+      class="sc-AxmLO fUYNGj"
+    >
+      <span
+        class="sc-AxheI jxxOzf"
+      >
+        read more
+      </span>
+    </span>
+  </a>
+</div>
+`;

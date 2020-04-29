@@ -1,12 +1,12 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link as GatsbyLink } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { Typography } from '../components/Typography/Typography';
 import { useTheme } from 'styled-components';
-import styled from 'styled-components';
-import { Link } from '../components/Link/Link';
 import { AllGuideBlogPostsQuery } from '../../graphql-types';
+import { BlogPostLink } from '../components/BlogPostLink/BlogPostLink';
+import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaData';
 
 const Guides: React.FC = () => {
   const theme = useTheme();
@@ -37,34 +37,28 @@ const Guides: React.FC = () => {
 
   const posts = data.allMdx.nodes;
 
-  const StyledGatsbyLink = styled(GatsbyLink)`
-    display: block;
-    text-decoration: none;
-    font-family: inherit;
-    color: inherit;
-    position: relative;
-  `;
-
   return (
     <Layout size="narrow">
       <SEO
         title="Guides ✨"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        keywords={[`blog`, `web development`, `javascript`, `react`, `guide`]}
       />
       <Typography variant="title" mb={theme.space.l}>
-        Guides ✨
+        Yet Another Guide ✨
       </Typography>
       <Typography variant="subheadline" fontWeight="400" mb={theme.space.xxl}>
-        We introduce a detailed guide every month about the latest trends on the
-        web.
+        We introduce detailed guides about the latest trends in web development
+        and beyond.
       </Typography>
+
       {posts.map((node) => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
         const date = node!.frontmatter!.date!;
         const dateUrl = node!.frontmatter!.dateUrl!;
-
+        const words = node!.wordCount?.words;
+        const timeToRead = node.timeToRead;
         const title = frontmatter.title!;
         const url = `guides/${dateUrl}-${slug}`;
 
@@ -73,30 +67,20 @@ const Guides: React.FC = () => {
         }
 
         return (
-          <StyledGatsbyLink to={url} key={slug}>
-            <Typography variant="headline" mb={theme.space.m}>
-              {title}
-            </Typography>
-            <Typography
-              fontFamily="Source Code Pro"
-              variant="tinyText"
-              marginBottom={theme.space.l}
-            >
-              {date} • {node.timeToRead}min to read • {node.wordCount?.words}{' '}
-              words
-            </Typography>
-            <Typography variant="text" mb={theme.space.m}>
-              {excerpt}
-            </Typography>
-            <Link
-              display="block"
-              variant="secondary"
-              component="span"
-              marginBottom={theme.space.xxl}
-            >
-              read more
-            </Link>
-          </StyledGatsbyLink>
+          <BlogPostLink
+            url={url}
+            title={title}
+            slug={slug}
+            excerpt={excerpt}
+            blogType="guide"
+            metaData={
+              <BlogPostMetaData
+                date={date}
+                wordCount={words}
+                timeToRead={timeToRead}
+              />
+            }
+          />
         );
       })}
     </Layout>

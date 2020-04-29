@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogPostMetaData component should render a BlogPostMetaData w/ content 1`] = `
+<div>
+  <p
+    class="sc-AxgMl cHIyhd"
+    font-family="Source Code Pro"
+    font-weight="600"
+  >
+    May 25, 2020
+     • 
+    4
+    min to read • 
+    1337
+     words
+  </p>
+</div>
+`;
