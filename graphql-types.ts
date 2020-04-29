@@ -3052,7 +3052,7 @@ export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSit
 export type Unnamed_2_QueryVariables = {};
 
 
-export type Unnamed_2_Query = { guides: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'slug'>> }> }, repos: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'slug'>> }> } };
+export type Unnamed_2_Query = { guides: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'slug' | 'draft'>> }> }, repos: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'slug' | 'draft'>> }> } };
 
 export type CookiePolicyQueryVariables = {};
 
