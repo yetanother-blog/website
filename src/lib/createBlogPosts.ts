@@ -6,6 +6,7 @@ interface Post {
   frontmatter: {
     slug: string;
     date: string;
+    draft: boolean;
   };
 }
 
@@ -25,6 +26,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
           frontmatter {
             date
             slug
+            draft
           }
         }
       }
@@ -35,6 +37,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
           frontmatter {
             date
             slug
+            draft
           }
         }
       }
@@ -59,6 +62,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
       component: blogPostTemplate,
       context: {
         slug: post.frontmatter.slug,
+        draft: post.frontmatter.draft,
       },
     });
   });
@@ -74,6 +78,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
       component: blogPostTemplate,
       context: {
         slug: post.frontmatter.slug,
+        draft: post.frontmatter.draft,
       },
     });
   });

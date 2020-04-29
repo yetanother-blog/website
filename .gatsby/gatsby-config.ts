@@ -75,5 +75,24 @@ module.exports = {
         documentIds: [`46807218`],
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+
+            allSitePage(filter: { context: { draft: { ne: true }}}) {
+              nodes {
+                path
+              }
+            }
+          }`,
+      },
+    },
   ],
 };
