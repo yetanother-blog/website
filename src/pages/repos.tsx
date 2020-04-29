@@ -1,17 +1,12 @@
 import React from 'react';
-import {
-  graphql,
-  useStaticQuery,
-  PageRendererProps,
-  Link as GatsbyLink,
-} from 'gatsby';
+import { graphql, useStaticQuery, PageRendererProps } from 'gatsby';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { Typography } from '../components/Typography/Typography';
 import { useTheme } from 'styled-components';
-import { Link } from '../components/Link/Link';
-import styled from 'styled-components';
 import { AllRepoBlogPostsQuery } from '../../graphql-types';
+import { BlogPostLink } from '../components/BlogPostLink/BlogPostLink';
+import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaData';
 
 const Repos: React.FC<PageRendererProps> = () => {
   const theme = useTheme();
@@ -42,22 +37,14 @@ const Repos: React.FC<PageRendererProps> = () => {
 
   const posts = data.allMdx.nodes;
 
-  const StyledGatsbyLink = styled(GatsbyLink)`
-    display: block;
-    text-decoration: none;
-    font-family: inherit;
-    color: inherit;
-    position: relative;
-  `;
-
   return (
     <Layout size="narrow">
       <SEO
         title="Repos 🌟"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        keywords={[`blog`, `javascript`, `react`, `github repositories`]}
       />
       <Typography variant="title" mb={theme.space.l}>
-        Yet another Repo 🌟
+        Yet Another Repo 🌟
       </Typography>
       <Typography
         variant="subheadline"
@@ -74,8 +61,9 @@ const Repos: React.FC<PageRendererProps> = () => {
         const date = node!.frontmatter!.date!;
         const excerpt = node!.excerpt!;
         const dateUrl = node!.frontmatter!.dateUrl!;
+        const words = node!.wordCount?.words;
+        const timeToRead = node.timeToRead;
         const url = `repos/${dateUrl}-${slug}`;
-
         const title = frontmatter.title || slug;
 
         if (frontmatter.draft === true) {
@@ -83,29 +71,20 @@ const Repos: React.FC<PageRendererProps> = () => {
         }
 
         return (
-          <StyledGatsbyLink to={url} key={slug}>
-            <Typography variant="headline" mb={theme.space.xs}>
-              {title}
-            </Typography>
-            <Typography
-              fontFamily="Source Code Pro"
-              variant="tinyText"
-              marginBottom={theme.space.l}
-            >
-              {date} • {node.timeToRead}min to read • {node.wordCount?.words}{' '}
-              words
-            </Typography>
-            <Typography variant="text" mb={theme.space.m}>
-              {excerpt}
-            </Typography>
-            <Link
-              display="block"
-              component="span"
-              marginBottom={theme.space.xxl}
-            >
-              read more
-            </Link>
-          </StyledGatsbyLink>
+          <BlogPostLink
+            url={url}
+            title={title}
+            slug={slug}
+            excerpt={excerpt}
+            blogType="repo"
+            metaData={
+              <BlogPostMetaData
+                date={date}
+                wordCount={words}
+                timeToRead={timeToRead}
+              />
+            }
+          />
         );
       })}
     </Layout>
