@@ -52,11 +52,11 @@ const Guides: React.FC = () => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <Typography variant="title" mb={theme.space.l}>
-        Guides ✨
+        Yet Another Guide ✨
       </Typography>
       <Typography variant="subheadline" fontWeight="400" mb={theme.space.xxl}>
-        We introduce a detailed guide every month about the latest trends on the
-        web.
+        We introduce detailed guides about the latest trends in web development
+        and beyond.
       </Typography>
       {posts.map((node) => {
         const frontmatter = node!.frontmatter!;

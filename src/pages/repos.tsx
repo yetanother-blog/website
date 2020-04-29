@@ -57,15 +57,15 @@ const Repos: React.FC<PageRendererProps> = () => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <Typography variant="title" mb={theme.space.l}>
-        Repos 🌟
+        Yet another Repo 🌟
       </Typography>
       <Typography
         variant="subheadline"
         fontWeight="400"
         marginBottom={theme.space.xxl}
       >
-        We introduce independent repositories on a weekly basis and provide
-        opinionated feedback.
+        We introduce independent repositories and provide a short and on point
+        opinion.
       </Typography>
 
       {posts.map((node) => {

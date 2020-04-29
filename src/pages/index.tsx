@@ -42,11 +42,11 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
             component="span"
             mb={theme.space.m}
           >
-            repos
+            yet another repo
           </Link>
           <Typography variant="smallText">
-            Check out the latest indipendent repository on the internet. We
-            provide you opinionated information.
+            Yet another repo provide opinionated information about the latest
+            independent repositories.
           </Typography>
         </Card>
         <Card
@@ -60,11 +60,10 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
             component="span"
             mb={theme.space.m}
           >
-            guides
+            yet another guide
           </Link>
           <Typography variant="smallText">
-            On a monthly basis we create valueble guides about the latest
-            technologies on the web.
+            Yet another guide about the latest technologies on the web.
           </Typography>
         </Card>
       </Box>
