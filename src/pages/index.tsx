@@ -13,7 +13,7 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
 
   return (
     <Layout>
-      <SEO title="Hi 👋" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
+      <SEO title="Hi 👋" />
 
       <Typography variant="title" mb={20}>
         Hi 👋,
