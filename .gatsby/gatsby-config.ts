@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `yetanother.blog`,
     author: `Henrik Fricke & André Rusakow`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `We would like to help you to stay up to date about the latest trends in web developement`,
     siteUrl,
     social: {
       twitter: `@_yetanotherblog`,
@@ -130,6 +130,56 @@ module.exports = {
             host: null,
           },
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            output: '/rss.xml',
+            title: 'yetanother.blog',
+            //@ts-ignore
+            serialize({ query: { site, allMdx } }) {
+              //@ts-ignore
+              return allMdx.nodes.map((node) => {
+                const path =
+                  node.fileAbsolutePath.indexOf('/guides/') > -1
+                    ? 'guides'
+                    : 'repos';
+
+                return {
+                  title: node.frontmatter.title,
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: `${site.siteMetadata.siteUrl}/${path}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/${path}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
+                  custom_elements: [{ 'content:encoded': node.html }],
+                };
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  filter: { fileAbsolutePath: { regex: "/.+content/(guides|repos).+/" }, frontmatter: { draft: { ne: true } } }
+                  sort: { fields: [frontmatter___date], order: DESC }
+                ) {
+                  nodes {
+                    excerpt
+                    fileAbsolutePath
+                    html
+                    frontmatter {
+                      title
+                      date
+                      dateUrl: date(formatString: "YYYY-MM-DD")
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+          },
+        ],
       },
     },
   ],
