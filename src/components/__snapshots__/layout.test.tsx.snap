@@ -47,7 +47,7 @@ exports[`Layout renders a header 1`] = `
           <span
             class="sc-AxjAm hxcjNF"
           >
-            Guide
+            Guides
           </span>
         </a>
         <a
