@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `yetanother.blog`,
     author: `Henrik Fricke & André Rusakow`,
-    description: `We would like to help you to stay up to date about the latest trends in web developement`,
+    description: `We would like to help you to stay up to date about the latest trends in web development`,
     siteUrl,
     social: {
       twitter: `@_yetanotherblog`,

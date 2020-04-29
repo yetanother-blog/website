@@ -23,7 +23,7 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
       </Typography>
       <Typography variant="subheadline" fontWeight="400" mb={theme.space.xl}>
         We would like to help you to stay up to date about the latest
-        <br /> trends in web developement
+        <br /> trends in web development
       </Typography>
       <Box
         display="flex"
