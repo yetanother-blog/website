@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component should render correctly w/ list item 1`] = `
+<div>
+  <ul
+    class="sc-AxjAm hkumP"
+  >
+    <li
+      class="sc-AxjAm cPBeYE"
+    >
+      Hello One
+    </li>
+    <li
+      class="sc-AxjAm cPBeYE"
+    >
+      Hello Two
+    </li>
+    <li
+      class="sc-AxjAm cPBeYE"
+    >
+      Hello Hundred
+    </li>
+  </ul>
+</div>
+`;
