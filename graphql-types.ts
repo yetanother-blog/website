@@ -2479,10 +2479,12 @@ export type SitePageConnectionGroupArgs = {
 
 export type SitePageContext = {
   slug?: Maybe<Scalars['String']>;
+  draft?: Maybe<Scalars['Boolean']>;
 };
 
 export type SitePageContextFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
+  draft?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2585,6 +2587,7 @@ export type SitePageFieldsEnum =
   'internal___type' |
   'isCreatedByStatefulCreatePages' |
   'context___slug' |
+  'context___draft' |
   'pluginCreator___id' |
   'pluginCreator___parent___id' |
   'pluginCreator___parent___parent___id' |
@@ -2636,6 +2639,7 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___icon' |
   'pluginCreator___pluginOptions___pathToConfigModule' |
   'pluginCreator___pluginOptions___documentIds' |
+  'pluginCreator___pluginOptions___query' |
   'pluginCreator___pluginOptions___configDir' |
   'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
@@ -2835,6 +2839,10 @@ export type SitePluginFieldsEnum =
   'pluginOptions___icon' |
   'pluginOptions___pathToConfigModule' |
   'pluginOptions___documentIds' |
+  'pluginOptions___query' |
+  'pluginOptions___env___production___policy' |
+  'pluginOptions___env___branch_deploy___policy' |
+  'pluginOptions___env___deploy_preview___policy' |
   'pluginOptions___configDir' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
@@ -2962,6 +2970,8 @@ export type SitePluginPluginOptions = {
   icon?: Maybe<Scalars['String']>;
   pathToConfigModule?: Maybe<Scalars['String']>;
   documentIds?: Maybe<Array<Maybe<Scalars['String']>>>;
+  query?: Maybe<Scalars['String']>;
+  env?: Maybe<SitePluginPluginOptionsEnv>;
   configDir?: Maybe<Scalars['String']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
@@ -2972,6 +2982,82 @@ export type SitePluginPluginOptionsDefaultLayouts = {
 
 export type SitePluginPluginOptionsDefaultLayoutsFilterInput = {
   posts?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsEnv = {
+  production?: Maybe<SitePluginPluginOptionsEnvProduction>;
+  branch_deploy?: Maybe<SitePluginPluginOptionsEnvBranch_Deploy>;
+  deploy_preview?: Maybe<SitePluginPluginOptionsEnvDeploy_Preview>;
+};
+
+export type SitePluginPluginOptionsEnvBranch_Deploy = {
+  policy?: Maybe<Array<Maybe<SitePluginPluginOptionsEnvBranch_DeployPolicy>>>;
+};
+
+export type SitePluginPluginOptionsEnvBranch_DeployFilterInput = {
+  policy?: Maybe<SitePluginPluginOptionsEnvBranch_DeployPolicyFilterListInput>;
+};
+
+export type SitePluginPluginOptionsEnvBranch_DeployPolicy = {
+  userAgent?: Maybe<Scalars['String']>;
+  disallow?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+export type SitePluginPluginOptionsEnvBranch_DeployPolicyFilterInput = {
+  userAgent?: Maybe<StringQueryOperatorInput>;
+  disallow?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsEnvBranch_DeployPolicyFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsEnvBranch_DeployPolicyFilterInput>;
+};
+
+export type SitePluginPluginOptionsEnvDeploy_Preview = {
+  policy?: Maybe<Array<Maybe<SitePluginPluginOptionsEnvDeploy_PreviewPolicy>>>;
+};
+
+export type SitePluginPluginOptionsEnvDeploy_PreviewFilterInput = {
+  policy?: Maybe<SitePluginPluginOptionsEnvDeploy_PreviewPolicyFilterListInput>;
+};
+
+export type SitePluginPluginOptionsEnvDeploy_PreviewPolicy = {
+  userAgent?: Maybe<Scalars['String']>;
+  disallow?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+export type SitePluginPluginOptionsEnvDeploy_PreviewPolicyFilterInput = {
+  userAgent?: Maybe<StringQueryOperatorInput>;
+  disallow?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsEnvDeploy_PreviewPolicyFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsEnvDeploy_PreviewPolicyFilterInput>;
+};
+
+export type SitePluginPluginOptionsEnvFilterInput = {
+  production?: Maybe<SitePluginPluginOptionsEnvProductionFilterInput>;
+  branch_deploy?: Maybe<SitePluginPluginOptionsEnvBranch_DeployFilterInput>;
+  deploy_preview?: Maybe<SitePluginPluginOptionsEnvDeploy_PreviewFilterInput>;
+};
+
+export type SitePluginPluginOptionsEnvProduction = {
+  policy?: Maybe<Array<Maybe<SitePluginPluginOptionsEnvProductionPolicy>>>;
+};
+
+export type SitePluginPluginOptionsEnvProductionFilterInput = {
+  policy?: Maybe<SitePluginPluginOptionsEnvProductionPolicyFilterListInput>;
+};
+
+export type SitePluginPluginOptionsEnvProductionPolicy = {
+  userAgent?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsEnvProductionPolicyFilterInput = {
+  userAgent?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsEnvProductionPolicyFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsEnvProductionPolicyFilterInput>;
 };
 
 export type SitePluginPluginOptionsFilterInput = {
@@ -2985,6 +3071,8 @@ export type SitePluginPluginOptionsFilterInput = {
   icon?: Maybe<StringQueryOperatorInput>;
   pathToConfigModule?: Maybe<StringQueryOperatorInput>;
   documentIds?: Maybe<StringQueryOperatorInput>;
+  query?: Maybe<StringQueryOperatorInput>;
+  env?: Maybe<SitePluginPluginOptionsEnvFilterInput>;
   configDir?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
