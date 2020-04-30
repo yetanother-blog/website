@@ -1235,14 +1235,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
-  version "7.9.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
-  integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.5.1":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
   integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
@@ -10111,10 +10104,10 @@ fuzzy@^0.1.3:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
-gatsby-cli@^2.12.1:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.1.tgz#fdf32b7a47d64f814e39e911b9d4865654679902"
-  integrity sha512-ZD3keYu0dtMQvssFREejyB3qA277rZQqzZnPAua7Gy6ExILseNXjbOewz9M9CymfqFZjAovpBmoIrcGe5lge4Q==
+gatsby-cli@^2.12.5:
+  version "2.12.5"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.5.tgz#f79fd1d466fa121b28b7dc3f90e8b4b704008e4f"
+  integrity sha512-YH2XDGNWRJNYq4jHbHKSS8Wy1/Ao6k6HHKJMOCtWMmeencurAELbkXUVCxkqL/3FxFUUbWOw4j6nkiWfsHVznw==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/runtime" "^7.9.2"
@@ -10132,7 +10125,7 @@ gatsby-cli@^2.12.1:
     fs-exists-cached "^1.0.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^1.2.0"
-    gatsby-recipes "^0.1.1"
+    gatsby-recipes "^0.1.6"
     gatsby-telemetry "^1.3.0"
     hosted-git-info "^3.0.4"
     is-valid-path "^0.1.1"
@@ -10421,10 +10414,10 @@ gatsby-react-router-scroll@^2.3.0:
     scroll-behavior "^0.9.12"
     warning "^3.0.0"
 
-gatsby-recipes@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.1.1.tgz#337130a829df700e435ba0b9d3d470bd15ed4702"
-  integrity sha512-c84NqjeTo2vAPPmokSkQ0eyj1+Vp8MXRtoHntCnTog/RE2HmM1SoIU8IWy6+O14Nr2i8MbagEjve4KklQ3/tVw==
+gatsby-recipes@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.1.6.tgz#2038a1ec923076046d413f4e114c3ecb349e4b2a"
+  integrity sha512-/ViZfWApGTtBFEZgeeRYjwo3lvv0k2UWbzQyeTM77MQJJ7fWGvJjpZ8m7zs/gGi6Q/E7mB4cRPkC9iLhZne5SQ==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/generator" "^7.9.5"
@@ -10465,6 +10458,7 @@ gatsby-recipes@^0.1.1:
     ink-link "^1.1.0"
     ink-select-input "^3.1.2"
     ink-spinner "^3.0.1"
+    is-binary-path "^2.1.0"
     is-blank "^2.1.0"
     is-newline "^1.0.0"
     is-relative "^1.0.0"
@@ -10615,10 +10609,10 @@ gatsby-transformer-sharp@^2.5.0:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby@^2.21.1:
-  version "2.21.1"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.1.tgz#60f649fdfb579860cba7f6395e59dc0572f79075"
-  integrity sha512-Pf8pAC3QZMxD1cTOA4T1vFVxricZYlVf02ei0Dba/Y/NVABpDsEqpKqs59BQVvRk5GcuLaBEHv7Q93tNSfDBsA==
+gatsby@^2.21.5:
+  version "2.21.5"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.5.tgz#4ee3542db41ac318f7d44c29b20da79e86b64c75"
+  integrity sha512-p4kA7G4ROhgreESV6CQxOI/ezNGuXou+VSJhiM4zWc+99TinWEQ+V/RJ0KuVlp8ca4iCeS2+HqFMr/uORKHnfA==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/core" "^7.9.0"
@@ -10681,7 +10675,7 @@ gatsby@^2.21.1:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.12.1"
+    gatsby-cli "^2.12.5"
     gatsby-core-utils "^1.2.0"
     gatsby-graphiql-explorer "^0.4.0"
     gatsby-link "^2.4.0"
@@ -12439,7 +12433,7 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
-is-binary-path@~2.1.0:
+is-binary-path@^2.1.0, is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-binary-path/-/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
   integrity sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==
