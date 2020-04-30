@@ -72,6 +72,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         width="100%"
         flex="1 0 auto"
         maxWidth={isNarrow ? '680px' : '940px'}
+        mb={theme.space.xl}
       >
         {children}
       </Box>
