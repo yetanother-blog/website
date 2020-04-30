@@ -14,9 +14,10 @@ exports[`Layout renders a header 1`] = `
       width="100%"
     >
       <a
+        aria-label="logo"
         class="sc-fzpans jNJyGJ"
         href="/"
-        role="logo"
+        role="navigation"
       >
         <p
           class="sc-AxmLO iODOfY sc-fzplWN hFAfpW"
@@ -123,7 +124,7 @@ exports[`Layout renders a header 1`] = `
       </button>
     </nav>
     <main
-      class="sc-fzoyAV jLWyWj"
+      class="sc-fzoyAV jSewga"
       width="100%"
     >
       <main>

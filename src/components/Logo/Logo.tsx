@@ -22,7 +22,7 @@ const StyledTypography = styled(Typography)`
 
 export const Logo: React.FC<LogoProps> = ({ to }) => {
   return (
-    <StyledGatsbyLink to={to} role="logo">
+    <StyledGatsbyLink to={to} role="navigation" aria-label="logo">
       <StyledTypography
         variant="text"
         fontWeight={600}

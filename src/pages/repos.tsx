@@ -7,6 +7,7 @@ import { useTheme } from 'styled-components';
 import { AllRepoBlogPostsQuery } from '../../graphql-types';
 import { BlogPostLink } from '../components/BlogPostLink/BlogPostLink';
 import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaData';
+import { Teaser } from '../components/Teaser/Teaser';
 
 const Repos: React.FC<PageRendererProps> = () => {
   const theme = useTheme();
@@ -37,6 +38,8 @@ const Repos: React.FC<PageRendererProps> = () => {
 
   const posts = data.allMdx.nodes;
 
+  console.log('post', posts);
+
   return (
     <Layout size="narrow">
       <SEO
@@ -54,6 +57,7 @@ const Repos: React.FC<PageRendererProps> = () => {
         We introduce independent repositories and provide a short and on point
         opinion.
       </Typography>
+      <Teaser>Comming Soon...</Teaser>
 
       {posts.map((node) => {
         const frontmatter = node!.frontmatter!;

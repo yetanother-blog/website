@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teaser component should render a teaser w/ content 1`] = `
+<div>
+  <div
+    class="sc-AxjAm jtorcg"
+    display="flex"
+  >
+    <span
+      class="sc-Axmtr fCbTzN"
+    >
+      <svg
+        class="sc-fzozJi keiRCo"
+        data-file-name="SvgBrowser"
+      />
+      <svg
+        class="sc-AxmLO hkRIbO"
+        data-file-name="SvgBackground"
+      />
+    </span>
+    <div
+      class="sc-fzoLsD hghlzN"
+    >
+      <h2
+        class="sc-AxirZ hjYpfA"
+        font-family="Source Code Pro"
+        font-weight="600"
+      >
+        Hello World
+      </h2>
+    </div>
+  </div>
+</div>
+`;

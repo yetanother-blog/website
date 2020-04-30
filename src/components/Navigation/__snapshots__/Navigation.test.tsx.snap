@@ -9,9 +9,10 @@ exports[`Navigation component should render social link for twitter 1`] = `
     width="100%"
   >
     <a
+      aria-label="logo"
       class="sc-AxheI ioazkw"
       href="/"
-      role="logo"
+      role="navigation"
     >
       <p
         class="sc-AxhCb cHVtzT sc-Axmtr hJiVbd"
