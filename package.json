@@ -72,12 +72,8 @@
     "babel-preset-gatsby": "^0.4.0",
     "gatsby-plugin-ts-config": "^0.2.2",
     "graphql": "^15.0.0",
-<<<<<<< HEAD
     "jest": "^25.5.2",
-=======
-    "jest": "^25.5.0",
     "jest-svg-transformer": "^1.0.0",
->>>>>>> chore: add jest-svg-transformer' to parse svg in jest
     "netlify-cli": "^2.48.0",
     "netlify-plugin-gatsby-cache": "^0.2.1",
     "node-fetch": "^2.6.0",

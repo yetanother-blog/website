@@ -9,7 +9,6 @@
     fill="currentColor"
     >
     <animate
-        id="o1"
         dur="6s"
         repeatCount="indefinite"
         fill="freeze"
