@@ -2638,9 +2638,15 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___display' |
   'pluginCreator___pluginOptions___icon' |
   'pluginCreator___pluginOptions___pathToConfigModule' |
+  'pluginCreator___pluginOptions___omitGoogleFont' |
   'pluginCreator___pluginOptions___documentIds' |
   'pluginCreator___pluginOptions___query' |
+  'pluginCreator___pluginOptions___feeds' |
+  'pluginCreator___pluginOptions___feeds___output' |
+  'pluginCreator___pluginOptions___feeds___title' |
+  'pluginCreator___pluginOptions___feeds___query' |
   'pluginCreator___pluginOptions___configDir' |
+  'pluginCreator___pluginOptions___tsNode' |
   'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
   'pluginCreator___browserAPIs' |
@@ -2838,12 +2844,18 @@ export type SitePluginFieldsEnum =
   'pluginOptions___display' |
   'pluginOptions___icon' |
   'pluginOptions___pathToConfigModule' |
+  'pluginOptions___omitGoogleFont' |
   'pluginOptions___documentIds' |
   'pluginOptions___query' |
   'pluginOptions___env___production___policy' |
   'pluginOptions___env___branch_deploy___policy' |
   'pluginOptions___env___deploy_preview___policy' |
+  'pluginOptions___feeds' |
+  'pluginOptions___feeds___output' |
+  'pluginOptions___feeds___title' |
+  'pluginOptions___feeds___query' |
   'pluginOptions___configDir' |
+  'pluginOptions___tsNode' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
   'browserAPIs' |
@@ -2969,10 +2981,13 @@ export type SitePluginPluginOptions = {
   display?: Maybe<Scalars['String']>;
   icon?: Maybe<Scalars['String']>;
   pathToConfigModule?: Maybe<Scalars['String']>;
+  omitGoogleFont?: Maybe<Scalars['Boolean']>;
   documentIds?: Maybe<Array<Maybe<Scalars['String']>>>;
   query?: Maybe<Scalars['String']>;
   env?: Maybe<SitePluginPluginOptionsEnv>;
+  feeds?: Maybe<Array<Maybe<SitePluginPluginOptionsFeeds>>>;
   configDir?: Maybe<Scalars['String']>;
+  tsNode?: Maybe<Scalars['Boolean']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -3060,6 +3075,22 @@ export type SitePluginPluginOptionsEnvProductionPolicyFilterListInput = {
   elemMatch?: Maybe<SitePluginPluginOptionsEnvProductionPolicyFilterInput>;
 };
 
+export type SitePluginPluginOptionsFeeds = {
+  output?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  query?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsFeedsFilterInput = {
+  output?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  query?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsFeedsFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsFeedsFilterInput>;
+};
+
 export type SitePluginPluginOptionsFilterInput = {
   extensions?: Maybe<StringQueryOperatorInput>;
   defaultLayouts?: Maybe<SitePluginPluginOptionsDefaultLayoutsFilterInput>;
@@ -3070,10 +3101,13 @@ export type SitePluginPluginOptionsFilterInput = {
   display?: Maybe<StringQueryOperatorInput>;
   icon?: Maybe<StringQueryOperatorInput>;
   pathToConfigModule?: Maybe<StringQueryOperatorInput>;
+  omitGoogleFont?: Maybe<BooleanQueryOperatorInput>;
   documentIds?: Maybe<StringQueryOperatorInput>;
   query?: Maybe<StringQueryOperatorInput>;
   env?: Maybe<SitePluginPluginOptionsEnvFilterInput>;
+  feeds?: Maybe<SitePluginPluginOptionsFeedsFilterListInput>;
   configDir?: Maybe<StringQueryOperatorInput>;
+  tsNode?: Maybe<BooleanQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
