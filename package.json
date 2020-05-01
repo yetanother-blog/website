@@ -11,7 +11,7 @@
     "@mdx-js/react": "^1.6.0",
     "@storybook/addon-docs": "^5.3.18",
     "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.21.7",
+    "gatsby": "^2.21.8",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-feed": "^2.5.0",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
@@ -95,7 +95,7 @@
     "url": "git+https://github.com/yetanother-blog/website.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "gatsby develop",
     "serve": "gatsby serve",
