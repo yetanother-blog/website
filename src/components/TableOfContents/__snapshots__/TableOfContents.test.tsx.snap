@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Of Contents ui should render toc list w/ items 1`] = `
+<div>
+  <div>
+    <h2
+      class="sc-Axmtr eToRKj"
+    >
+      Table Of Contents
+    </h2>
+    <ul
+      class="sc-AxjAm hkumP"
+    >
+      <li
+        class="sc-AxjAm cPBeYE"
+      >
+        <a
+          class="sc-AxhUy cAohgn"
+          href="/#some-headline"
+          type="inline"
+        >
+          <span
+            class="sc-AxirZ jnBuLy"
+          >
+            some headline
+          </span>
+        </a>
+      </li>
+      <li
+        class="sc-AxjAm cPBeYE"
+      >
+        <a
+          class="sc-AxhUy cAohgn"
+          href="/#some-other-headline"
+          type="inline"
+        >
+          <span
+            class="sc-AxirZ jnBuLy"
+          >
+            some other headline
+          </span>
+        </a>
+      </li>
+      <li
+        class="sc-AxjAm cPBeYE"
+      >
+        <a
+          class="sc-AxhUy cAohgn"
+          href="/#more-headlines"
+          type="inline"
+        >
+          <span
+            class="sc-AxirZ jnBuLy"
+          >
+            more headlines
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
