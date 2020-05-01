@@ -23,6 +23,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
   const excerpt = post.excerpt!;
   const frontmatter = post.frontmatter!;
   const body = post.body!;
+  const headings = post.headings;
 
   return (
     <Layout size="narrow">
@@ -38,7 +39,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
         {post.wordCount?.words} words
       </Typography>
       <MDXProvider components={mxdComponents}>
-        <MDXRenderer>{body}</MDXRenderer>
+        <MDXRenderer headings={headings}>{body}</MDXRenderer>
       </MDXProvider>
     </Layout>
   );
@@ -53,6 +54,10 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       body
       timeToRead
+      headings {
+        value
+        depth
+      }
       wordCount {
         words
       }
