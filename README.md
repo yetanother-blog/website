@@ -83,18 +83,17 @@ We’re going to structure our posts in years. In each one of those we’re goin
 
 In order to create content, each `index.mdx` file should have `frontmatter`. Frontmatter is a way to assign properties to the contents, in this case, a title, slug, format, published date and a published flag (true or false).
 
-```
+```mdx
 ---
 title: Hello World
-date: "2020-05-25T23:36:03.284Z"
-slug: "/hello-world"
-format: "guide"
-desription: "some description"
+date: '2020-05-25T23:36:03.284Z'
+slug: '/hello-world'
+format: 'guide'
+desription: 'some description'
 pubslished: true
 ---
 
 # Hello World
-
 ```
 
 ## Storybook
@@ -103,13 +102,13 @@ We use Storybook for developing UI components in isolation.
 
 **Local Development**
 
-```
+```bash
 yarn storybook
 ```
 
 That's it. Storybook is available at:
 
-```
+```bash
 http://localhost:6006/
 ```
 
@@ -134,5 +133,6 @@ You want to help us and fix bugs, improve our docs or provide some feedback. Fee
 - [gatsby-plugin-typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/)
 - [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
 - [gatsby-plugin-react-svg](https://www.gatsbyjs.org/packages/gatsby-plugin-react-svg/)
+- [gatsby-remark-slug](https://www.gatsbyjs.org/packages/gatsby-remark-slug/)
 
 Licensed under the [MIT License](./LICENSE).

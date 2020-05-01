@@ -3476,6 +3476,11 @@
     "@types/got" "^8"
     "@types/node" "*"
 
+"@types/emoji-regex@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@types/emoji-regex/-/emoji-regex-8.0.0.tgz#df215c9ff818e071087fb8e7e6e74c4cb42a1303"
+  integrity sha512-iacbaYN9IWWrGWTwlYLVOeUtN/e4cjN9Uh6v7Yo1Qa/vJzeSQeh10L/erBBSl53BTmbnQ07vsWp8mmNHGI4WbQ==
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -8578,6 +8583,11 @@ emoji-regex@^8.0.0:
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
 
+emoji-regex@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.0.0.tgz#48a2309cc8a1d2e9d23bc6a67c39b63032e76ea4"
+  integrity sha512-6p1NII1Vm62wni/VR/cUMauVQoxmLVb9csqQlvLz+hO2gk8U2UYDfXHQSUYIBKmZwAKz867IDqG7B+u0mj+M6w==
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
@@ -10145,10 +10155,10 @@ fuzzy@^0.1.3:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
-gatsby-cli@^2.12.5:
-  version "2.12.5"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.5.tgz#f79fd1d466fa121b28b7dc3f90e8b4b704008e4f"
-  integrity sha512-YH2XDGNWRJNYq4jHbHKSS8Wy1/Ao6k6HHKJMOCtWMmeencurAELbkXUVCxkqL/3FxFUUbWOw4j6nkiWfsHVznw==
+gatsby-cli@^2.12.6:
+  version "2.12.6"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.12.6.tgz#488ab6d6bf4b913b7b6f895796abfbb2cba1dfe1"
+  integrity sha512-JO8p5IlH6GqOxFrowKCpwEqVw9+t0DFXFRfhdf3Sl1UQWQ4QyxuVVEn/dalD21MofTEu0PU7KmJC3SNhOA2a3w==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/runtime" "^7.9.2"
@@ -10166,8 +10176,8 @@ gatsby-cli@^2.12.5:
     fs-exists-cached "^1.0.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^1.2.0"
-    gatsby-recipes "^0.1.6"
-    gatsby-telemetry "^1.3.0"
+    gatsby-recipes "^0.1.7"
+    gatsby-telemetry "^1.3.1"
     hosted-git-info "^3.0.4"
     is-valid-path "^0.1.1"
     lodash "^4.17.15"
@@ -10455,10 +10465,10 @@ gatsby-react-router-scroll@^2.3.0:
     scroll-behavior "^0.9.12"
     warning "^3.0.0"
 
-gatsby-recipes@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.1.6.tgz#2038a1ec923076046d413f4e114c3ecb349e4b2a"
-  integrity sha512-/ViZfWApGTtBFEZgeeRYjwo3lvv0k2UWbzQyeTM77MQJJ7fWGvJjpZ8m7zs/gGi6Q/E7mB4cRPkC9iLhZne5SQ==
+gatsby-recipes@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.1.7.tgz#de8e628b7cd38002430e804086c80241a05a7e4c"
+  integrity sha512-i39CbFmJZ11xanFyz+DhbDqS4/Hz7Aj3hEHUoQ5zF9o5BtH1yRjFvlwZ5+7sN/BAQ6IM8RsUo4yt4LAEVbOVrw==
   dependencies:
     "@babel/core" "^7.9.0"
     "@babel/generator" "^7.9.5"
@@ -10486,7 +10496,7 @@ gatsby-recipes@^0.1.6:
     express-graphql "^0.9.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^1.2.0"
-    gatsby-telemetry "^1.3.0"
+    gatsby-telemetry "^1.3.1"
     glob "^7.1.6"
     graphql "^14.6.0"
     graphql-compose "^6.3.8"
@@ -10574,6 +10584,16 @@ gatsby-remark-responsive-iframe@^2.4.1:
     lodash "^4.17.15"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-slug@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-slug/-/gatsby-remark-slug-0.1.0.tgz#4d744721e82bc1f089935d453015af4cc633af0b"
+  integrity sha512-eAq7zXIyM7+Q9ai7PHTwSUoEIlWCQoFwNgOmcJ3khixGoOgeRtQPh2f1MiFPq8BQ275tZuIg156OYtYd77IzQw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    github-slugger "^1.2.1"
+    mdast-util-to-string "^1.0.5"
+    unist-util-visit "^1.3.0"
+
 gatsby-remark-smartypants@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-smartypants/-/gatsby-remark-smartypants-2.3.0.tgz#3c463b15f464b68a196be14dbaa03378fa66c034"
@@ -10614,10 +10634,10 @@ gatsby-source-iubenda@^1.0.2:
     axios "^0.18.0"
     lodash "^4.17.10"
 
-gatsby-telemetry@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.3.0.tgz#0035b34c4190d17e5cab80ad07678fb0a80b04a5"
-  integrity sha512-efqPO6grC/lkf01bI+NPhgu6cvTY2n+ecVk1m3QTVu2K1yVW8zwqPEEQlD1jw5CZ1muF4bcc6lvMEY7BcdiHtw==
+gatsby-telemetry@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.3.1.tgz#699a7ca81798d189806e7cd4a5c71ed10dcbf844"
+  integrity sha512-UOuRSbNrRkWIi7vzwI2gxd5b+pY0HXuvrhdzB/B/SCUkDaxfKf0LIsLIjtnSAKUrNNxNKnec0jSGk3PJdUNh4g==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/runtime" "^7.9.2"
@@ -10650,10 +10670,10 @@ gatsby-transformer-sharp@^2.5.0:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby@^2.21.7:
-  version "2.21.7"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.7.tgz#b8a4fcb9d3f1f82bdc03dc6a98faa4ecf6324f87"
-  integrity sha512-OBSSyUklOKbPRYzcuBml7aSb8221SFgRgQoHKsJV2Pbcll1D9F+wQnb1WnLqLUKhDjgbE33nnJxt7rJfe63weg==
+gatsby@^2.21.8:
+  version "2.21.8"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.21.8.tgz#2ee8dcc6fb887e4c33fdd17c77cef1fe74aa3295"
+  integrity sha512-nML/UNSX78uAyKSBnkP2z1eweJ08BYnbr077lSCJPMWF8q9tqrrAFuTo+nHVYUDgEnmOAlz7JwZQk/si/2Kh+Q==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/core" "^7.9.0"
@@ -10716,13 +10736,13 @@ gatsby@^2.21.7:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.12.5"
+    gatsby-cli "^2.12.6"
     gatsby-core-utils "^1.2.0"
     gatsby-graphiql-explorer "^0.4.0"
     gatsby-link "^2.4.0"
     gatsby-plugin-page-creator "^2.3.0"
     gatsby-react-router-scroll "^2.3.0"
-    gatsby-telemetry "^1.3.0"
+    gatsby-telemetry "^1.3.1"
     glob "^7.1.6"
     got "8.3.2"
     graphql "^14.6.0"
@@ -10945,6 +10965,14 @@ github-from-package@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
+
+github-slugger-typescript@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/github-slugger-typescript/-/github-slugger-typescript-1.0.1.tgz#5b21b0646001643fc74e481012d03b21da306c53"
+  integrity sha512-ZFnRS4JezzH9HNulSpTGpqCUziaX71z8Pk9veEMMctO/6krRUqNs/GpUg/OX7uaDgybgPvwEY07WiN2r+SJ4jQ==
+  dependencies:
+    "@types/emoji-regex" "^8.0.0"
+    emoji-regex "^9.0.0"
 
 github-slugger@^1.0.0, github-slugger@^1.2.1:
   version "1.3.0"
@@ -21874,7 +21902,7 @@ unist-util-visit@2.0.2, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.0, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.3.0, unist-util-visit@^1.4.0, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==

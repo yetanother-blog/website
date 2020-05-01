@@ -2,10 +2,10 @@
   publish = "public"
 
 [[plugins]]
-package = "./.plugins/ci"
+  package = "./.plugins/ci"
 
 [[plugins]]
-package = "./.plugins/slack"
+  package = "./.plugins/slack"
 
 [[plugins]]
-package = "netlify-plugin-gatsby-cache"
+  package = "netlify-plugin-gatsby-cache"
