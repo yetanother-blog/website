@@ -17,6 +17,7 @@ export type LinkProps<C extends React.ElementType> = PolymorphicLinkProps<C> &
   MarginProps & {
     variant?: LinkVariant;
     children: React.ReactNode;
+    type?: 'inline';
   };
 
 const StyledPrimaryLink = styled(PolymorphicLink)`
@@ -48,7 +49,8 @@ const StyledTertiaryLink = styled(PolymorphicLink)`
   ${sharedStyles}
   ${smallFontLinkStyles}
   ${margin}
-  color: ${(props) => props.theme.colors.grey500};
+  color: ${(props) =>
+    props.type === 'inline' ? 'darkmagenta' : props.theme.colors.grey500};
 
   @keyframes pulse {
     0% {

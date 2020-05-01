@@ -5,6 +5,7 @@ import { useTheme } from 'styled-components';
 import styled from 'styled-components';
 import { List } from '../components/List/List';
 import { ListItem } from '../components/List/ListItem';
+import { Link } from '../components/Link/Link';
 
 const StyledBlockquote = styled(Typography)`
   border-left: 4px solid ${(props) => props.theme.colors.grey300};
@@ -59,4 +60,7 @@ export const mxdComponents: MDXProviderComponentsProp = {
   blockquote: StyledBlockquote,
   ul: List,
   li: ListItem,
+  a: (props) => {
+    return <Link variant="tertiary" type="inline" {...props} />;
+  },
 };
