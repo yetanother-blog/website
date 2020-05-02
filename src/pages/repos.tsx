@@ -38,8 +38,6 @@ const Repos: React.FC<PageRendererProps> = () => {
 
   const posts = data.allMdx.nodes;
 
-  console.log('post', posts);
-
   return (
     <Layout size="narrow">
       <SEO

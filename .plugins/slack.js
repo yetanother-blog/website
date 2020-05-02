@@ -76,8 +76,6 @@ const onError = async () => {
 };
 
 module.exports = () => {
-  console.log('CONTEXT', process.env.CONTEXT);
-
   if (process.env.CONTEXT !== 'production') {
     return {};
   }
