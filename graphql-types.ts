@@ -698,6 +698,7 @@ export type FileFieldsEnum =
   'childMdx___frontmatter___slug' |
   'childMdx___frontmatter___format' |
   'childMdx___frontmatter___draft' |
+  'childMdx___frontmatter___description' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -1608,6 +1609,7 @@ export type MdxFieldsEnum =
   'frontmatter___slug' |
   'frontmatter___format' |
   'frontmatter___draft' |
+  'frontmatter___description' |
   'body' |
   'excerpt' |
   'headings' |
@@ -1731,6 +1733,7 @@ export type MdxFrontmatter = {
   slug?: Maybe<Scalars['String']>;
   format?: Maybe<Scalars['String']>;
   draft?: Maybe<Scalars['Boolean']>;
+  description?: Maybe<Scalars['String']>;
 };
 
 
@@ -1747,6 +1750,7 @@ export type MdxFrontmatterFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
   format?: Maybe<StringQueryOperatorInput>;
   draft?: Maybe<BooleanQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -2481,56 +2485,12 @@ export type SitePageContext = {
   slug?: Maybe<Scalars['String']>;
   format?: Maybe<Scalars['String']>;
   draft?: Maybe<Scalars['Boolean']>;
-  previous?: Maybe<SitePageContextPrevious>;
-  next?: Maybe<SitePageContextNext>;
 };
 
 export type SitePageContextFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
   format?: Maybe<StringQueryOperatorInput>;
   draft?: Maybe<BooleanQueryOperatorInput>;
-  previous?: Maybe<SitePageContextPreviousFilterInput>;
-  next?: Maybe<SitePageContextNextFilterInput>;
-};
-
-export type SitePageContextNext = {
-  frontmatter?: Maybe<SitePageContextNextFrontmatter>;
-};
-
-export type SitePageContextNextFilterInput = {
-  frontmatter?: Maybe<SitePageContextNextFrontmatterFilterInput>;
-};
-
-export type SitePageContextNextFrontmatter = {
-  date?: Maybe<Scalars['Date']>;
-  dateUrl?: Maybe<Scalars['Date']>;
-  slug?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextNextFrontmatterFilterInput = {
-  date?: Maybe<DateQueryOperatorInput>;
-  dateUrl?: Maybe<DateQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePageContextPrevious = {
-  frontmatter?: Maybe<SitePageContextPreviousFrontmatter>;
-};
-
-export type SitePageContextPreviousFilterInput = {
-  frontmatter?: Maybe<SitePageContextPreviousFrontmatterFilterInput>;
-};
-
-export type SitePageContextPreviousFrontmatter = {
-  date?: Maybe<Scalars['Date']>;
-  dateUrl?: Maybe<Scalars['Date']>;
-  slug?: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextPreviousFrontmatterFilterInput = {
-  date?: Maybe<DateQueryOperatorInput>;
-  dateUrl?: Maybe<DateQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2635,12 +2595,6 @@ export type SitePageFieldsEnum =
   'context___slug' |
   'context___format' |
   'context___draft' |
-  'context___previous___frontmatter___date' |
-  'context___previous___frontmatter___dateUrl' |
-  'context___previous___frontmatter___slug' |
-  'context___next___frontmatter___date' |
-  'context___next___frontmatter___dateUrl' |
-  'context___next___frontmatter___slug' |
   'pluginCreator___id' |
   'pluginCreator___parent___id' |
   'pluginCreator___parent___parent___id' |
@@ -3246,7 +3200,7 @@ export type AllGuideBlogPostsQueryVariables = {};
 export type AllGuideBlogPostsQuery = { allMdx: { nodes: Array<(
       Pick<Mdx, 'excerpt' | 'timeToRead'>
       & { wordCount?: Maybe<Pick<MdxWordCount, 'words'>>, frontmatter?: Maybe<(
-        Pick<MdxFrontmatter, 'title' | 'format' | 'date' | 'slug' | 'draft'>
+        Pick<MdxFrontmatter, 'title' | 'format' | 'description' | 'date' | 'slug' | 'draft'>
         & { dateUrl: MdxFrontmatter['date'] }
       )> }
     )> } };
@@ -3274,7 +3228,7 @@ export type BlogPostBySlugQueryVariables = {
 
 export type BlogPostBySlugQuery = { mdx?: Maybe<(
     Pick<Mdx, 'id' | 'excerpt' | 'body' | 'timeToRead'>
-    & { headings?: Maybe<Array<Maybe<Pick<MdxHeadingMdx, 'value' | 'depth'>>>>, wordCount?: Maybe<Pick<MdxWordCount, 'words'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'date' | 'slug' | 'format'>> }
+    & { headings?: Maybe<Array<Maybe<Pick<MdxHeadingMdx, 'value' | 'depth'>>>>, wordCount?: Maybe<Pick<MdxWordCount, 'words'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'description' | 'date' | 'slug' | 'format'>> }
   )> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
