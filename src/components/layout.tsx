@@ -16,6 +16,7 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   const theme = useTheme();
+
   const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
     MobileNavigationContext
   );
@@ -39,6 +40,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
       pl={theme.space.l}
       pr={theme.space.l}
       overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
+      position={isMobileNavigationOpen ? 'fixed' : 'static'}
     >
       <Navigation>
         <Link
