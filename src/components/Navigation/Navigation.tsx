@@ -63,7 +63,12 @@ const StyledMobileNavigationButton = styled.button<LayoutProps & FlexboxProps>`
 `;
 
 const StyledNav = styled.nav<
-  WidthProps & HeightProps & LayoutProps & FlexboxProps & PaddingProps & MarginBottomProps
+  WidthProps &
+    HeightProps &
+    LayoutProps &
+    FlexboxProps &
+    PaddingProps &
+    MarginBottomProps
 >`
   ${layout}
   ${height}
@@ -85,10 +90,40 @@ const StyledMobileWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 60px 30px;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 
   > * {
+    font-size: 28px;
     margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.9s 1;
+    animation-fill-mode: forwards;
+
+    &:nth-child(4n + 1) {
+      animation-delay: 150ms;
+    }
+
+    &:nth-child(4n + 2) {
+      animation-delay: 300ms;
+    }
+
+    &:nth-child(4n + 3) {
+      animation-delay: 450ms;
+    }
+
+    &:nth-child(4n + 4) {
+      animation-delay: 600ms;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
@@ -105,7 +140,9 @@ const StyledDesktopWrapper = styled.div<LayoutProps>`
 `;
 
 export const Navigation: React.FC = ({ children }) => {
-  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(MobileNavigationContext);
+  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
+    MobileNavigationContext
+  );
   const theme = useTheme();
 
   return (
@@ -120,8 +157,12 @@ export const Navigation: React.FC = ({ children }) => {
       width="100%"
     >
       <Logo to="/" />
-      {isMobileNavigationOpen && <StyledMobileWrapper>{children}</StyledMobileWrapper>}
-      <StyledDesktopWrapper display={['none', 'flex']}>{children}</StyledDesktopWrapper>
+      {isMobileNavigationOpen && (
+        <StyledMobileWrapper>{children}</StyledMobileWrapper>
+      )}
+      <StyledDesktopWrapper display={['none', 'flex']}>
+        {children}
+      </StyledDesktopWrapper>
       <StyledMobileNavigationButton
         display={['flex', 'none']}
         height="48px"
