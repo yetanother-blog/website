@@ -9,6 +9,7 @@ const typography = new Typography({
   bodyColor: theme.colors.grey500,
   bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
   boldWeight: '600',
+  headerFontFamily: ['Source Sans Pro', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo }, options, styles) => ({
     a: {
       fontFamily: `"Source Code Pro", "sans-serif"`,
