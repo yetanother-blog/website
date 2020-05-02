@@ -4,7 +4,7 @@ import { theme } from './theme';
 
 const typography = new Typography({
   baseFontSize: '20px',
-  baseLineHeight: 1.85,
+  baseLineHeight: 1.75,
   headerColor: theme.colors.grey500,
   bodyColor: theme.colors.grey500,
   bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
