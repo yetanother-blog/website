@@ -25,6 +25,7 @@ const Guides: React.FC = () => {
           frontmatter {
             title
             format
+            description
             date(formatString: "MMMM DD, YYYY")
             slug
             dateUrl: date(formatString: "YYYY-MM-DD")
@@ -55,6 +56,7 @@ const Guides: React.FC = () => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
+        const description = node!.frontmatter!.description;
         const date = node!.frontmatter!.date!;
         const dateUrl = node!.frontmatter!.dateUrl!;
         const words = node!.wordCount?.words;
@@ -71,7 +73,7 @@ const Guides: React.FC = () => {
             url={url}
             title={title}
             slug={slug}
-            excerpt={excerpt}
+            excerpt={description || excerpt}
             blogType="guide"
             metaData={
               <BlogPostMetaData

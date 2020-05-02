@@ -25,6 +25,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
   const body = post.body!;
   const headings = post.headings;
   const format = props.pageContext.format;
+  const description = post.frontmatter!.description;
 
   const { previous, next } = props.pageContext;
   const nextUrl = `${format}/${next?.frontmatter?.dateUrl}-${next?.frontmatter?.slug}`;
@@ -32,7 +33,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
 
   return (
     <Layout size="narrow">
-      <SEO title={frontmatter.title!} description={excerpt} />
+      <SEO title={frontmatter.title!} description={description || excerpt} />
       <Typography variant="title">{post.frontmatter!.title}</Typography>
       <Typography
         variant="tinyText"
@@ -86,6 +87,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
         date(formatString: "MMMM DD, YYYY")
         slug
         format
