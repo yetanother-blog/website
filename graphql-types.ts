@@ -2479,12 +2479,58 @@ export type SitePageConnectionGroupArgs = {
 
 export type SitePageContext = {
   slug?: Maybe<Scalars['String']>;
+  format?: Maybe<Scalars['String']>;
   draft?: Maybe<Scalars['Boolean']>;
+  previous?: Maybe<SitePageContextPrevious>;
+  next?: Maybe<SitePageContextNext>;
 };
 
 export type SitePageContextFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
+  format?: Maybe<StringQueryOperatorInput>;
   draft?: Maybe<BooleanQueryOperatorInput>;
+  previous?: Maybe<SitePageContextPreviousFilterInput>;
+  next?: Maybe<SitePageContextNextFilterInput>;
+};
+
+export type SitePageContextNext = {
+  frontmatter?: Maybe<SitePageContextNextFrontmatter>;
+};
+
+export type SitePageContextNextFilterInput = {
+  frontmatter?: Maybe<SitePageContextNextFrontmatterFilterInput>;
+};
+
+export type SitePageContextNextFrontmatter = {
+  date?: Maybe<Scalars['Date']>;
+  dateUrl?: Maybe<Scalars['Date']>;
+  slug?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextNextFrontmatterFilterInput = {
+  date?: Maybe<DateQueryOperatorInput>;
+  dateUrl?: Maybe<DateQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextPrevious = {
+  frontmatter?: Maybe<SitePageContextPreviousFrontmatter>;
+};
+
+export type SitePageContextPreviousFilterInput = {
+  frontmatter?: Maybe<SitePageContextPreviousFrontmatterFilterInput>;
+};
+
+export type SitePageContextPreviousFrontmatter = {
+  date?: Maybe<Scalars['Date']>;
+  dateUrl?: Maybe<Scalars['Date']>;
+  slug?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextPreviousFrontmatterFilterInput = {
+  date?: Maybe<DateQueryOperatorInput>;
+  dateUrl?: Maybe<DateQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2587,7 +2633,14 @@ export type SitePageFieldsEnum =
   'internal___type' |
   'isCreatedByStatefulCreatePages' |
   'context___slug' |
+  'context___format' |
   'context___draft' |
+  'context___previous___frontmatter___date' |
+  'context___previous___frontmatter___dateUrl' |
+  'context___previous___frontmatter___slug' |
+  'context___next___frontmatter___date' |
+  'context___next___frontmatter___dateUrl' |
+  'context___next___frontmatter___slug' |
   'pluginCreator___id' |
   'pluginCreator___parent___id' |
   'pluginCreator___parent___parent___id' |
@@ -3174,7 +3227,13 @@ export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSit
 export type Unnamed_2_QueryVariables = {};
 
 
-export type Unnamed_2_Query = { guides: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'slug' | 'draft'>> }> }, repos: { nodes: Array<{ frontmatter?: Maybe<Pick<MdxFrontmatter, 'date' | 'slug' | 'draft'>> }> } };
+export type Unnamed_2_Query = { guides: { nodes: Array<{ frontmatter?: Maybe<(
+        Pick<MdxFrontmatter, 'date' | 'slug' | 'draft'>
+        & { dateUrl: MdxFrontmatter['date'] }
+      )> }> }, repos: { nodes: Array<{ frontmatter?: Maybe<(
+        Pick<MdxFrontmatter, 'date' | 'slug' | 'draft'>
+        & { dateUrl: MdxFrontmatter['date'] }
+      )> }> } };
 
 export type CookiePolicyQueryVariables = {};
 
@@ -3215,7 +3274,7 @@ export type BlogPostBySlugQueryVariables = {
 
 export type BlogPostBySlugQuery = { mdx?: Maybe<(
     Pick<Mdx, 'id' | 'excerpt' | 'body' | 'timeToRead'>
-    & { headings?: Maybe<Array<Maybe<Pick<MdxHeadingMdx, 'value' | 'depth'>>>>, wordCount?: Maybe<Pick<MdxWordCount, 'words'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'date'>> }
+    & { headings?: Maybe<Array<Maybe<Pick<MdxHeadingMdx, 'value' | 'depth'>>>>, wordCount?: Maybe<Pick<MdxWordCount, 'words'>>, frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'date' | 'slug' | 'format'>> }
   )> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
