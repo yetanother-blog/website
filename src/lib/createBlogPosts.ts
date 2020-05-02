@@ -25,6 +25,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
         nodes {
           frontmatter {
             date
+            dateUrl: date(formatString: "YYYY-MM-DD")
             slug
             draft
           }
@@ -36,6 +37,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
         nodes {
           frontmatter {
             date
+            dateUrl: date(formatString: "YYYY-MM-DD")
             slug
             draft
           }
@@ -51,7 +53,7 @@ export const createBlogPosts: GatsbyCreatePages = async ({
   const guides = mdx.data.guides.nodes;
   const repos = mdx.data.repos.nodes;
 
-  guides.forEach((post: Post) => {
+  guides.forEach((post: Post, index: number) => {
     const date = moment.utc(post.frontmatter.date).format('YYYY-MM-DD');
     const slug = post.frontmatter.slug;
 
@@ -62,12 +64,15 @@ export const createBlogPosts: GatsbyCreatePages = async ({
       component: blogPostTemplate,
       context: {
         slug: post.frontmatter.slug,
+        format: 'guides',
         draft: post.frontmatter.draft,
+        previous: index === guides.length - 1 ? null : guides[index - 1],
+        next: index === 0 ? null : guides[index + 1],
       },
     });
   });
 
-  repos.forEach((post: Post) => {
+  repos.forEach((post: Post, index: number) => {
     const date = moment.utc(post.frontmatter.date).format('YYYY-MM-DD');
     const slug = post.frontmatter.slug;
 
@@ -78,7 +83,10 @@ export const createBlogPosts: GatsbyCreatePages = async ({
       component: blogPostTemplate,
       context: {
         slug: post.frontmatter.slug,
+        format: 'repos',
         draft: post.frontmatter.draft,
+        previous: index === 0 ? null : repos[index - 1],
+        next: index === repos.length - 1 ? null : repos[index + 1],
       },
     });
   });
