@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useTheme } from 'styled-components';
+import { useTheme, createGlobalStyle } from 'styled-components';
 import { Link } from './Link/Link';
 import { Link as GatsbyLink } from 'gatsby';
 import { Navigation } from './Navigation/Navigation';
@@ -14,8 +14,16 @@ interface LayoutProps {
   size?: 'narrow';
 }
 
+const GlobalStyle = createGlobalStyle`
+  ::selection{
+    color: white;
+    background: ${(props) => props.theme.colors.grey500}
+  }
+`;
+
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   const theme = useTheme();
+
   const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
     MobileNavigationContext
   );
@@ -29,81 +37,85 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   };
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      minHeight="100vh"
-      m="0 auto"
-      maxWidth="940px"
-      pl={theme.space.l}
-      pr={theme.space.l}
-      overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
-    >
-      <Navigation>
-        <Link
-          variant="tertiary"
-          component={GatsbyLink}
-          onClick={handleMobileNavigation}
-          to="/repos"
-          partiallyActive
-          marginBottom={[theme.space.l, 0]}
-        >
-          Repos
-        </Link>
-        <Link
-          variant="tertiary"
-          component={GatsbyLink}
-          onClick={handleMobileNavigation}
-          to="/guides"
-          marginBottom={[theme.space.l, 0]}
-        >
-          Guides
-        </Link>
-        <SocialLink href="https://twitter.com/_yetanotherblog">
-          <Twitter />
-        </SocialLink>
-        <SocialLink href="https://github.com/yetanother-blog">
-          <Github />
-        </SocialLink>
-      </Navigation>
+    <>
+      <GlobalStyle />
       <Box
-        as="main"
-        width="100%"
-        flex="1 0 auto"
-        maxWidth={isNarrow ? '680px' : '940px'}
-        mb={theme.space.xl}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        minHeight="100vh"
+        m="0 auto"
+        maxWidth="940px"
+        pl={theme.space.l}
+        pr={theme.space.l}
+        overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
+        position={isMobileNavigationOpen ? 'fixed' : 'static'}
       >
-        {children}
+        <Navigation>
+          <Link
+            variant="tertiary"
+            component={GatsbyLink}
+            onClick={handleMobileNavigation}
+            to="/repos"
+            partiallyActive
+            marginBottom={[theme.space.l, 0]}
+          >
+            Repos
+          </Link>
+          <Link
+            variant="tertiary"
+            component={GatsbyLink}
+            onClick={handleMobileNavigation}
+            to="/guides"
+            marginBottom={[theme.space.l, 0]}
+          >
+            Guides
+          </Link>
+          <SocialLink href="https://twitter.com/_yetanotherblog">
+            <Twitter />
+          </SocialLink>
+          <SocialLink href="https://github.com/yetanother-blog">
+            <Github />
+          </SocialLink>
+        </Navigation>
+        <Box
+          as="main"
+          width="100%"
+          flex="1 0 auto"
+          maxWidth={isNarrow ? '680px' : '940px'}
+          mb={theme.space.xl}
+        >
+          {children}
+        </Box>
+        <Footer>
+          <Link
+            variant="quaternary"
+            component={GatsbyLink}
+            to="/privacy-policy"
+            mr={theme.space.l}
+            mb={theme.space.l}
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            variant="quaternary"
+            component={GatsbyLink}
+            to="/cookie-policy"
+            mr={theme.space.l}
+            mb={theme.space.l}
+          >
+            Cookie Policy
+          </Link>
+          <Link
+            variant="quaternary"
+            component={GatsbyLink}
+            to="/legal-details"
+            mb={theme.space.l}
+          >
+            Legal Details
+          </Link>
+        </Footer>
       </Box>
-      <Footer>
-        <Link
-          variant="quaternary"
-          component={GatsbyLink}
-          to="/privacy-policy"
-          mr={theme.space.l}
-          mb={theme.space.l}
-        >
-          Privacy Policy
-        </Link>
-        <Link
-          variant="quaternary"
-          component={GatsbyLink}
-          to="/cookie-policy"
-          mr={theme.space.l}
-          mb={theme.space.l}
-        >
-          Cookie Policy
-        </Link>
-        <Link
-          variant="quaternary"
-          component={GatsbyLink}
-          to="/legal-details"
-          mb={theme.space.l}
-        >
-          Legal Details
-        </Link>
-      </Footer>
-    </Box>
+    </>
   );
 };
