@@ -4,11 +4,12 @@ import { theme } from './theme';
 
 const typography = new Typography({
   baseFontSize: '20px',
-  baseLineHeight: 1.85,
+  baseLineHeight: 1.75,
   headerColor: theme.colors.grey500,
   bodyColor: theme.colors.grey500,
   bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
   boldWeight: '600',
+  headerFontFamily: ['Source Sans Pro', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo }, options, styles) => ({
     a: {
       fontFamily: `"Source Code Pro", "sans-serif"`,
