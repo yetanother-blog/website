@@ -152,11 +152,10 @@ module.exports = {
 
                 return {
                   title: node.frontmatter.title,
-                  description: node.excerpt,
+                  description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/${path}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
                   guid: `${site.siteMetadata.siteUrl}/${path}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
-                  custom_elements: [{ 'content:encoded': node.html }],
                 };
               });
             },
@@ -169,10 +168,10 @@ module.exports = {
                   nodes {
                     excerpt
                     fileAbsolutePath
-                    html
                     frontmatter {
                       title
                       date
+                      description
                       dateUrl: date(formatString: "YYYY-MM-DD")
                       slug
                     }
