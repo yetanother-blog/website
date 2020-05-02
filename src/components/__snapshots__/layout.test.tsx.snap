@@ -3,8 +3,9 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-fzoyAV hwvdie"
+    class="sc-fzoyAV GRdRz"
     display="flex"
+    height="auto"
     overflow="visible"
   >
     <nav

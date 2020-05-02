@@ -49,7 +49,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         pl={theme.space.l}
         pr={theme.space.l}
         overflow={isMobileNavigationOpen ? 'hidden' : 'visible'}
-        position={isMobileNavigationOpen ? 'fixed' : 'static'}
+        height={isMobileNavigationOpen ? '100vh' : 'auto'}
       >
         <Navigation>
           <Link
