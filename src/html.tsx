@@ -10,6 +10,10 @@ export default function HTML(props: any) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta
+          name="google-site-verification"
+          content="7VN8uwagcAuD4V-4GKJqa3I2SENSccfc0Ph7LWwd1Kc"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
