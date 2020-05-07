@@ -69,7 +69,7 @@
     "@types/styled-system": "^5.1.9",
     "@types/testing-library__jest-dom": "^5.0.3",
     "@types/typography": "^0.16.3",
-    "babel-jest": "^26.0.0",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "babel-preset-gatsby": "^0.4.1",
     "gatsby-plugin-ts-config": "^0.2.2",
