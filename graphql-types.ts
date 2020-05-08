@@ -696,9 +696,9 @@ export type FileFieldsEnum =
   'childMdx___frontmatter___title' |
   'childMdx___frontmatter___date' |
   'childMdx___frontmatter___slug' |
-  'childMdx___frontmatter___draft' |
   'childMdx___frontmatter___description' |
   'childMdx___frontmatter___format' |
+  'childMdx___frontmatter___draft' |
   'childMdx___body' |
   'childMdx___excerpt' |
   'childMdx___headings' |
@@ -1607,9 +1607,9 @@ export type MdxFieldsEnum =
   'frontmatter___title' |
   'frontmatter___date' |
   'frontmatter___slug' |
-  'frontmatter___draft' |
   'frontmatter___description' |
   'frontmatter___format' |
+  'frontmatter___draft' |
   'body' |
   'excerpt' |
   'headings' |
@@ -1731,9 +1731,9 @@ export type MdxFrontmatter = {
   title: Scalars['String'];
   date?: Maybe<Scalars['Date']>;
   slug?: Maybe<Scalars['String']>;
-  draft?: Maybe<Scalars['Boolean']>;
   description?: Maybe<Scalars['String']>;
   format?: Maybe<Scalars['String']>;
+  draft?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -1748,9 +1748,9 @@ export type MdxFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
-  draft?: Maybe<BooleanQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   format?: Maybe<StringQueryOperatorInput>;
+  draft?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -2636,8 +2636,6 @@ export type SitePageFieldsEnum =
   'pluginCreator___resolve' |
   'pluginCreator___name' |
   'pluginCreator___version' |
-  'pluginCreator___pluginOptions___extensions' |
-  'pluginCreator___pluginOptions___defaultLayouts___posts' |
   'pluginCreator___pluginOptions___path' |
   'pluginCreator___pluginOptions___name' |
   'pluginCreator___pluginOptions___start_url' |
@@ -2655,6 +2653,8 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___configDir' |
   'pluginCreator___pluginOptions___tsNode' |
   'pluginCreator___pluginOptions___pathCheck' |
+  'pluginCreator___pluginOptions___extensions' |
+  'pluginCreator___pluginOptions___defaultLayouts___posts' |
   'pluginCreator___nodeAPIs' |
   'pluginCreator___browserAPIs' |
   'pluginCreator___ssrAPIs' |
@@ -2842,8 +2842,6 @@ export type SitePluginFieldsEnum =
   'resolve' |
   'name' |
   'version' |
-  'pluginOptions___extensions' |
-  'pluginOptions___defaultLayouts___posts' |
   'pluginOptions___path' |
   'pluginOptions___name' |
   'pluginOptions___start_url' |
@@ -2864,6 +2862,8 @@ export type SitePluginFieldsEnum =
   'pluginOptions___configDir' |
   'pluginOptions___tsNode' |
   'pluginOptions___pathCheck' |
+  'pluginOptions___extensions' |
+  'pluginOptions___defaultLayouts___posts' |
   'nodeAPIs' |
   'browserAPIs' |
   'ssrAPIs' |
@@ -2979,8 +2979,6 @@ export type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 };
 
 export type SitePluginPluginOptions = {
-  extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
-  defaultLayouts?: Maybe<SitePluginPluginOptionsDefaultLayouts>;
   path?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
@@ -2996,6 +2994,8 @@ export type SitePluginPluginOptions = {
   configDir?: Maybe<Scalars['String']>;
   tsNode?: Maybe<Scalars['Boolean']>;
   pathCheck?: Maybe<Scalars['Boolean']>;
+  extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
+  defaultLayouts?: Maybe<SitePluginPluginOptionsDefaultLayouts>;
 };
 
 export type SitePluginPluginOptionsDefaultLayouts = {
@@ -3099,8 +3099,6 @@ export type SitePluginPluginOptionsFeedsFilterListInput = {
 };
 
 export type SitePluginPluginOptionsFilterInput = {
-  extensions?: Maybe<StringQueryOperatorInput>;
-  defaultLayouts?: Maybe<SitePluginPluginOptionsDefaultLayoutsFilterInput>;
   path?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
@@ -3116,6 +3114,8 @@ export type SitePluginPluginOptionsFilterInput = {
   configDir?: Maybe<StringQueryOperatorInput>;
   tsNode?: Maybe<BooleanQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
+  extensions?: Maybe<StringQueryOperatorInput>;
+  defaultLayouts?: Maybe<SitePluginPluginOptionsDefaultLayoutsFilterInput>;
 };
 
 export type SitePluginSortInput = {
