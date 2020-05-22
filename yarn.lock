@@ -10285,10 +10285,10 @@ gatsby-page-utils@^0.2.6:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-feed@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.5.1.tgz#dad412c2c0455342849ddd51c8b228c8747d5fef"
-  integrity sha512-pt3sQBIgMVhKkJ+oNpYa4D2VJUfJkvjjpPVv+hpYeVsUmTpycDL1eZBVxm91OGn8qppzrwKGnmaT8R6ri0qaag==
+gatsby-plugin-feed@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.5.2.tgz#eee24ef59c39d24a1f7dd94bed4f463fd4823538"
+  integrity sha512-+z0kgQyNHKphRqc6SePPLBGoxtleumJod3xZCl70RMAw+Fx7mOu0mAKpqe/2W4FlzTuPBW7am37muP7qWM+iSw==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@hapi/joi" "^15.1.1"
