@@ -32,7 +32,7 @@
     "gatsby-remark-responsive-iframe": "^2.4.3",
     "gatsby-remark-slug": "^0.1.0",
     "gatsby-remark-smartypants": "^2.3.2",
-    "gatsby-source-filesystem": "^2.3.7",
+    "gatsby-source-filesystem": "^2.3.8",
     "gatsby-source-iubenda": "^1.0.2",
     "gatsby-transformer-sharp": "^2.5.3",
     "github-slugger-typescript": "^1.0.1",
