@@ -16,7 +16,7 @@
     "gatsby-plugin-feed": "^2.5.3",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
     "gatsby-plugin-manifest": "^2.4.9",
-    "gatsby-plugin-mdx": "^1.2.12",
+    "gatsby-plugin-mdx": "^1.2.16",
     "gatsby-plugin-offline": "^3.2.7",
     "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-react-svg": "^3.0.0",
