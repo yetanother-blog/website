@@ -7,7 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.4",
     "@storybook/addon-docs": "^5.3.19",
     "babel-plugin-styled-components": "^1.10.7",
