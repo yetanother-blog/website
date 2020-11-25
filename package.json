@@ -51,7 +51,7 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
+    "@babel/core": "^7.12.9",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.17",
