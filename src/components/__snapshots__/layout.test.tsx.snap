@@ -152,18 +152,6 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-eCssSg bApVWh"
-        href="/cookie-policy"
-        mb="20"
-        mr="20"
-      >
-        <span
-          class="sc-bdfBwQ cXEaCg"
-        >
-          Cookie Policy
-        </span>
-      </a>
-      <a
         class="sc-eCssSg fcwQBZ"
         href="/legal-details"
         mb="20"

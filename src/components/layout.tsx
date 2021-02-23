@@ -100,15 +100,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
           <Link
             variant="quaternary"
             component={GatsbyLink}
-            to="/cookie-policy"
-            mr={theme.space.l}
-            mb={theme.space.l}
-          >
-            Cookie Policy
-          </Link>
-          <Link
-            variant="quaternary"
-            component={GatsbyLink}
             to="/legal-details"
             mb={theme.space.l}
           >
