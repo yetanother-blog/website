@@ -15560,10 +15560,10 @@ netlify-cli@^2.51.0:
     wrap-ansi "^6.0.0"
     write-file-atomic "^3.0.0"
 
-netlify-plugin-gatsby-cache@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/netlify-plugin-gatsby-cache/-/netlify-plugin-gatsby-cache-0.2.1.tgz#22d8ef9a9b022909ac3e330734a3362d11bef1c6"
-  integrity sha512-y5gSjDXPWyj/Hdjp3WEGWjpeBH5nCnqztgF45JIK3/xVQBH4vwurOUsoK6C9500d7z2/CNH6I9k01crIA81pMw==
+netlify-plugin-gatsby-cache@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/netlify-plugin-gatsby-cache/-/netlify-plugin-gatsby-cache-0.3.2.tgz#f2b89c220ef7a525ce4eaac46f828507cc8f8eff"
+  integrity sha512-Ssj2af0DliY70u8MmkDN25cpDk2/jW1aVZxPdljdm17oNwAIQcB17BF86RlW0ikdQ94KGHfaJymjVUZM7K3hPA==
 
 netlify-redirect-parser@^2.5.0:
   version "2.5.0"
