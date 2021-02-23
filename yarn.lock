@@ -5016,9 +5016,9 @@ autoprefixer@^9.7.2, autoprefixer@^9.8.4:
     postcss-value-parser "^4.1.0"
 
 aws-sdk@^2.689.0:
-  version "2.849.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.849.0.tgz#7fc9863e04f9e97c1f81f204fca84dfb2e4175dd"
-  integrity sha512-CzpK+0TcycRUzYKOdL5AnFcRmLDty+POWR+ZTeqCIY/rho3mM6jBTSseFreZTFiNxj8lIBBrMTsZ45KZ7Xm2Dg==
+  version "2.850.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.850.0.tgz#be58a03f8e418590e2739844fe3f847c7246f9fb"
+  integrity sha512-RqPeSKe1JlhTUL9+xUsp771ZtMY7JICoQEnFJuJ+JVqGyILhg95L4t8S5KnznUfWYc0pcpTiHKLmPteHyHS3pw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -5812,9 +5812,9 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.11.9:
   integrity sha512-E6QoYqCKZfgatHTdHzs1RRKP7ip4vvm+EyRUeE2RF0NblwVvb0p6jSVeNTOFxPn26QXN2o6SMfNxKp6kU8zQaw==
 
 bn.js@^5.0.0, bn.js@^5.1.1:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-5.1.3.tgz#beca005408f642ebebea80b042b4d18d2ac0ee6b"
-  integrity sha512-GkTiFpjFtUzU9CbMeJ5iazkCzGL3jrhzerzZIuqLABjbwRaFt33I9tUdSNryIptM+RxDet6OKm2WnLXzW51KsQ==
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-5.2.0.tgz#358860674396c6997771a9d051fcc1b57d4ae002"
+  integrity sha512-D7iWRBvnZE8ecXiLj/9wbxH7Tk79fAh8IHaTNq1RWRixsS02W+5qS+iE9yq6RYl0asXx5tw0bLhmT5pIfbSquw==
 
 body-parser@1.19.0, body-parser@^1.19.0:
   version "1.19.0"
@@ -11697,11 +11697,6 @@ graphql@^14.6.0:
   dependencies:
     iterall "^1.2.2"
 
-graphql@^15.5.0:
-  version "15.5.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.5.0.tgz#39d19494dbe69d1ea719915b578bf920344a69d5"
-  integrity sha512-OmaM7y0kaK31NKG31q4YbD2beNYa6jBBKtMFT6gLYJljHLJr42IqJ8KX08u3Li/0ifzTU5HjmoOOrwa5BRLeDA==
-
 gray-matter@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-4.0.2.tgz#9aa379e3acaf421193fce7d2a28cebd4518ac454"
@@ -15947,9 +15942,9 @@ node-object-hash@^2.0.0:
   integrity sha512-OSDFfdMTLMnKt0CdH3h0CpGdChS2rVtzpL4fW1n6t8GP3FiwkOsTN4435YmnmIBGf9zLx8+Jati/xK6AJcU5Mw==
 
 node-releases@^1.1.52, node-releases@^1.1.70:
-  version "1.1.70"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.70.tgz#66e0ed0273aa65666d7fe78febe7634875426a08"
-  integrity sha512-Slf2s69+2/uAD79pVVQo8uSiC34+g8GWY8UH2Qtqv34ZfhYrxpYpfzs9Js9d6O0mbDmALuxaTlplnBTnSELcrw==
+  version "1.1.71"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.71.tgz#cb1334b179896b1c89ecfdd4b725fb7bbdfc7dbb"
+  integrity sha512-zR6HoT6LrLCRBwukmrVbHv0EpEQjksO6GmFcZQQuCAy139BEsoVKPYnf3jongYW83fAa1torLGYwxxky/p28sg==
 
 node-source-walk@^4.0.0, node-source-walk@^4.2.0:
   version "4.2.0"
