@@ -4,53 +4,53 @@ exports[`Table Of Contents ui should render toc list w/ items 1`] = `
 <div>
   <div>
     <h2
-      class="sc-Axmtr eToRKj"
+      class="sc-iBPRYJ YSVVB"
     >
       Table Of Contents
     </h2>
     <ul
-      class="sc-AxjAm hkumP"
+      class="sc-bdfBwQ cclmkS"
     >
       <li
-        class="sc-AxjAm cPBeYE"
+        class="sc-bdfBwQ ivfIwt"
       >
         <a
-          class="sc-AxhUy cAohgn"
+          class="sc-eCssSg fJLwcK"
           href="/#some-headline"
           type="inline"
         >
           <span
-            class="sc-AxirZ jnBuLy"
+            class="sc-gsTCUz iPjDLQ"
           >
             some headline
           </span>
         </a>
       </li>
       <li
-        class="sc-AxjAm cPBeYE"
+        class="sc-bdfBwQ ivfIwt"
       >
         <a
-          class="sc-AxhUy cAohgn"
+          class="sc-eCssSg fJLwcK"
           href="/#some-other-headline"
           type="inline"
         >
           <span
-            class="sc-AxirZ jnBuLy"
+            class="sc-gsTCUz iPjDLQ"
           >
             some other headline
           </span>
         </a>
       </li>
       <li
-        class="sc-AxjAm cPBeYE"
+        class="sc-bdfBwQ ivfIwt"
       >
         <a
-          class="sc-AxhUy cAohgn"
+          class="sc-eCssSg fJLwcK"
           href="/#more-headlines"
           type="inline"
         >
           <span
-            class="sc-AxirZ jnBuLy"
+            class="sc-gsTCUz iPjDLQ"
           >
             more headlines
           </span>

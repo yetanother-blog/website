@@ -62,7 +62,7 @@ const Guides: React.FC = () => {
         const words = node!.wordCount?.words;
         const timeToRead = node.timeToRead;
         const title = frontmatter.title!;
-        const url = `guides/${dateUrl}-${slug}`;
+        const url = `${dateUrl}-${slug}`;
 
         if (frontmatter.draft === true) {
           return null;

@@ -9,7 +9,7 @@ module.exports = {
     }
 
     await Promise.all([
-      utils.run.command('yarn build-storybook'),
+      // utils.run.command('yarn build-storybook'),
       utils.run.command('yarn test:ci'),
     ]).catch((err) => {
       utils.build.failBuild('CI failed!');

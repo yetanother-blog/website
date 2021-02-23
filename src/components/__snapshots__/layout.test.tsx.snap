@@ -3,25 +3,25 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-fzoyAV GRdRz"
+    class="sc-fFubgz bTfTvq"
     display="flex"
     height="auto"
     overflow="visible"
   >
     <nav
-      class="sc-fznZeY cPRwPz"
+      class="sc-bqyKva ldFryj"
       display="flex"
       height="64,80"
       width="100%"
     >
       <a
         aria-label="logo"
-        class="sc-fzpans jNJyGJ"
+        class="sc-kEjbxe bOcxtY"
         href="/"
         role="navigation"
       >
         <p
-          class="sc-AxmLO iODOfY sc-fzplWN hFAfpW"
+          class="sc-fubCfw gmuzPW sc-iqHYGH bdKNcT"
           font-family="Source Code Pro"
           font-weight="600"
         >
@@ -29,31 +29,31 @@ exports[`Layout renders a header 1`] = `
         </p>
       </a>
       <div
-        class="sc-fzqBZW cHQdAR"
+        class="sc-hBEYos hKBvqn"
         display="none,flex"
       >
         <a
-          class="sc-AxhCb jbRlRn"
+          class="sc-hKgILt fRGUNE"
           href="/repos"
         >
           <span
-            class="sc-AxjAm hxcjNF"
+            class="sc-bdfBwQ cXEaCg"
           >
             Repos
           </span>
         </a>
         <a
-          class="sc-AxhCb jbRlRn"
+          class="sc-hKgILt fRGUNE"
           href="/guides"
         >
           <span
-            class="sc-AxjAm hxcjNF"
+            class="sc-bdfBwQ cXEaCg"
           >
             Guides
           </span>
         </a>
         <a
-          class="sc-fzqNJr jBlmjD"
+          class="sc-fodVxV hdxeqj"
           href="https://twitter.com/_yetanotherblog"
           rel="noopener"
           target="_blank"
@@ -83,7 +83,7 @@ exports[`Layout renders a header 1`] = `
           </span>
         </a>
         <a
-          class="sc-fzqNJr jBlmjD"
+          class="sc-fodVxV hdxeqj"
           href="https://github.com/yetanother-blog"
           rel="noopener"
           target="_blank"
@@ -114,18 +114,18 @@ exports[`Layout renders a header 1`] = `
         </a>
       </div>
       <button
-        class="sc-fznKkj hZHRVC"
+        class="sc-dQppl iirHAx"
         display="flex,none"
         height="48px"
         width="48px"
       >
         <div
-          class="sc-fznyAO ksIcwb"
+          class="sc-crrsfI esrOfX"
         />
       </button>
     </nav>
     <main
-      class="sc-fzoyAV jSewga"
+      class="sc-fFubgz bYPIJD"
       width="100%"
     >
       <main>
@@ -135,41 +135,41 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-fzoyAV gMumkd"
+      class="sc-fFubgz hPa-DDw"
       display="flex"
       width="100%"
     >
       <a
-        class="sc-AxhUy ekjyds"
+        class="sc-eCssSg bApVWh"
         href="/privacy-policy"
         mb="20"
         mr="20"
       >
         <span
-          class="sc-AxjAm hxcjNF"
+          class="sc-bdfBwQ cXEaCg"
         >
           Privacy Policy
         </span>
       </a>
       <a
-        class="sc-AxhUy ekjyds"
+        class="sc-eCssSg bApVWh"
         href="/cookie-policy"
         mb="20"
         mr="20"
       >
         <span
-          class="sc-AxjAm hxcjNF"
+          class="sc-bdfBwQ cXEaCg"
         >
           Cookie Policy
         </span>
       </a>
       <a
-        class="sc-AxhUy cdXcPc"
+        class="sc-eCssSg fcwQBZ"
         href="/legal-details"
         mb="20"
       >
         <span
-          class="sc-AxjAm hxcjNF"
+          class="sc-bdfBwQ cXEaCg"
         >
           Legal Details
         </span>

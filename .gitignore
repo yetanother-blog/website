@@ -55,3 +55,5 @@ yarn-error.log
 .netlify
 
 storybook-static
+
+graphql-types.ts
