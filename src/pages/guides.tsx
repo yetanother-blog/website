@@ -75,6 +75,7 @@ const Guides: React.FC = () => {
             slug={slug}
             excerpt={description || excerpt}
             blogType="guide"
+            key={slug}
             metaData={
               <BlogPostMetaData
                 date={date}

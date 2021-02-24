@@ -102,6 +102,13 @@ We use Storybook for developing UI components in isolation.
 
 **Local Development**
 
+Before you can use Storybook ensure you already run:
+
+```bash
+yarn build
+```
+
+
 ```bash
 yarn storybook
 ```

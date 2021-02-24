@@ -57,3 +57,6 @@ yarn-error.log
 storybook-static
 
 graphql-types.ts
+
+# IntelliJ
+.idea/
