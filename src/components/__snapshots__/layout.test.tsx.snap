@@ -34,16 +34,6 @@ exports[`Layout renders a header 1`] = `
       >
         <a
           class="sc-hKgILt fRGUNE"
-          href="/repos"
-        >
-          <span
-            class="sc-bdfBwQ cXEaCg"
-          >
-            Repos
-          </span>
-        </a>
-        <a
-          class="sc-hKgILt fRGUNE"
           href="/guides"
         >
           <span

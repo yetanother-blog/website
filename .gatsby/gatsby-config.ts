@@ -49,12 +49,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: './content/repos',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: './content/assets',
       },
     },
@@ -90,22 +84,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-
-            allSitePage(filter: { context: { draft: { ne: true }}}) {
-              nodes {
-                path
-              }
-            }
-          }`,
-      },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
@@ -147,24 +125,19 @@ module.exports = {
             serialize({ query: { site, allMdx } }) {
               //@ts-ignore
               return allMdx.nodes.map((node) => {
-                const path =
-                  node.fileAbsolutePath.indexOf('/guides/') > -1
-                    ? 'guides'
-                    : 'repos';
-
                 return {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/${path}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
-                  guid: `${site.siteMetadata.siteUrl}/${path}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/guides/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
+                  guid: `${site.siteMetadata.siteUrl}/guides/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
                 };
               });
             },
             query: `
               {
                 allMdx(
-                  filter: { fileAbsolutePath: { regex: "/.+content/(guides|repos).+/" }, frontmatter: { draft: { ne: true } } }
+                  filter: { fileAbsolutePath: { regex: "/.+content/guides.+/" } }
                   sort: { fields: [frontmatter___date], order: DESC }
                 ) {
                   nodes {

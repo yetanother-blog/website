@@ -24,12 +24,10 @@ const Guides: React.FC = () => {
           }
           frontmatter {
             title
-            format
             description
             date(formatString: "MMMM DD, YYYY")
             slug
             dateUrl: date(formatString: "YYYY-MM-DD")
-            draft
           }
         }
       }
@@ -63,10 +61,6 @@ const Guides: React.FC = () => {
         const timeToRead = node.timeToRead;
         const title = frontmatter.title!;
         const url = `${dateUrl}-${slug}`;
-
-        if (frontmatter.draft === true) {
-          return null;
-        }
 
         return (
           <BlogPostLink

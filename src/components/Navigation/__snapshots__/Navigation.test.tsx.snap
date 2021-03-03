@@ -32,15 +32,6 @@ exports[`Navigation component should render social link for twitter 1`] = `
         <span
           class="sc-crrsfI cVYSVb"
         >
-          Repos
-        </span>
-      </a>
-      <a
-        class="sc-kstrdz eWYgSw"
-      >
-        <span
-          class="sc-crrsfI cVYSVb"
-        >
           Guide
         </span>
       </a>
