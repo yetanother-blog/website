@@ -10,7 +10,6 @@ describe('Navigation component', () => {
     const { container } = render(
       <ThemeContext.Provider value={theme}>
         <Navigation>
-          <Link variant="tertiary">Repos</Link>
           <Link variant="tertiary">Guide</Link>
         </Navigation>
       </ThemeContext.Provider>

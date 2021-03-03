@@ -59,7 +59,6 @@ The structure for the blog posts enables to create posts for several formats at 
  ┃ ┃ 📂assets
  ┃ ┗ 📂blog
  ┃   ┃ 📂guides
- ┃   ┗ 📂repos
  ┗ 📂...
 ```
 
@@ -88,7 +87,6 @@ In order to create content, each `index.mdx` file should have `frontmatter`. Fro
 title: Hello World
 date: '2020-05-25T23:36:03.284Z'
 slug: '/hello-world'
-format: 'guide'
 desription: 'some description'
 pubslished: true
 ---

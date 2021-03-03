@@ -33,24 +33,6 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
       >
         <Card
           width={['100%', 'calc(50% - 10px)']}
-          to="/repos"
-          mb={theme.space.l}
-        >
-          <Link
-            display="block"
-            variant="primary"
-            component="span"
-            mb={theme.space.m}
-          >
-            yet another repo
-          </Link>
-          <Typography variant="smallText">
-            Yet another repo provide opinionated information about the latest
-            independent repositories.
-          </Typography>
-        </Card>
-        <Card
-          width={['100%', 'calc(50% - 10px)']}
           to="/guides"
           mb={theme.space.l}
         >

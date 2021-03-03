@@ -56,16 +56,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
             variant="tertiary"
             component={GatsbyLink}
             onClick={handleMobileNavigation}
-            to="/repos"
-            partiallyActive
-            marginBottom={[theme.space.l, 0]}
-          >
-            Repos
-          </Link>
-          <Link
-            variant="tertiary"
-            component={GatsbyLink}
-            onClick={handleMobileNavigation}
             to="/guides"
             marginBottom={[theme.space.l, 0]}
           >

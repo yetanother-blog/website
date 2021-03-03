@@ -8,8 +8,6 @@ import { Typography } from '../components/Typography/Typography';
 import { MDXProvider } from '@mdx-js/react';
 import { mxdComponents } from './mdx-components';
 import { useTheme } from 'styled-components';
-// import { Link } from '../components/Link/Link';
-// import { BlogPostActionBar } from '../components/BlogPostActionBar/BlogPostActionBar';
 
 interface Props extends PageRendererProps {
   pageContext: SitePageContext;
@@ -24,12 +22,7 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
   const frontmatter = post.frontmatter!;
   const body = post.body!;
   const headings = post.headings;
-  // const format = props.pageContext.format;
   const description = post.frontmatter!.description;
-
-  // const { previous, next } = props.pageContext;
-  // const nextUrl = `${format}/${next?.frontmatter?.dateUrl}-${next?.frontmatter?.slug}`;
-  // const previousUrl = `${format}/${previous?.frontmatter?.dateUrl}-${previous?.frontmatter?.slug}`;
 
   return (
     <Layout size="narrow">
@@ -47,24 +40,6 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
       <MDXProvider components={mxdComponents}>
         <MDXRenderer headings={headings}>{body}</MDXRenderer>
       </MDXProvider>
-      {/* <BlogPostActionBar>
-        {previous && (
-          <Link
-            variant="tertiary"
-            as={GatsbyLink}
-            to={previousUrl}
-            mr={theme.space.l}
-          >
-            ← previous
-          </Link>
-        )}
-
-        {next && (
-          <Link variant="tertiary" as={GatsbyLink} to={nextUrl}>
-            next →
-          </Link>
-        )}
-      </BlogPostActionBar> */}
     </Layout>
   );
 };
@@ -90,7 +65,6 @@ export const pageQuery = graphql`
         description
         date(formatString: "MMMM DD, YYYY")
         slug
-        format
       }
     }
   }
