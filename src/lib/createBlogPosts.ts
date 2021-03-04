@@ -18,9 +18,7 @@ export const createBlogPosts = async ({
 
   const mdx: any = await graphql(`
     {
-      guides: allMdx(
-        filter: { fileAbsolutePath: { regex: "/.+content/guides.+/" } }
-      ) {
+      guides: allMdx {
         nodes {
           frontmatter {
             date
@@ -42,7 +40,7 @@ export const createBlogPosts = async ({
     const date = moment.utc(post.frontmatter.date).format('YYYY-MM-DD');
     const slug = post.frontmatter.slug;
 
-    const path = `/guides/${date}-${slug}`;
+    const path = `/${date}-${slug}`;
 
     createPage({
       path: path,

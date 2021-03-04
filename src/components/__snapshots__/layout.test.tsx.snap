@@ -33,16 +33,6 @@ exports[`Layout renders a header 1`] = `
         display="none,flex"
       >
         <a
-          class="sc-hKgILt fRGUNE"
-          href="/guides"
-        >
-          <span
-            class="sc-bdfBwQ cXEaCg"
-          >
-            Guides
-          </span>
-        </a>
-        <a
           class="sc-fodVxV hdxeqj"
           href="https://twitter.com/_yetanotherblog"
           rel="noopener"
@@ -104,6 +94,7 @@ exports[`Layout renders a header 1`] = `
         </a>
       </div>
       <button
+        aria-label="hamburger menu"
         class="sc-dQppl iirHAx"
         display="flex,none"
         height="48px"
@@ -125,7 +116,7 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-fFubgz hPa-DDw"
+      class="sc-fFubgz hGqBhg"
       display="flex"
       width="100%"
     >

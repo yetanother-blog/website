@@ -169,6 +169,7 @@ export const Navigation: React.FC = ({ children }) => {
         width="48px"
         justifyContent="center"
         alignItems="center"
+        aria-label="hamburger menu"
         onClick={() => setIsMobileNavigationOpen(!isMobileNavigationOpen)}
       >
         <Hamburger isActive={isMobileNavigationOpen} />
