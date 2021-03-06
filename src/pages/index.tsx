@@ -1,18 +1,44 @@
-import { PageRendererProps } from 'gatsby';
+import { PageRendererProps, useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { Typography } from '../components/Typography/Typography';
 import { Box } from '../components/Box/Box';
-import { Link } from '../components/Link/Link';
 import { useTheme } from 'styled-components';
-import { Card } from '../components/Card/Card';
+import { AllGuideBlogPostsQuery } from '../../graphql-types';
+import { BlogPostLink } from '../components/BlogPostLink/BlogPostLink';
+import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaData';
 
 const BlogIndex: React.FC<PageRendererProps> = (props) => {
   const theme = useTheme();
 
+  const data = useStaticQuery<AllGuideBlogPostsQuery>(graphql`
+  query allGuideBlogPosts {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      nodes {
+        excerpt
+        timeToRead
+        wordCount {
+          words
+        }
+        frontmatter {
+          title
+          description
+          date(formatString: "MMMM DD, YYYY")
+          slug
+          dateUrl: date(formatString: "YYYY-MM-DD")
+        }
+      }
+    }
+  }
+`);
+
+const posts = data.allMdx.nodes;
+
   return (
-    <Layout>
+    <Layout size="narrow">
       <SEO title="Hi 👋" />
 
       <Typography variant="title" mb={20}>
@@ -21,33 +47,46 @@ const BlogIndex: React.FC<PageRendererProps> = (props) => {
         <br /> both Software Developers
         <br /> based in Hamburg.
       </Typography>
-      <Typography variant="subheadline" fontWeight="400" mb={theme.space.xl}>
+      <Typography variant="subheadline" as="h2" fontWeight="400" mb={theme.space.xxl}>
         We would like to help you to stay up to date about the latest
         <br /> trends in web development
       </Typography>
       <Box
         display="flex"
-        flexDirection={['column', 'row']}
+        flexDirection={['column']}
         justifyContent="space-between"
         mb={theme.space.m}
       >
-        <Card
-          width={['100%', 'calc(50% - 10px)']}
-          to="/guides"
-          mb={theme.space.l}
-        >
-          <Link
-            display="block"
-            variant="secondary"
-            component="span"
-            mb={theme.space.m}
-          >
-            yet another guide
-          </Link>
-          <Typography variant="smallText">
-            Yet another guide about the latest technologies on the web.
-          </Typography>
-        </Card>
+      {posts.map((node) => {
+        const frontmatter = node!.frontmatter!;
+        const slug = node!.frontmatter!.slug!;
+        const excerpt = node!.excerpt!;
+        const description = node!.frontmatter!.description;
+        const date = node!.frontmatter!.date!;
+        const dateUrl = node!.frontmatter!.dateUrl!;
+        const words = node!.wordCount?.words;
+        const timeToRead = node.timeToRead;
+        const title = frontmatter.title!;
+        const url = `${dateUrl}-${slug}`;
+
+        return (
+          <BlogPostLink
+            url={url}
+            title={title}
+            slug={slug}
+            excerpt={description || excerpt}
+            blogType="guide"
+            key={slug}
+            metaData={
+              <BlogPostMetaData
+                date={date}
+                wordCount={words}
+                timeToRead={timeToRead}
+              />
+            }
+          />
+        );
+      })}
       </Box>
     </Layout>
   );

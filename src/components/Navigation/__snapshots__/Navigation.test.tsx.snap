@@ -37,6 +37,7 @@ exports[`Navigation component should render social link for twitter 1`] = `
       </a>
     </div>
     <button
+      aria-label="hamburger menu"
       class="sc-pFZIQ isDUPU"
       display="flex,none"
       height="48px"

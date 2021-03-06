@@ -3,7 +3,7 @@
 exports[`Footer should render w/ children 1`] = `
 <div>
   <footer
-    class="sc-bdfBwQ hRWnDa"
+    class="sc-bdfBwQ bepFSC"
     display="flex"
     width="100%"
   >

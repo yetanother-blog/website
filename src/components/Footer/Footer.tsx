@@ -6,8 +6,8 @@ export const Footer: React.FC = ({ children }) => {
     <Box
       as="footer"
       display="flex"
-      flexDirection={['column', 'row']}
-      justifyContent="flex-end"
+      flexDirection="row"
+      justifyContent={['center', 'flex-end']}
       maxWidth="940px"
       width="100%"
       minHeight="60px"
