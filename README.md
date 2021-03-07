@@ -56,9 +56,7 @@ The structure for the blog posts enables to create posts for several formats at 
 ```
 📦website
  ┣ 📂content
- ┃ ┃ 📂assets
- ┃ ┗ 📂blog
- ┃   ┃ 📂guides
+ ┃ ┗ 📂posts
  ┗ 📂...
 ```
 

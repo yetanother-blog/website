@@ -43,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: './content/guides',
+        path: './content/posts',
       },
     },
     `gatsby-transformer-sharp`,
@@ -132,15 +132,15 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/guides/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
-                  guid: `${site.siteMetadata.siteUrl}/guides/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
+                  guid: `${site.siteMetadata.siteUrl}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
                 };
               });
             },
             query: `
               {
                 allMdx(
-                  filter: { fileAbsolutePath: { regex: "/.+content/guides.+/" } }
+                  filter: { fileAbsolutePath: { regex: "/.+content/posts.+/" } }
                   sort: { fields: [frontmatter___date], order: DESC }
                 ) {
                   nodes {
