@@ -1,4 +1,4 @@
-import { PageRendererProps, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
@@ -9,33 +9,31 @@ import { AllGuideBlogPostsQuery } from '../../graphql-types';
 import { BlogPostLink } from '../components/BlogPostLink/BlogPostLink';
 import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaData';
 
-const BlogIndex: React.FC<PageRendererProps> = (props) => {
+const BlogIndex: React.FC = () => {
   const theme = useTheme();
 
   const data = useStaticQuery<AllGuideBlogPostsQuery>(graphql`
-  query allGuideBlogPosts {
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      nodes {
-        excerpt
-        timeToRead
-        wordCount {
-          words
-        }
-        frontmatter {
-          title
-          description
-          date(formatString: "MMMM DD, YYYY")
-          slug
-          dateUrl: date(formatString: "YYYY-MM-DD")
+    query allGuideBlogPosts {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        nodes {
+          excerpt
+          timeToRead
+          wordCount {
+            words
+          }
+          frontmatter {
+            title
+            description
+            date(formatString: "MMMM DD, YYYY")
+            dateUrl: date(formatString: "YYYY-MM-DD")
+            slug
+          }
         }
       }
     }
-  }
-`);
-
-const posts = data.allMdx.nodes;
+  `);
 
   return (
     <Layout size="narrow">
@@ -57,7 +55,7 @@ const posts = data.allMdx.nodes;
         justifyContent="space-between"
         mb={theme.space.m}
       >
-      {posts.map((node) => {
+      {data.allMdx.nodes.map((node) => {
         const frontmatter = node!.frontmatter!;
         const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
