@@ -2,8 +2,6 @@ import { CreatePagesArgs } from 'gatsby';
 import { BlogPostsQuery } from '../graphql-types';
 import { resolve } from 'path';
 
-require('source-map-support').install();
-
 exports.createPages = async ({
   graphql,
   actions,
