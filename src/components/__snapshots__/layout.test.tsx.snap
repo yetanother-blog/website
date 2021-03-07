@@ -133,14 +133,28 @@ exports[`Layout renders a header 1`] = `
         </span>
       </a>
       <a
-        class="sc-eCssSg fcwQBZ"
+        class="sc-eCssSg bApVWh"
         href="/legal-details"
         mb="20"
+        mr="20"
       >
         <span
           class="sc-bdfBwQ cXEaCg"
         >
           Legal Details
+        </span>
+      </a>
+      <a
+        class="sc-eCssSg fcwQBZ"
+        href="https://plausible.io/yetanother.blog"
+        mb="20"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+      >
+        <span
+          class="sc-bdfBwQ cXEaCg"
+        >
+          Stats
         </span>
       </a>
     </footer>
