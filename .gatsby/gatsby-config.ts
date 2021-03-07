@@ -21,10 +21,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          posts: require.resolve('../src/templates/blog-post.tsx'),
-        },
         gatsbyRemarkPlugins: [
           `gatsby-remark-smartypants`,
           {
@@ -43,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: './content/posts',
+        path: './posts',
       },
     },
     `gatsby-transformer-sharp`,
@@ -69,16 +65,7 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        documentPaths: [
-          './src/**/*.{ts,tsx}',
-          './node_modules/gatsby-*/**/*.js',
-          './.gatsby/*.{ts,tsx}'
-        ]
-      }
-    },
+    `gatsby-plugin-graphql-codegen`,
     {
       resolve: `gatsby-source-iubenda`,
       options: {
@@ -132,26 +119,29 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
-                  guid: `${site.siteMetadata.siteUrl}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/${node.parent.name}?utm_source=rss-feed&utm_medium=rss`,
+                  guid: `${site.siteMetadata.siteUrl}/${node.parent.name}`,
                 };
               });
             },
             query: `
               {
                 allMdx(
-                  filter: { fileAbsolutePath: { regex: "/.+content/posts.+/" } }
                   sort: { fields: [frontmatter___date], order: DESC }
                 ) {
                   nodes {
                     excerpt
                     fileAbsolutePath
+                    parent {
+                      ... on File {
+                        name
+                      }
+                    }
                     frontmatter {
                       title
                       date
                       description
                       dateUrl: date(formatString: "YYYY-MM-DD")
-                      slug
                     }
                   }
                 }

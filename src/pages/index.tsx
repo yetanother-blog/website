@@ -23,12 +23,15 @@ const BlogIndex: React.FC = () => {
           wordCount {
             words
           }
+          parent {
+            ... on File {
+              name
+            }
+          }
           frontmatter {
             title
             description
             date(formatString: "MMMM DD, YYYY")
-            dateUrl: date(formatString: "YYYY-MM-DD")
-            slug
           }
         }
       }
@@ -57,24 +60,22 @@ const BlogIndex: React.FC = () => {
       >
       {data.allMdx.nodes.map((node) => {
         const frontmatter = node!.frontmatter!;
-        const slug = node!.frontmatter!.slug!;
         const excerpt = node!.excerpt!;
         const description = node!.frontmatter!.description;
         const date = node!.frontmatter!.date!;
-        const dateUrl = node!.frontmatter!.dateUrl!;
         const words = node!.wordCount?.words;
         const timeToRead = node.timeToRead;
         const title = frontmatter.title!;
-        const url = `${dateUrl}-${slug}`;
+        const url = node!.parent!.name;
 
         return (
           <BlogPostLink
             url={url}
             title={title}
-            slug={slug}
+            slug={url}
             excerpt={description || excerpt}
             blogType="guide"
-            key={slug}
+            key={url}
             metaData={
               <BlogPostMetaData
                 date={date}
