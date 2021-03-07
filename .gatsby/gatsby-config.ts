@@ -46,12 +46,6 @@ module.exports = {
         path: './content/guides',
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: './content/assets',
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -61,7 +55,7 @@ module.exports = {
         start_url: `/`,
         theme_color: `#00FF00`,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
+        icon: `static/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,
