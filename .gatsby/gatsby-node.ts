@@ -1,5 +1,4 @@
 import { CreatePagesArgs } from 'gatsby';
-import { BlogPostsQuery } from '../graphql-types';
 import { resolve } from 'path';
 
 exports.createPages = async ({
@@ -9,7 +8,7 @@ exports.createPages = async ({
   const { createPage } = actions;
   const component = resolve('./src/templates/blog-post.tsx');
 
-  const mdx = await graphql<BlogPostsQuery>(`
+  const mdx = await graphql<any>(`
     query BlogPosts {
       posts: allMdx {
         nodes {
@@ -36,7 +35,7 @@ exports.createPages = async ({
     }
   `);
 
-  mdx.data!.posts!.nodes!.forEach(post => {
+  mdx.data!.posts!.nodes!.forEach((post: any) => {
     const date = post.frontmatter!.dateUrl!;
     const slug = post.frontmatter!.slug!;
 
