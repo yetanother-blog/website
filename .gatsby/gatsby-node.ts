@@ -27,7 +27,7 @@ exports.createPages = async ({
           frontmatter {
             title
             description
-            date
+            date(formatString: "MMMM DD, YYYY")
             dateUrl: date(formatString: "YYYY-MM-DD")
             slug
           }
