@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 import { graphql, PageProps } from 'gatsby'
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
@@ -7,7 +7,7 @@ import { Typography } from '../components/Typography/Typography';
 import { MDXProvider } from '@mdx-js/react';
 import { mxdComponents } from '../utils/mdx-components';
 import { useTheme } from 'styled-components';
-import { BlogPostQuery } from "../../graphql-types";
+import { BlogPostQuery } from '../../graphql-types';
 
 const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const theme = useTheme();
