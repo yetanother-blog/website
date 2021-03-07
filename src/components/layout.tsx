@@ -75,9 +75,20 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
             variant="quaternary"
             component={GatsbyLink}
             to="/legal-details"
+            mr={theme.space.l}
             mb={theme.space.l}
           >
             Legal Details
+          </Link>
+          <Link
+            variant="quaternary"
+            component={GatsbyLink}
+            to="https://plausible.io/yetanother.blog"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            mb={theme.space.l}
+          >
+            Stats
           </Link>
         </Footer>
       </Box>
