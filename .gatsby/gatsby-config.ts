@@ -75,7 +75,16 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-graphql-codegen`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        documentPaths: [
+          './src/**/*.{ts,tsx}',
+          './node_modules/gatsby-*/**/*.js',
+          './.gatsby/*.{ts,tsx}'
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-iubenda`,
       options: {

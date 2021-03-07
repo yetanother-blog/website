@@ -1,21 +1,41 @@
-import { createFilePath } from 'gatsby-source-filesystem';
-import { createBlogPosts } from '../src/lib/createBlogPosts';
+import moment from 'moment';
+import { CreatePagesArgs } from 'gatsby';
+import { BlogPostsQuery } from '../graphql-types';
+import { resolve } from 'path';
 
 require('source-map-support').install();
-require('ts-node').register();
 
-//@ts-ignore
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+exports.createPages = async ({
+  graphql,
+  actions,
+}: CreatePagesArgs) => {
+  const { createPage } = actions;
+  const component = resolve('./src/templates/blog-post.tsx');
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
+  const mdx = await graphql<BlogPostsQuery>(`
+    query BlogPosts {
+      posts: allMdx {
+        nodes {
+          frontmatter {
+            date
+            dateUrl: date(formatString: "YYYY-MM-DD")
+            slug
+          }
+        }
+      }
+    }
+  `);
+
+  mdx.data!.posts!.nodes!.forEach(post => {
+    const date = moment.utc(post.frontmatter!.date!).format('YYYY-MM-DD');
+    const slug = post.frontmatter!.slug!;
+
+    createPage({
+      path: `/${date}-${slug}`,
+      component,
+      context: {
+        slug: post.frontmatter!.slug!,
+      },
     });
-  }
+  });
 };
-
-exports.createPages = createBlogPosts;
