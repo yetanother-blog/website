@@ -43,13 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: './content/guides',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: './content/assets',
+        path: './content/posts',
       },
     },
     `gatsby-transformer-sharp`,
@@ -61,7 +55,7 @@ module.exports = {
         start_url: `/`,
         theme_color: `#00FF00`,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
+        icon: `static/favicon.png`,
       },
     },
     `gatsby-plugin-offline`,
@@ -75,7 +69,16 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-graphql-codegen`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        documentPaths: [
+          './src/**/*.{ts,tsx}',
+          './node_modules/gatsby-*/**/*.js',
+          './.gatsby/*.{ts,tsx}'
+        ]
+      }
+    },
     {
       resolve: `gatsby-source-iubenda`,
       options: {
@@ -129,15 +132,15 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/guides/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
-                  guid: `${site.siteMetadata.siteUrl}/guides/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
+                  url: `${site.siteMetadata.siteUrl}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}?utm_source=rss-feed&utm_medium=rss`,
+                  guid: `${site.siteMetadata.siteUrl}/${node.frontmatter.dateUrl}-${node.frontmatter.slug}`,
                 };
               });
             },
             query: `
               {
                 allMdx(
-                  filter: { fileAbsolutePath: { regex: "/.+content/guides.+/" } }
+                  filter: { fileAbsolutePath: { regex: "/.+content/posts.+/" } }
                   sort: { fields: [frontmatter___date], order: DESC }
                 ) {
                   nodes {

@@ -1,23 +1,21 @@
-import { graphql, PageRendererProps } from 'gatsby';
 import React from 'react';
+import { PageProps } from 'gatsby';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
-import { SitePageContext, BlogPostBySlugQuery } from '../../graphql-types';
+import { BlogPostsQuery } from '../../graphql-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography } from '../components/Typography/Typography';
 import { MDXProvider } from '@mdx-js/react';
 import { mxdComponents } from './mdx-components';
 import { useTheme } from 'styled-components';
 
-interface Props extends PageRendererProps {
-  pageContext: SitePageContext;
-  data: BlogPostBySlugQuery;
-}
+type Props = PageProps<null, {
+  post: BlogPostsQuery["posts"]["nodes"][0]
+}>;
 
 const BlogPostTemplate: React.FC<Props> = (props) => {
   const theme = useTheme();
-  const data = props.data!;
-  const post = data.mdx!;
+  const post = props.pageContext.post;
   const excerpt = post.excerpt!;
   const frontmatter = post.frontmatter!;
   const body = post.body!;
@@ -45,27 +43,3 @@ const BlogPostTemplate: React.FC<Props> = (props) => {
 };
 
 export default BlogPostTemplate;
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    mdx(frontmatter: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      body
-      timeToRead
-      headings {
-        value
-        depth
-      }
-      wordCount {
-        words
-      }
-      frontmatter {
-        title
-        description
-        date(formatString: "MMMM DD, YYYY")
-        slug
-      }
-    }
-  }
-`;
