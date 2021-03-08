@@ -76,7 +76,7 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         thumbnail {
           childImageSharp {
-            resize(width: 800) {
+            resize(width: 1200) {
               src
             }
           }
