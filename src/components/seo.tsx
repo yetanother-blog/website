@@ -10,7 +10,7 @@ import React from "react"
 import { Helmet } from 'react-helmet'
 
 
-interface Meta {
+export interface Meta {
   name: string
   content: string
 }
@@ -37,6 +37,9 @@ export const SEO = (props: Props) => {
             title
             description
             author
+            social {
+              twitter
+            }
           }
         }
       }
@@ -80,6 +83,10 @@ export const SEO = (props: Props) => {
         {
           content: props.title,
           name: `twitter:title`,
+        },
+        {
+          content: site.siteMetadata.social.twitter,
+          name: `twitter:site`,
         },
         {
           content: metaDescription,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby'
 import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
+import { SEO, Meta } from '../components/seo';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Typography } from '../components/Typography/Typography';
 import { MDXProvider } from '@mdx-js/react';
@@ -18,10 +18,20 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const body = post.body!;
   const headings = post.headings;
   const description = post.frontmatter!.description;
+  const thumbnail = post.frontmatter!.thumbnail!;
+  const siteUrl = props.data.site!.siteMetadata!.siteUrl!;
+
+  const meta: Meta[] = [];
+  if (thumbnail) {
+    meta.push({
+      name: 'twitter:image',
+      content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
+    });
+  }
 
   return (
     <Layout size="narrow">
-      <SEO title={frontmatter.title!} description={description || excerpt} />
+      <SEO title={frontmatter.title!} description={description || excerpt} meta={meta} />
       <Typography variant="title">{post.frontmatter!.title}</Typography>
       <Typography
         variant="tinyText"
@@ -43,6 +53,11 @@ export default BlogPost
 
 export const query = graphql`
   query BlogPost($id: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     mdx(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
@@ -59,6 +74,13 @@ export const query = graphql`
         title
         description
         date(formatString: "MMMM DD, YYYY")
+        thumbnail {
+          childImageSharp {
+            resize(width: 1200) {
+              src
+            }
+          }
+        }
       }
     }
   }

@@ -61,6 +61,18 @@ export const mxdComponents: MDXProviderComponentsProp = {
   ul: List,
   li: ListItem,
   a: (props) => {
+    if (props.href.indexOf('http') != -1) {
+      return (
+        <Link 
+          rel="noopener noreferrer nofollow" 
+          target="_blank" 
+          variant="tertiary" 
+          type="inline" 
+          {...props} 
+        />
+      );
+    }
+
     return <Link variant="tertiary" type="inline" {...props} />;
   },
 };
