@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: './posts',
+        path: './content/posts',
       },
     },
     `gatsby-transformer-sharp`,
