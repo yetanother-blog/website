@@ -10,7 +10,7 @@ import React from "react"
 import { Helmet } from 'react-helmet'
 
 
-interface Meta {
+export interface Meta {
   name: string
   content: string
 }
