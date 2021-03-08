@@ -1,2 +1,3 @@
 User-agent: *
-Disallow:
+Sitemap: https://yetanother.blog/sitemap.xml
+Host: https://yetanother.blog
