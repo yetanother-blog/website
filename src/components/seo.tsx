@@ -20,6 +20,7 @@ interface Props {
   lang?: string
   meta?: Meta[]
   keywords?: string[]
+  twitterCard?: string;
   description?: string
 }
 
@@ -28,6 +29,7 @@ export const SEO = (props: Props) => {
   const meta = props.meta || []
   const keywords = props.keywords || []
   const description = props.description || ""
+  const twitterCard = props.twitterCard || 'summary';
 
   const { site } = useStaticQuery(
     graphql`
@@ -73,7 +75,7 @@ export const SEO = (props: Props) => {
           property: `og:type`,
         },
         {
-          content: `summary`,
+          content: twitterCard,
           name: `twitter:card`,
         },
         {

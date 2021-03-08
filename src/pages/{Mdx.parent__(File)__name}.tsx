@@ -31,7 +31,12 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
 
   return (
     <Layout size="narrow">
-      <SEO title={frontmatter.title!} description={description || excerpt} meta={meta} />
+      <SEO
+        title={frontmatter.title!}
+        description={description || excerpt}
+        meta={meta}
+        twitterCard={thumbnail ? 'summary_large_image' : 'summary'}
+      />
       <Typography variant="title">{post.frontmatter!.title}</Typography>
       <Typography
         variant="tinyText"
