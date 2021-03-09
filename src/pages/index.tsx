@@ -20,9 +20,6 @@ const BlogIndex: React.FC = () => {
         nodes {
           excerpt
           timeToRead
-          wordCount {
-            words
-          }
           parent {
             ... on File {
               name
@@ -32,6 +29,9 @@ const BlogIndex: React.FC = () => {
             title
             description
             date(formatString: "MMMM DD, YYYY")
+            author {
+              name
+            }
           }
         }
       }
@@ -63,7 +63,6 @@ const BlogIndex: React.FC = () => {
         const excerpt = node!.excerpt!;
         const description = node!.frontmatter!.description;
         const date = node!.frontmatter!.date!;
-        const words = node!.wordCount?.words;
         const timeToRead = node.timeToRead;
         const title = frontmatter.title!;
         const url = `/${node!.parent!.name}/`;
@@ -79,8 +78,8 @@ const BlogIndex: React.FC = () => {
             metaData={
               <BlogPostMetaData
                 date={date}
-                wordCount={words}
                 timeToRead={timeToRead}
+                author={frontmatter.author.name}
               />
             }
           />

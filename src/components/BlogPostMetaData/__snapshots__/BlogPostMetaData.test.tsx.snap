@@ -9,10 +9,10 @@ exports[`BlogPostMetaData component should render a BlogPostMetaData w/ content 
   >
     May 25, 2020
      • 
+    Homer Simpson
+     • 
     4
-    min to read • 
-    1337
-     words
+    min read
   </p>
 </div>
 `;

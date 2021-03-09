@@ -1,17 +1,19 @@
 import React from 'react';
 import { Typography } from '../Typography/Typography';
-import { useTheme } from 'styled-components';
+import { useTheme, DefaultTheme } from 'styled-components';
 
 interface BlogPostMetaDataProps {
   date: React.ReactNode;
   timeToRead: React.ReactNode;
-  wordCount: React.ReactNode;
+  author: React.ReactNode;
+  mb?: keyof DefaultTheme['space'];
 }
 
 export const BlogPostMetaData: React.FC<BlogPostMetaDataProps> = ({
   date,
   timeToRead,
-  wordCount,
+  author,
+  mb = 'l'
 }) => {
   const theme = useTheme();
   return (
@@ -19,9 +21,9 @@ export const BlogPostMetaData: React.FC<BlogPostMetaDataProps> = ({
       variant="tinyText"
       fontFamily="Source Code Pro"
       fontWeight="600"
-      mb={theme.space.l}
+      mb={theme.space[mb]}
     >
-      {date} • {timeToRead}min to read • {wordCount} words
+      {date} • {author} • {timeToRead}min read
     </Typography>
   );
 };

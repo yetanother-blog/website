@@ -18,6 +18,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -40,6 +41,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: './content/posts',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'authors',
+        path: './content/authors',
       },
     },
     `gatsby-transformer-sharp`,
@@ -70,8 +78,7 @@ module.exports = {
       options: {
         documentPaths: [
           './src/**/*.{ts,tsx}',
-          './node_modules/gatsby-*/**/*.js',
-          './.gatsby/*.{ts,tsx}'
+          './node_modules/gatsby-*/**/*.js'
         ]
       }
     },
