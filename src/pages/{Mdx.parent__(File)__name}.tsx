@@ -20,11 +20,21 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const description = post.frontmatter!.description;
   const thumbnail = post.frontmatter!.thumbnail!;
   const siteUrl = props.data.site!.siteMetadata!.siteUrl!;
+  const path = props.data.mdx!.parent!.name;
 
   const meta: Meta[] = [];
+  meta.push({
+    name: 'og:url',
+    content: `${siteUrl}/${path}/`,
+  });
+
   if (thumbnail) {
     meta.push({
       name: 'twitter:image',
+      content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
+    });
+    meta.push({
+      name: 'og:image',
       content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
     });
   }
@@ -71,6 +81,11 @@ export const query = graphql`
       headings {
         value
         depth
+      }
+      parent {
+        ... on File {
+          name
+        }
       }
       wordCount {
         words
