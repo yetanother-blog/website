@@ -5,9 +5,16 @@ import { SEO } from '../components/seo';
 import { Typography } from '../components/Typography/Typography';
 
 const Imprint: React.FC<PageRendererProps> = () => {
+  const metaTags = [
+    {
+      name: "robots",
+      content: "noindex, nofollow"
+    }
+  ];
+
   return (
     <Layout>
-      <SEO title="Legal Details 👩‍⚖️" />
+      <SEO title="Legal Details 👩‍⚖️" meta={metaTags} />
       <Typography variant="title" marginBottom={20}>
         Legal Details 👩‍⚖️
       </Typography>
