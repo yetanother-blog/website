@@ -107,8 +107,8 @@ module.exports = {
                   title: node.frontmatter.title,
                   description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/${node.parent.name}?utm_source=rss-feed&utm_medium=rss`,
-                  guid: `${site.siteMetadata.siteUrl}/${node.parent.name}`,
+                  url: `${site.siteMetadata.siteUrl}/${node.parent.name}/?utm_source=rss-feed&utm_medium=rss`,
+                  guid: `${site.siteMetadata.siteUrl}/${node.parent.name}/`,
                 };
               });
             },

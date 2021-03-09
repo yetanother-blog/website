@@ -66,7 +66,7 @@ const BlogIndex: React.FC = () => {
         const words = node!.wordCount?.words;
         const timeToRead = node.timeToRead;
         const title = frontmatter.title!;
-        const url = node!.parent!.name;
+        const url = `/${node!.parent!.name}/`;
 
         return (
           <BlogPostLink

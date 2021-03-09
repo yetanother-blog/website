@@ -122,7 +122,7 @@ exports[`Layout renders a header 1`] = `
     >
       <a
         class="sc-eCssSg bApVWh"
-        href="/privacy-policy"
+        href="/privacy-policy/"
         mb="20"
         mr="20"
       >
@@ -134,7 +134,7 @@ exports[`Layout renders a header 1`] = `
       </a>
       <a
         class="sc-eCssSg bApVWh"
-        href="/legal-details"
+        href="/legal-details/"
         mb="20"
         mr="20"
       >
