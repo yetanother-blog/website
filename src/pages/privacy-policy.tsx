@@ -23,9 +23,16 @@ const PrivacyPolicy: React.FC = () => {
     ''
   );
 
+  const metaTags = [
+    {
+      name: "robots",
+      content: "noindex, nofollow"
+    }
+  ];
+
   return (
     <Layout>
-      <SEO title="Privacy Policy 📃" />
+      <SEO title="Privacy Policy 📃" meta={metaTags} />
       <Typography variant="title" mb={theme.space.l}>
         Privacy Policy 📃
       </Typography>
