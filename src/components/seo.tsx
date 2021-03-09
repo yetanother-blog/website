@@ -79,10 +79,6 @@ export const SEO = (props: Props) => {
           name: `twitter:card`,
         },
         {
-          content: site.siteMetadata.author,
-          name: `twitter:creator`,
-        },
-        {
           content: props.title,
           name: `twitter:title`,
         },

@@ -8,6 +8,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { mxdComponents } from '../utils/mdx-components';
 import { useTheme } from 'styled-components';
 import { BlogPostQuery } from '../../graphql-types';
+import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaData';
 
 const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const theme = useTheme();
@@ -22,11 +23,16 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const siteUrl = props.data.site!.siteMetadata!.siteUrl!;
   const path = props.data.mdx!.parent!.name;
 
-  const meta: Meta[] = [];
-  meta.push({
-    name: 'og:url',
-    content: `${siteUrl}/${path}/`,
-  });
+  const meta: Meta[] = [
+    {
+      name: 'og:url',
+      content: `${siteUrl}/${path}/`,
+    },
+    {
+      name: 'twitter:creator',
+      content: `@${frontmatter.author.twitter}`,
+    }
+  ];
 
   if (thumbnail) {
     meta.push({
@@ -47,16 +53,13 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
         meta={meta}
         twitterCard={thumbnail ? 'summary_large_image' : 'summary'}
       />
-      <Typography variant="title">{post.frontmatter!.title}</Typography>
-      <Typography
-        variant="tinyText"
-        fontFamily="Source Code Pro"
-        fontWeight="600"
-        mb={theme.space.xl}
-      >
-        {frontmatter.date} • {post.timeToRead}min to read •{' '}
-        {post.wordCount?.words} words
-      </Typography>
+      <Typography variant="title" mb={theme.space.xxs}>{post.frontmatter!.title}</Typography>
+      <BlogPostMetaData
+        date={frontmatter.date}
+        author={frontmatter.author.name}
+        timeToRead={post.timeToRead}
+        mb="xl"
+      />
       <MDXProvider components={mxdComponents}>
         <MDXRenderer headings={headings}>{body}</MDXRenderer>
       </MDXProvider>
@@ -87,13 +90,14 @@ export const query = graphql`
           name
         }
       }
-      wordCount {
-        words
-      }
       frontmatter {
         title
         description
         date(formatString: "MMMM DD, YYYY")
+        author {
+          name
+          twitter
+        }
         thumbnail {
           childImageSharp {
             resize(width: 1200) {
