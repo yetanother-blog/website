@@ -19,6 +19,18 @@ const GlobalStyle = createGlobalStyle`
     color: white;
     background: ${(props) => props.theme.colors.grey500}
   }
+
+  pre[class*='language-'] {
+    display: flex;
+    border-radius: 4px;
+  }
+
+  @media (min-width: 992px) {
+    pre[class*='language-'] {
+      margin-left: -50px;
+      margin-right: -50px;
+    }
+  }
 `;
 
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
