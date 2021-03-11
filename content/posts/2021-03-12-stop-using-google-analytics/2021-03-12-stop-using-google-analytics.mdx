@@ -1,5 +1,5 @@
 ---
-title: "Stop using Google Analytics"
+title: 'Stop using Google Analytics'
 author: henrik
 description: |
   Do you really need Google Analytics for your website? We used it, and we switched to another 
@@ -7,64 +7,106 @@ description: |
 date: '2021-03-12T12:00:00.000Z'
 ---
 
-When we started this blog last year, we made a list of things we have to do for the launch. 
-Our list included a rough design concept, a logo, avatars for social media, and 
-all the boring legal requirements. We live in Europe, so a privacy and cookie policy, 
-legal details (aka. _Impressum_ in Germany) plus, the most annoying feature of all time, 
-the cookie law banner felt pretty natural for us. It did feel like a common feature set we 
-have to follow. Part of this feature set was also Google Analytics. We wanted to have 
-some basic metrics about our website, and our decision felt straightforward.
+import { Stats } from '../../../src/components/Stats/Stats';
+import { StatsItem } from '../../../src/components/Stats/StatsItem';
 
-## But why? 
+When we started this blog last year, we made a list of things we have to do for
+the launch. Our list included a rough design concept, a logo, avatars for social
+media, and all the boring legal requirements. We live in Europe, so a privacy
+and cookie policy, legal details (aka. _Impressum_ in Germany) plus, the most
+annoying feature of all time, the cookie law banner felt pretty natural for us.
+It did feel like a common feature set we have to follow. Part of this feature
+set was also Google Analytics. We wanted to have some basic metrics about our
+website, and our decision felt straightforward.
 
-Because everyone does it. Google Analytics is just given. In fact, according to [BuiltWith](https://trends.builtwith.com/analytics/Google-Analytics), 
-~50% of all top 1m websites by traffic include Google Analytics. We didn’t question it. Also, and most importantly, it’s for “free”. Our blog is a side project, so keeping the costs down 
-was very critical for us. 
+<Stats marginTop={['xl', 'xl', 'xl']} marginBottom={['xxl', 'xxl', 'xxl']}>
+  <StatsItem
+    value="~50"
+    unit="%"
+    description="Of all top 1m websites by traffic include Google Analytics"
+    source="BuiltWith"
+    sourceUrl="https://trends.builtwith.com/analytics/Google-Analytics"
+  />
+  <StatsItem
+    value="~46"
+    unit="KB"
+    description="Size of the Google Analytics JavaScript Snippet"
+    source="Google"
+    sourceUrl="https://www.google-analytics.com/analytics.js"
+  />
+</Stats>
 
-But over the last months, something changed. Today, we have more discussions about the big tech companies, 
-about the way they use our data and analyse our behaviour. We have seen scandals like 
-[Cambridge Analytica](https://en.wikipedia.org/wiki/Cambridge_Analytica), eye-opening documentaries 
-like [The Social Dilemma](https://www.thesocialdilemma.com/), and, personally, the episode 
-of [The Changelog](https://changelog.com/podcast/396) with the creators of [Plausible](https://plausible.io), 
-a privacy-friendly website tracking tool. 
+## But why?
 
-After the podcast, I understood, that we are responsible for our website and visitors. This one minute it took us to include 
-the JavaScript snippet, had a huge impact on our visitors. Without really giving them a choice, we sold their data to one 
-of the biggest companies in the world. And why did we do it? Because we want to see simple metrics like page views or referrals. 
-Is that responsible action?
+Because everyone does it. Google Analytics is just given. In fact, according to
+[BuiltWith](https://trends.builtwith.com/analytics/Google-Analytics), ~50% of
+all top 1m websites by traffic include Google Analytics. We didn’t question it.
+Also, and most importantly, it’s for “free”. Our blog is a side project, so
+keeping the costs down was very critical for us.
+
+But over the last months, something changed. Today, we have more discussions
+about the big tech companies, about the way they use our data and analyse our
+behaviour. We have seen scandals like
+[Cambridge Analytica](https://en.wikipedia.org/wiki/Cambridge_Analytica),
+eye-opening documentaries like
+[The Social Dilemma](https://www.thesocialdilemma.com/), and, personally, the
+episode of [The Changelog](https://changelog.com/podcast/396) with the creators
+of [Plausible](https://plausible.io), a privacy-friendly website tracking tool.
+
+After the podcast, I understood, that we are responsible for our website and
+visitors. This one minute it took us to include the JavaScript snippet, had a
+huge impact on our visitors. Without really giving them a choice, we sold their
+data to one of the biggest companies in the world. And why did we do it? Because
+we want to see simple metrics like page views or referrals. Is that responsible
+action?
 
 ## The era of alternatives
 
-The great thing is that, with all the discussions about our data, we also see more and more great alternatives popping up. 
-Hosting providers like [Netlify](https://www.netlify.com/products/analytics/) or [Vercel](https://vercel.com/analytics) offer 
-analytics tool, but we also see independent tools like Plausible. We don’t rely on Google Analytics anymore, 
-but it also has consequences. The tools are not for free. I believe that’s okay and we just forgot that things aren’t for free. 
-The “free” services out there, namely all Google products, are for free because it’s okay for us to give away all our data. 
-And not just our data, but also the data of our visitors, users, and customers. We decided that we want to spend money and 
-use a service carefully, rather than just including everything on our page because we can.
+The great thing is that, with all the discussions about our data, we also see
+more and more great alternatives popping up. Hosting providers like
+[Netlify](https://www.netlify.com/products/analytics/) or
+[Vercel](https://vercel.com/analytics) offer analytics tool, but we also see
+independent tools like Plausible. We don’t rely on Google Analytics anymore, but
+it also has consequences. The tools are not for free. I believe that’s okay and
+we just forgot that things aren’t for free. The “free” services out there,
+namely all Google products, are for free because it’s okay for us to give away
+all our data. And not just our data, but also the data of our visitors, users,
+and customers. We decided that we want to spend money and use a service
+carefully, rather than just including everything on our page because we can.
 
 ## Cool side effects
 
-Besides selling less data, the greatest advantage is also the ability to get rid of the cookie law banner. Isn’t it annoying 
-to click on these banners over and over and over again every time we open a new page? I deeply believe the intention is good, 
-it’s good to inform us and being more transparent, but it certainly didn’t make the internet more user-friendly. With the switch 
-to Plausible, we don’t set cookies anymore, so we also don’t need a cookie law banner. You can just go to our website and enjoy 
-our content. Plausible’s JS snippet is smaller, so we could even improve the performance of our website.  That’s how the internet 
-should work.
+Besides selling less data, the greatest advantage is also the ability to get rid
+of the cookie law banner. Isn’t it annoying to click on these banners over and
+over and over again every time we open a new page? I deeply believe the
+intention is good, it’s good to inform us and being more transparent, but it
+certainly didn’t make the internet more user-friendly. With the switch to
+Plausible, we don’t set cookies anymore, so we also don’t need a cookie law
+banner. You can just go to our website and enjoy our content. Plausible’s JS
+snippet is smaller, so we could even improve the performance of our website.
+That’s how the internet should work.
 
 ![Plausible dashboard](./plausible-dashboard.png)
 
-In addition to that, also our experience got way better. Honest question: Do you really like the Google Analytics experience? 
-Do you enjoy diving into your stats? Probably not. We included Google Analytics, but we never checked it because the console has 
-thousands of ugly views, navigations, options, and whatsoever. But we just want to have basic metrics like page views. 
-With Plausible, we got a tool that is easy to use and easy to scan (btw our [dashboard is publicly available](https://plausible.io/yetanother.blog)). For the first time, I enjoyed using an analytics tool.
+In addition to that, also our experience got way better. Honest question: Do you
+really like the Google Analytics experience? Do you enjoy diving into your
+stats? Probably not. We included Google Analytics, but we never checked it
+because the console has thousands of ugly views, navigations, options, and
+whatsoever. But we just want to have basic metrics like page views. With
+Plausible, we got a tool that is easy to use and easy to scan (btw our
+[dashboard is publicly available](https://plausible.io/yetanother.blog)). For
+the first time, I enjoyed using an analytics tool.
 
-By the way, we also played around with Netlify’s analytics offering, and all the benefits we described here for Plausible also apply to them. 
-We also loved the experience, but Plausible is a bit cheaper for us, so we just made a pragmatic decision. 
+By the way, we also played around with Netlify’s analytics offering, and all the
+benefits we described here for Plausible also apply to them. We also loved the
+experience, but Plausible is a bit cheaper for us, so we just made a pragmatic
+decision.
 
 ## Take away
 
-This blog post could be interpreted as a simple Google rant, but that’s not my point. I want to encourage you to re-think the usage 
-of Google Analytics. Maybe you have good reasons to use it, or you enjoy the experience. But maybe you don’t. Maybe you have the 
-same mixed feelings we had in the last months. I want to encourage you to try out other tools. For a better, privacy-friendly, 
-faster and fairer web. Why not?
+This blog post could be interpreted as a simple Google rant, but that’s not my
+point. I want to encourage you to re-think the usage of Google Analytics. Maybe
+you have good reasons to use it, or you enjoy the experience. But maybe you
+don’t. Maybe you have the same mixed feelings we had in the last months. I want
+to encourage you to try out other tools. For a better, privacy-friendly, faster
+and fairer web. Why not?
