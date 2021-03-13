@@ -36,10 +36,17 @@ const GlobalStyle = createGlobalStyle`
 export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
   const theme = useTheme();
 
-  const { isMobileNavigationOpen } = useContext(
+  const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
     MobileNavigationContext
   );
   const isNarrow = size === 'narrow';
+
+  const handleMobileNavigation = () => {
+    if (isMobileNavigationOpen) {
+      return setIsMobileNavigationOpen(false);
+    }
+    return;
+  };
 
   return (
     <>
@@ -57,6 +64,15 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
         height={isMobileNavigationOpen ? '100vh' : 'auto'}
       >
         <Navigation>
+          <Link
+            variant="tertiary"
+            component={GatsbyLink}
+            onClick={handleMobileNavigation}
+            to="/"
+            marginBottom={[theme.space.l, 0]}
+          >
+            Home
+          </Link>
           <SocialLink href="https://twitter.com/_yetanotherblog">
             <Twitter />
           </SocialLink>

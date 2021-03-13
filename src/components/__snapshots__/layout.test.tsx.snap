@@ -33,6 +33,16 @@ exports[`Layout renders a header 1`] = `
         display="none,flex"
       >
         <a
+          class="sc-hKgILt fRGUNE"
+          href="/"
+        >
+          <span
+            class="sc-bdfBwQ cXEaCg"
+          >
+            Home
+          </span>
+        </a>
+        <a
           class="sc-fodVxV hdxeqj"
           href="https://twitter.com/_yetanotherblog"
           rel="noopener"
