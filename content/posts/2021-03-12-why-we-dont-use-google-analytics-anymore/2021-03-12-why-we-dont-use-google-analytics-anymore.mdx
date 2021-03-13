@@ -1,14 +1,11 @@
 ---
-title: 'Stop using Google Analytics'
+title: 'Why we don’t use Google Analytics anymore'
 author: henrik
 description: |
   Do you really need Google Analytics for your website? We used it, and we switched to another 
   tool because we want to respect the privacy of our visitors, sell fewer data to one of the biggest companies in the world, and improve the usability of our blog.
 date: '2021-03-12T12:00:00.000Z'
 ---
-
-import { Stats } from '../../../src/components/Stats/Stats';
-import { StatsItem } from '../../../src/components/Stats/StatsItem';
 
 When we started this blog last year, we made a list of things we have to do for
 the launch. Our list included a rough design concept, a logo, avatars for social
@@ -39,6 +36,9 @@ huge impact on our visitors. Without really giving them a choice, we sold their
 data to one of the biggest companies in the world. And why did we do it? Because
 we want to see simple metrics like page views or referrals. Is that responsible
 action?
+
+import { Stats } from '../../../src/components/Stats/Stats';
+import { StatsItem } from '../../../src/components/Stats/StatsItem';
 
 <Stats marginTop={['xl', 'xl', 'xl']} marginBottom={['xxl', 'xxl', 'xxl']}>
   <StatsItem
