@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stats component should render 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ jlfcoC"
+  >
+    <div>
+      <span
+        class="sc-gKsewC gVIdnn"
+        color="secondary"
+        display="block"
+      >
+        ~50
+        <small>
+          %
+        </small>
+      </span>
+      <span
+        class="sc-jrAGrp birvxJ"
+        display="block"
+      >
+        Of all top 1m websites by traffic include Google Analytics
+      </span>
+      <span
+        class="sc-kEjbxe eDVcYQ"
+        display="block"
+      >
+        (Source: 
+        <a
+          class="sc-jSgupP intPQj"
+          href="https://trends.builtwith.com/analytics/Google-Analytics"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          <span
+            class="sc-gsTCUz iPjDLQ"
+          >
+            BuiltWith
+          </span>
+        </a>
+        )
+      </span>
+    </div>
+    <div>
+      <span
+        class="sc-gKsewC gVIdnn"
+        color="secondary"
+        display="block"
+      >
+        ~46
+        <small>
+          KB
+        </small>
+      </span>
+      <span
+        class="sc-jrAGrp birvxJ"
+        display="block"
+      >
+        Size of the Google Analytics JavaScript Snippet
+      </span>
+      <span
+        class="sc-kEjbxe eDVcYQ"
+        display="block"
+      >
+        (Source: 
+        <a
+          class="sc-jSgupP intPQj"
+          href="https://www.google-analytics.com/analytics.js"
+          rel="noopener noreferrer nofollow"
+          target="_blank"
+        >
+          <span
+            class="sc-gsTCUz iPjDLQ"
+          >
+            Google
+          </span>
+        </a>
+        )
+      </span>
+    </div>
+  </div>
+</div>
+`;
