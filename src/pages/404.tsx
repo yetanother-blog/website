@@ -15,6 +15,11 @@ export const NotFoundPage = (props: Props) => {
       <Typography variant="subheadline" textAlign="center">
         You just hit a route that doesn&#39;t exist... the sadness.
       </Typography>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `plausible("404",{ props: { path: document.location.pathname } })`,
+        }}
+      />
     </Layout>
   );
 };

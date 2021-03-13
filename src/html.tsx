@@ -22,6 +22,11 @@ export default function HTML(props: any) {
         ></script>
         <script
           dangerouslySetInnerHTML={{
+            __html: `window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
             __html: `if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true`,
           }}
         />
