@@ -14,12 +14,17 @@ export default function HTML(props: any) {
           name="google-site-verification"
           content="7VN8uwagcAuD4V-4GKJqa3I2SENSccfc0Ph7LWwd1Kc"
         />
-        <script 
+        <script
           async
           defer
           data-domain="yetanother.blog"
           src="https://plausible.io/js/plausible.js"
         ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true`,
+          }}
+        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
