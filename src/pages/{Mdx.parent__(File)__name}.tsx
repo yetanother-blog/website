@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, PageProps } from 'gatsby'
+import { graphql, PageProps } from 'gatsby';
 import { Layout } from '../components/layout';
 import { SEO, Meta } from '../components/seo';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
@@ -12,7 +12,7 @@ import { BlogPostMetaData } from '../components/BlogPostMetaData/BlogPostMetaDat
 
 const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const theme = useTheme();
-  
+
   const post = props.data.mdx!;
   const excerpt = post.excerpt!;
   const frontmatter = post.frontmatter!;
@@ -31,7 +31,7 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
     {
       name: 'twitter:creator',
       content: `@${frontmatter.author.twitter}`,
-    }
+    },
   ];
 
   if (thumbnail) {
@@ -46,14 +46,16 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   }
 
   return (
-    <Layout size="narrow">
+    <Layout size="narrow" mainElement="article">
       <SEO
         title={frontmatter.title!}
         description={description || excerpt}
         meta={meta}
         twitterCard={thumbnail ? 'summary_large_image' : 'summary'}
       />
-      <Typography variant="title" mb={theme.space.xxs}>{post.frontmatter!.title}</Typography>
+      <Typography variant="title" mb={theme.space.xxs}>
+        {post.frontmatter!.title}
+      </Typography>
       <BlogPostMetaData
         date={frontmatter.date}
         author={frontmatter.author.name}
@@ -67,7 +69,7 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   );
 };
 
-export default BlogPost
+export default BlogPost;
 
 export const query = graphql`
   query BlogPost($id: String!) {
@@ -108,4 +110,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -6,12 +6,13 @@ import { Navigation } from './Navigation/Navigation';
 import { SocialLink } from './SocialLink/SocialLink';
 import { Twitter } from './SocialLink/Twitter';
 import { Github } from './SocialLink/Github';
-import { Box } from './Box/Box';
+import { Box, BoxProps } from './Box/Box';
 import { MobileNavigationContext } from '../context/MobileNavigationContext/MobileNavigationContext';
 import { Footer } from './Footer/Footer';
 
 interface LayoutProps {
   size?: 'narrow';
+  mainElement?: BoxProps['as'];
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -33,7 +34,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
+export const Layout: React.FC<LayoutProps> = ({
+  children,
+  size,
+  mainElement = 'main',
+}) => {
   const theme = useTheme();
 
   const { isMobileNavigationOpen, setIsMobileNavigationOpen } = useContext(
@@ -81,7 +86,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, size }) => {
           </SocialLink>
         </Navigation>
         <Box
-          as="main"
+          as={mainElement}
           width="100%"
           flex="1 0 auto"
           maxWidth={isNarrow ? '680px' : '940px'}
