@@ -3,7 +3,7 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-fFubgz bTfTvq"
+    class="sc-fFubgz ha-dEYC"
     display="flex"
     height="auto"
     overflow="visible"
@@ -116,7 +116,7 @@ exports[`Layout renders a header 1`] = `
       </button>
     </nav>
     <main
-      class="sc-fFubgz bYPIJD"
+      class="sc-fFubgz jBhBnf"
       width="100%"
     >
       <main>
@@ -126,7 +126,7 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-fFubgz hGqBhg"
+      class="sc-fFubgz dqEFCc"
       display="flex"
       width="100%"
     >

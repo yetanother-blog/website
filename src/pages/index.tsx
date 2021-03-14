@@ -14,9 +14,7 @@ const BlogIndex: React.FC = () => {
 
   const data = useStaticQuery<AllGuideBlogPostsQuery>(graphql`
     query allGuideBlogPosts {
-      allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
-      ) {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           excerpt
           timeToRead
@@ -28,7 +26,8 @@ const BlogIndex: React.FC = () => {
           frontmatter {
             title
             description
-            date(formatString: "MMMM DD, YYYY")
+            date
+            formattedDate: date(formatString: "MMMM DD, YYYY")
             author {
               name
             }
@@ -48,7 +47,12 @@ const BlogIndex: React.FC = () => {
         <br /> both Software Developers
         <br /> based in Hamburg.
       </Typography>
-      <Typography variant="subheadline" as="h2" fontWeight="400" mb={theme.space.xxl}>
+      <Typography
+        variant="subheadline"
+        as="h2"
+        fontWeight="400"
+        mb={theme.space.xxl}
+      >
         We would like to help you to stay up to date about the latest
         <br /> trends in web development
       </Typography>
@@ -58,33 +62,35 @@ const BlogIndex: React.FC = () => {
         justifyContent="space-between"
         mb={theme.space.m}
       >
-      {data.allMdx.nodes.map((node) => {
-        const frontmatter = node!.frontmatter!;
-        const excerpt = node!.excerpt!;
-        const description = node!.frontmatter!.description;
-        const date = node!.frontmatter!.date!;
-        const timeToRead = node.timeToRead;
-        const title = frontmatter.title!;
-        const url = `/${node!.parent!.name}/`;
+        {data.allMdx.nodes.map((node) => {
+          const frontmatter = node!.frontmatter!;
+          const excerpt = node!.excerpt!;
+          const description = node!.frontmatter!.description;
+          const date = node!.frontmatter!.date!;
+          const formattedDate = node!.frontmatter!.formattedDate!;
+          const timeToRead = node.timeToRead;
+          const title = frontmatter.title!;
+          const url = `/${node!.parent!.name}/`;
 
-        return (
-          <BlogPostLink
-            url={url}
-            title={title}
-            slug={url}
-            excerpt={description || excerpt}
-            blogType="guide"
-            key={url}
-            metaData={
-              <BlogPostMetaData
-                date={date}
-                timeToRead={timeToRead}
-                author={frontmatter.author.name}
-              />
-            }
-          />
-        );
-      })}
+          return (
+            <BlogPostLink
+              url={url}
+              title={title}
+              slug={url}
+              excerpt={description || excerpt}
+              blogType="guide"
+              key={url}
+              metaData={
+                <BlogPostMetaData
+                  date={date}
+                  formattedDate={formattedDate}
+                  timeToRead={timeToRead}
+                  author={frontmatter.author.name}
+                />
+              }
+            />
+          );
+        })}
       </Box>
     </Layout>
   );
