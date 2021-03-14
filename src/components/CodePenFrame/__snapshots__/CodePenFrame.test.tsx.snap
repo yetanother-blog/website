@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CodePenFrame component should render 1`] = `
+<div>
+  <div>
+    
+        
+    <iframe
+      allowfullscreen="true"
+      allowtransparency="true"
+      frameborder="no"
+      height="500"
+      loading="lazy"
+      scrolling="no"
+      src="https://some-code-pen.url?height=500&theme-id=light&default-tab=result"
+      style="width: 100%;"
+      title="My 😎 CodePen"
+    >
+       
+    
+    </iframe>
+  </div>
+</div>
+`;
