@@ -16,6 +16,11 @@ interface LayoutProps {
 }
 
 const GlobalStyle = createGlobalStyle`
+  address {
+    font-style: normal;
+    margin-bottom: 0;
+  }
+
   ::selection{
     color: white;
     background: ${(props) => props.theme.colors.grey500}

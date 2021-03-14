@@ -3,7 +3,7 @@
 exports[`BlogPostActionBar should match snapshot 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ DorBN sc-gsTCUz cMSAim"
+    class="sc-bdfBwQ cBMwYR sc-gsTCUz cMSAim"
     display="flex"
   >
     <span>

@@ -58,6 +58,7 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
       </Typography>
       <BlogPostMetaData
         date={frontmatter.date}
+        formattedDate={frontmatter.formattedDate}
         author={frontmatter.author.name}
         timeToRead={post.timeToRead}
         mb="xl"
@@ -95,7 +96,8 @@ export const query = graphql`
       frontmatter {
         title
         description
-        date(formatString: "MMMM DD, YYYY")
+        date
+        formattedDate: date(formatString: "MMMM DD, YYYY")
         author {
           name
           twitter

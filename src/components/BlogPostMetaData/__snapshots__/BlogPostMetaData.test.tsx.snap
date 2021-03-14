@@ -2,17 +2,34 @@
 
 exports[`BlogPostMetaData component should render a BlogPostMetaData w/ content 1`] = `
 <div>
-  <p
-    class="sc-jSgupP EmhJb"
+  <span
+    class="sc-jSgupP fnsZfl"
+    display="block"
     font-family="Source Code Pro"
     font-weight="600"
   >
-    May 25, 2020
-     • 
-    Homer Simpson
-     • 
-    4
-    min read
-  </p>
+    <time
+      datetime="2020-05-25 15:00:00.000Z"
+    >
+      May 25, 2020
+    </time>
+     •
+     
+    <address
+      class="sc-gKsewC htKuho"
+      display="inline-block"
+    >
+      Homer Simpson
+    </address>
+     
+    •
+     
+    <span
+      class="sc-gKsewC htKuho"
+      display="inline-block"
+    >
+      4min read
+    </span>
+  </span>
 </div>
 `;
