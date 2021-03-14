@@ -17,3 +17,11 @@
 [[redirects]]
   from = "/guides/2020-05-02-continuous-integration-with-netlify-build-plugins"
   to = "/2020-05-02-continuous-integration-with-netlify-build-plugins"
+
+[[redirects]]
+  from = "/guides/"
+  to = "/"
+
+[[redirects]]
+  from = "/repos/"
+  to = "/"
