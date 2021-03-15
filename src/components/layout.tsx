@@ -9,6 +9,7 @@ import { Github } from './SocialLink/Github';
 import { Box, BoxProps } from './Box/Box';
 import { MobileNavigationContext } from '../context/MobileNavigationContext/MobileNavigationContext';
 import { Footer } from './Footer/Footer';
+import { RSS } from './SocialLink/RSS';
 
 interface LayoutProps {
   size?: 'narrow';
@@ -83,11 +84,14 @@ export const Layout: React.FC<LayoutProps> = ({
           >
             Home
           </Link>
-          <SocialLink href="https://twitter.com/_yetanotherblog">
+          <SocialLink href="https://twitter.com/_yetanotherblog" accessibleIconLabel="Twitter">
             <Twitter />
           </SocialLink>
-          <SocialLink href="https://github.com/yetanother-blog">
+          <SocialLink href="https://github.com/yetanother-blog" accessibleIconLabel="Github">
             <Github />
+          </SocialLink>
+          <SocialLink href="https://github.com/yetanother-blog" accessibleIconLabel="RSS">
+            <RSS />
           </SocialLink>
         </Navigation>
         <Box
