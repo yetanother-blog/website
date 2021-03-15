@@ -116,7 +116,7 @@ exports[`Layout renders a header 1`] = `
         </a>
         <a
           class="sc-fodVxV dZJVvd"
-          href="https://github.com/yetanother-blog"
+          href="https://yetanother.blog/rss.xml"
           rel="noopener"
           target="_blank"
         >

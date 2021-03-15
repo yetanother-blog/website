@@ -90,7 +90,7 @@ export const Layout: React.FC<LayoutProps> = ({
           <SocialLink href="https://github.com/yetanother-blog" accessibleIconLabel="Github">
             <Github />
           </SocialLink>
-          <SocialLink href="https://github.com/yetanother-blog" accessibleIconLabel="RSS">
+          <SocialLink href="https://yetanother.blog/rss.xml" accessibleIconLabel="RSS">
             <RSS />
           </SocialLink>
         </Navigation>
