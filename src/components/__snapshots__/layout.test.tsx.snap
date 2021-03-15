@@ -3,7 +3,7 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-fFubgz ha-dEYC"
+    class="sc-idOhPF fplOIk"
     display="flex"
     height="auto"
     overflow="visible"
@@ -43,13 +43,14 @@ exports[`Layout renders a header 1`] = `
           </span>
         </a>
         <a
-          class="sc-fodVxV hdxeqj"
+          class="sc-fodVxV dZJVvd"
           href="https://twitter.com/_yetanotherblog"
           rel="noopener"
           target="_blank"
         >
           <span
-            aria-label="twitter"
+            aria-label="twitter icon"
+            class="sc-bkzZxe gkTIXL"
             role="img"
           >
             
@@ -69,17 +70,23 @@ exports[`Layout renders a header 1`] = `
               />
             </svg>
             
-        
+    
+          </span>
+          <span
+            class="sc-fFubgz izKrpd"
+          >
+            Twitter
           </span>
         </a>
         <a
-          class="sc-fodVxV hdxeqj"
+          class="sc-fodVxV dZJVvd"
           href="https://github.com/yetanother-blog"
           rel="noopener"
           target="_blank"
         >
           <span
-            aria-label="github"
+            aria-label="github icon"
+            class="sc-bkzZxe gkTIXL"
             role="img"
           >
             
@@ -99,7 +106,56 @@ exports[`Layout renders a header 1`] = `
               />
             </svg>
             
+    
+          </span>
+          <span
+            class="sc-fFubgz izKrpd"
+          >
+            Github
+          </span>
+        </a>
+        <a
+          class="sc-fodVxV dZJVvd"
+          href="https://yetanother.blog/rss.xml"
+          rel="noopener"
+          target="_blank"
+        >
+          <span
+            aria-label="rss icon"
+            class="sc-bkzZxe gkTIXL"
+            role="img"
+          >
+             
+      
+            <svg
+              fill="none"
+              height="25"
+              viewBox="0 0 25 25"
+              width="25"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
         
+              <path
+                clip-rule="evenodd"
+                d="M0.135864 8.50159C0.135864 4.08331 3.71759 0.501587 8.13586 0.501587H16.1359C20.5541 0.501587 24.1359 4.08331 24.1359 8.50159V12.5016V16.5016C24.1359 20.9199 20.5541 24.5016 16.1359 24.5016H8.13586C3.71759 24.5016 0.135864 20.9199 0.135864 16.5016V8.50159ZM16.9404 18.5019C16.9864 19.0523 17.4297 19.5016 17.982 19.5016H18.1359C18.6881 19.5016 19.1396 19.0524 19.1007 18.5014C18.6112 11.5666 13.0709 6.02626 6.136 5.53676C5.58509 5.49787 5.13586 5.9493 5.13586 6.50159V6.65543C5.13586 7.20772 5.58514 7.65103 6.13551 7.69701C11.8806 8.17704 16.4604 12.7569 16.9404 18.5019ZM13.6743 19.5016C13.122 19.5016 12.6813 19.0515 12.6089 18.504C12.1639 15.1386 9.4989 12.4736 6.13351 12.0286C5.586 11.9562 5.13586 11.5155 5.13586 10.9632V10.8093C5.13586 10.257 5.58486 9.8039 6.13428 9.86012C10.6899 10.3263 14.3112 13.9476 14.7774 18.5032C14.8336 19.0526 14.3805 19.5016 13.8282 19.5016H13.6743Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              />
+              
+        
+              <path
+                d="M9.34528 17.3969C9.34528 18.5593 8.40297 19.5016 7.24057 19.5016C6.07817 19.5016 5.13586 18.5593 5.13586 17.3969C5.13586 16.2345 6.07817 15.2922 7.24057 15.2922C8.40297 15.2922 9.34528 16.2345 9.34528 17.3969Z"
+                fill="white"
+              />
+              
+      
+            </svg>
+          </span>
+          <span
+            class="sc-fFubgz izKrpd"
+          >
+            RSS
           </span>
         </a>
       </div>
@@ -116,7 +172,7 @@ exports[`Layout renders a header 1`] = `
       </button>
     </nav>
     <main
-      class="sc-fFubgz jBhBnf"
+      class="sc-idOhPF XSoBZ"
       width="100%"
     >
       <main>
@@ -126,7 +182,7 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-fFubgz dqEFCc"
+      class="sc-idOhPF bbHlDG"
       display="flex"
       width="100%"
     >

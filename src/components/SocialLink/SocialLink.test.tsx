@@ -9,7 +9,7 @@ describe('SocialLink component', () => {
   it('should render social link for twitter', () => {
     const { container } = render(
       <ThemeContext.Provider value={theme}>
-        <SocialLink href="https://twitter.com/_yetanotherblog">
+        <SocialLink href="https://twitter.com/_yetanotherblog" accessibleIconLabel="Twitter">
           <Twitter />
         </SocialLink>
       </ThemeContext.Provider>
