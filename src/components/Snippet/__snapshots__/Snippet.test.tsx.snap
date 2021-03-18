@@ -6,7 +6,6 @@ exports[`Snippet component should render 1`] = `
     class="sc-bdfBwQ hDZASP"
     height="256"
     loading="lazy"
-    sandbox="allow-scripts"
     src="data:text/html;charset=utf-8,%3Chtml%3E%3Cbody%3Efoo%3C/body%3E%3C/html%3E"
     title="Title is coooool :)"
   />
