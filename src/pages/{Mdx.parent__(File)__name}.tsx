@@ -19,8 +19,7 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
   const body = post.body!;
   const headings = post.headings;
   const description = post.frontmatter!.description;
-  const imageLinkedin = post.frontmatter!.imageLinkedin!;
-  const imageTwitter = post.frontmatter!.imageTwitter!;
+  const thumbnail = post.frontmatter!.thumbnail!;
   const siteUrl = props.data.site!.siteMetadata!.siteUrl!;
   const path = props.data.mdx!.parent!.name;
 
@@ -39,18 +38,15 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
     },
   ];
 
-  if (imageLinkedin) {
+  if (thumbnail) {
     meta.push({
       name: 'image',
       property: 'og:image',
-      content: `${siteUrl}${imageLinkedin.childImageSharp!.resize!.src}`,
+      content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
     });
-  }
-
-  if (imageTwitter) {
     meta.push({
       name: 'twitter:image',
-      content: `${siteUrl}${imageTwitter.childImageSharp!.resize!.src}`,
+      content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
     });
   }
 
@@ -60,7 +56,7 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
         title={frontmatter.title!}
         description={description || excerpt}
         meta={meta}
-        twitterCard={imageTwitter ? 'summary_large_image' : 'summary'}
+        twitterCard={thumbnail ? 'summary_large_image' : 'summary'}
       />
       <Typography variant="title" mb={theme.space.xxs}>
         {post.frontmatter!.title}
@@ -111,16 +107,9 @@ export const query = graphql`
           name
           twitter
         }
-        imageLinkedin: thumbnail {
+        thumbnail {
           childImageSharp {
             resize(width: 1200, height: 627, cropFocus: CENTER) {
-              src
-            }
-          }
-        }
-        imageTwitter: thumbnail {
-          childImageSharp {
-            resize(width: 1200, height: 600, cropFocus: CENTER) {
               src
             }
           }
