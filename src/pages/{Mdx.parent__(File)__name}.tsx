@@ -41,6 +41,7 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
 
   if (imageLinkedin) {
     meta.push({
+      name: 'image',
       property: 'og:image',
       content: `${siteUrl}${imageLinkedin.childImageSharp!.resize!.src}`,
     });
