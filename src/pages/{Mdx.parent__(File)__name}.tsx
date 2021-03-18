@@ -33,6 +33,10 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
       name: 'twitter:creator',
       content: `@${frontmatter.author.twitter}`,
     },
+    {
+      name: 'author',
+      content: frontmatter.author.name!,
+    },
   ];
 
   if (imageLinkedin) {
