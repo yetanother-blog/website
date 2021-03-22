@@ -111,19 +111,28 @@ module.exports = {
             title: 'yetanother.blog',
             //@ts-ignore
             serialize({ query: { site, allMdx } }) {
+              const siteUrl = site.siteMetadata.siteUrl;
+
               //@ts-ignore
-              return allMdx.nodes.map((node) => {
-                return {
+              return allMdx.nodes.map(node => ({
                   title: node.frontmatter.title,
                   description: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  url: `${site.siteMetadata.siteUrl}/${node.parent.name}/?utm_source=rss-feed&utm_medium=rss`,
-                  guid: `${site.siteMetadata.siteUrl}/${node.parent.name}/`,
-                };
-              });
+                  url: `${siteUrl}/${node.parent.name}/?utm_source=rss-feed&utm_medium=rss`,
+                  guid: `${siteUrl}/${node.parent.name}/`,
+                  enclosure: node.frontmatter.thumbnail && {
+                    url: siteUrl + node.frontmatter.thumbnail.childImageSharp.resize.src,
+                  },
+              }));
             },
             query: `
               {
+                site {
+                  siteMetadata {
+                    siteUrl
+                  }
+                }
+
                 allMdx(
                   sort: { fields: [frontmatter___date], order: DESC }
                 ) {
@@ -140,6 +149,13 @@ module.exports = {
                       date
                       description
                       dateUrl: date(formatString: "YYYY-MM-DD")
+                      thumbnail {
+                        childImageSharp {
+                          resize(width: 1200) {
+                            src
+                          }
+                        }
+                      }
                     }
                   }
                 }
