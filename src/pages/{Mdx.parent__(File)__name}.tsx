@@ -32,15 +32,20 @@ const BlogPost: React.FC<PageProps<BlogPostQuery>> = (props) => {
       name: 'twitter:creator',
       content: `@${frontmatter.author.twitter}`,
     },
+    {
+      name: 'author',
+      content: frontmatter.author.name!,
+    },
   ];
 
   if (thumbnail) {
     meta.push({
-      name: 'twitter:image',
+      name: 'image',
+      property: 'og:image',
       content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
     });
     meta.push({
-      name: 'og:image',
+      name: 'twitter:image',
       content: `${siteUrl}${thumbnail.childImageSharp!.resize!.src}`,
     });
   }
@@ -104,7 +109,7 @@ export const query = graphql`
         }
         thumbnail {
           childImageSharp {
-            resize(width: 1200) {
+            resize(width: 1200, height: 627, cropFocus: CENTER) {
               src
             }
           }
