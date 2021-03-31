@@ -25,7 +25,7 @@
     "gatsby-plugin-typescript": "^3.1.0",
     "gatsby-plugin-typography": "^3.1.0",
     "gatsby-remark-images": "^4.1.1",
-    "gatsby-remark-prismjs": "^4.1.0",
+    "gatsby-remark-prismjs": "^4.2.0",
     "gatsby-remark-responsive-iframe": "^3.1.0",
     "gatsby-remark-slug": "^0.1.0",
     "gatsby-remark-smartypants": "^3.1.0",
