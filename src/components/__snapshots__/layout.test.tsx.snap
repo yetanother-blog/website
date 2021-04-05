@@ -3,25 +3,25 @@
 exports[`Layout renders a header 1`] = `
 <div>
   <div
-    class="sc-idOhPF fplOIk"
+    class="sc-ieebsP beRXyu"
     display="flex"
     height="auto"
     overflow="visible"
   >
     <nav
-      class="sc-bqyKva ldFryj"
+      class="sc-bqiQRQ crIduL"
       display="flex"
       height="64,80"
       width="100%"
     >
       <a
         aria-label="logo"
-        class="sc-kEjbxe bOcxtY"
+        class="sc-kDThTU bDfKef"
         href="/"
         role="navigation"
       >
         <p
-          class="sc-fubCfw gmuzPW sc-iqHYGH bdKNcT"
+          class="sc-furvIG eOKeSC sc-iqsfdx jCCglu"
           font-family="Source Code Pro"
           font-weight="600"
         >
@@ -29,28 +29,28 @@ exports[`Layout renders a header 1`] = `
         </p>
       </a>
       <div
-        class="sc-hBEYos hKBvqn"
+        class="sc-hBURRC bcfJCj"
         display="none,flex"
       >
         <a
-          class="sc-hKgILt fRGUNE"
+          class="sc-hKwCoD hdiYYz"
           href="/"
         >
           <span
-            class="sc-bdfBwQ cXEaCg"
+            class="sc-bdvvaa knLrEo"
           >
             Home
           </span>
         </a>
         <a
-          class="sc-fodVxV dZJVvd"
+          class="sc-fotPbf cmBUzv"
           href="https://twitter.com/_yetanotherblog"
           rel="noopener"
           target="_blank"
         >
           <span
             aria-label="twitter icon"
-            class="sc-bkzZxe gkTIXL"
+            class="sc-bkkfTU FINAs"
             role="img"
           >
             
@@ -73,20 +73,20 @@ exports[`Layout renders a header 1`] = `
     
           </span>
           <span
-            class="sc-fFubgz izKrpd"
+            class="sc-fFehDp bOOXbk"
           >
             Twitter
           </span>
         </a>
         <a
-          class="sc-fodVxV dZJVvd"
+          class="sc-fotPbf cmBUzv"
           href="https://github.com/yetanother-blog"
           rel="noopener"
           target="_blank"
         >
           <span
             aria-label="github icon"
-            class="sc-bkzZxe gkTIXL"
+            class="sc-bkkfTU FINAs"
             role="img"
           >
             
@@ -109,20 +109,20 @@ exports[`Layout renders a header 1`] = `
     
           </span>
           <span
-            class="sc-fFubgz izKrpd"
+            class="sc-fFehDp bOOXbk"
           >
             Github
           </span>
         </a>
         <a
-          class="sc-fodVxV dZJVvd"
+          class="sc-fotPbf cmBUzv"
           href="https://yetanother.blog/rss.xml"
           rel="noopener"
           target="_blank"
         >
           <span
             aria-label="rss icon"
-            class="sc-bkzZxe gkTIXL"
+            class="sc-bkkfTU FINAs"
             role="img"
           >
              
@@ -153,7 +153,7 @@ exports[`Layout renders a header 1`] = `
             </svg>
           </span>
           <span
-            class="sc-fFubgz izKrpd"
+            class="sc-fFehDp bOOXbk"
           >
             RSS
           </span>
@@ -161,18 +161,18 @@ exports[`Layout renders a header 1`] = `
       </div>
       <button
         aria-label="hamburger menu"
-        class="sc-dQppl iirHAx"
+        class="sc-egiSv boSzQI"
         display="flex,none"
         height="48px"
         width="48px"
       >
         <div
-          class="sc-crrsfI esrOfX"
+          class="sc-crHlIS hojPTt"
         />
       </button>
     </nav>
     <main
-      class="sc-idOhPF XSoBZ"
+      class="sc-ieebsP cnuHGP"
       width="100%"
     >
       <main>
@@ -182,43 +182,43 @@ exports[`Layout renders a header 1`] = `
       </main>
     </main>
     <footer
-      class="sc-idOhPF bbHlDG"
+      class="sc-ieebsP ibjjE"
       display="flex"
       width="100%"
     >
       <a
-        class="sc-eCssSg bApVWh"
+        class="sc-eCImvq bbuctM"
         href="/privacy-policy/"
         mb="20"
         mr="20"
       >
         <span
-          class="sc-bdfBwQ cXEaCg"
+          class="sc-bdvvaa knLrEo"
         >
           Privacy Policy
         </span>
       </a>
       <a
-        class="sc-eCssSg bApVWh"
+        class="sc-eCImvq bbuctM"
         href="/legal-details/"
         mb="20"
         mr="20"
       >
         <span
-          class="sc-bdfBwQ cXEaCg"
+          class="sc-bdvvaa knLrEo"
         >
           Legal Details
         </span>
       </a>
       <a
-        class="sc-eCssSg fcwQBZ"
+        class="sc-eCImvq boCwNU"
         href="https://plausible.io/yetanother.blog"
         mb="20"
         rel="noopener noreferrer nofollow"
         target="_blank"
       >
         <span
-          class="sc-bdfBwQ cXEaCg"
+          class="sc-bdvvaa knLrEo"
         >
           Stats
         </span>
