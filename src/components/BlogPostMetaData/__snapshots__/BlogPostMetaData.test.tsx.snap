@@ -3,7 +3,7 @@
 exports[`BlogPostMetaData component should render a BlogPostMetaData w/ content 1`] = `
 <div>
   <span
-    class="sc-jSgupP fnsZfl"
+    class="sc-jRQAMF dSLHev"
     display="block"
     font-family="Source Code Pro"
     font-weight="600"
@@ -16,7 +16,7 @@ exports[`BlogPostMetaData component should render a BlogPostMetaData w/ content 
      •
      
     <address
-      class="sc-gKsewC htKuho"
+      class="sc-gKckTs bsCFOL"
       display="inline-block"
     >
       Homer Simpson
@@ -25,7 +25,7 @@ exports[`BlogPostMetaData component should render a BlogPostMetaData w/ content 
     •
      
     <span
-      class="sc-gKsewC htKuho"
+      class="sc-gKckTs bsCFOL"
       display="inline-block"
     >
       4min read

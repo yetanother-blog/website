@@ -3,11 +3,11 @@
 exports[`Stats component should render 1`] = `
 <div>
   <div
-    class="sc-bdfBwQ jlfcoC"
+    class="sc-bdvvaa hITgeK"
   >
     <div>
       <span
-        class="sc-gKsewC gVIdnn"
+        class="sc-gKckTs cBMlwg"
         color="secondary"
         display="block"
       >
@@ -17,24 +17,24 @@ exports[`Stats component should render 1`] = `
         </small>
       </span>
       <span
-        class="sc-jrAGrp birvxJ"
+        class="sc-jrQzUz jxTuHj"
         display="block"
       >
         Of all top 1m websites by traffic include Google Analytics
       </span>
       <span
-        class="sc-kEjbxe eDVcYQ"
+        class="sc-kDThTU cwQFAH"
         display="block"
       >
         (Source: 
         <a
-          class="sc-jSgupP intPQj"
+          class="sc-jRQAMF hVqlct"
           href="https://trends.builtwith.com/analytics/Google-Analytics"
           rel="noopener noreferrer nofollow"
           target="_blank"
         >
           <span
-            class="sc-gsTCUz iPjDLQ"
+            class="sc-gsDJrp leAAmy"
           >
             BuiltWith
           </span>
@@ -44,7 +44,7 @@ exports[`Stats component should render 1`] = `
     </div>
     <div>
       <span
-        class="sc-gKsewC gVIdnn"
+        class="sc-gKckTs cBMlwg"
         color="secondary"
         display="block"
       >
@@ -54,24 +54,24 @@ exports[`Stats component should render 1`] = `
         </small>
       </span>
       <span
-        class="sc-jrAGrp birvxJ"
+        class="sc-jrQzUz jxTuHj"
         display="block"
       >
         Size of the Google Analytics JavaScript Snippet
       </span>
       <span
-        class="sc-kEjbxe eDVcYQ"
+        class="sc-kDThTU cwQFAH"
         display="block"
       >
         (Source: 
         <a
-          class="sc-jSgupP intPQj"
+          class="sc-jRQAMF hVqlct"
           href="https://www.google-analytics.com/analytics.js"
           rel="noopener noreferrer nofollow"
           target="_blank"
         >
           <span
-            class="sc-gsTCUz iPjDLQ"
+            class="sc-gsDJrp leAAmy"
           >
             Google
           </span>
