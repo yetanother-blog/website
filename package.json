@@ -13,7 +13,7 @@
     "gatsby": "^3.2.1",
     "gatsby-plugin-feed": "^3.2.0",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
-    "gatsby-plugin-image": "^1.2.0",
+    "gatsby-plugin-image": "^1.2.1",
     "gatsby-plugin-manifest": "^3.2.0",
     "gatsby-plugin-mdx": "^2.2.0",
     "gatsby-plugin-offline": "^4.2.0",
