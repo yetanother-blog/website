@@ -74,7 +74,7 @@
     "node-fetch": "^2.6.1",
     "prettier": "^2.2.1",
     "react-docgen-typescript-loader": "^3.7.2",
-    "ts-loader": "^9.0.2",
+    "ts-loader": "^9.1.0",
     "typescript": "^4.2.4"
   },
   "homepage": "https://yetanother.blog",
