@@ -3,11 +3,11 @@
 exports[`BlogPostLink component should render a BlogPostLink w/ content 1`] = `
 <div>
   <a
-    class="sc-kDThTU IauXi"
+    class="sc-kEqXSa TRGNn"
     href="/some-url"
   >
     <h2
-      class="sc-gsDJrp dJUeDK"
+      class="sc-gtsrHT kzHeFW"
     >
       some title
     </h2>
@@ -15,15 +15,15 @@ exports[`BlogPostLink component should render a BlogPostLink w/ content 1`] = `
       Some Content 
     </div>
     <p
-      class="sc-hKwCoD kotPZF"
+      class="sc-hKFxyN guMfUx"
     >
       Some more text...
     </p>
     <span
-      class="sc-furvIG bGRiPV"
+      class="sc-fujyAs fTFtIY"
     >
       <span
-        class="sc-gKckTs bXbyMB"
+        class="sc-gKAaRy bYNphz"
       >
         read more
       </span>

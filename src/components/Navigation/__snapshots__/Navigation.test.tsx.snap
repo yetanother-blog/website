@@ -3,19 +3,19 @@
 exports[`Navigation component should render social link for twitter 1`] = `
 <div>
   <nav
-    class="sc-jrQzUz NhGfT"
+    class="sc-jrsJWt cWBQWn"
     display="flex"
     height="64,80"
     width="100%"
   >
     <a
       aria-label="logo"
-      class="sc-gKckTs cbXYIC"
+      class="sc-gKAaRy cvchbE"
       href="/"
       role="navigation"
     >
       <p
-        class="sc-hKwCoD kVRiJn sc-iCfLBT buuvTd"
+        class="sc-hKFxyN TZzLj sc-iCoGMd bcqFkW"
         font-family="Source Code Pro"
         font-weight="600"
       >
@@ -23,14 +23,14 @@ exports[`Navigation component should render social link for twitter 1`] = `
       </p>
     </a>
     <div
-      class="sc-iqsfdx csHdKK"
+      class="sc-iqAclL dnwRFX"
       display="none,flex"
     >
       <a
-        class="sc-ksdxAp eizrhv"
+        class="sc-ksluID gFDYUs"
       >
         <span
-          class="sc-crHlIS gtoVmF"
+          class="sc-crzoAE eZLDoQ"
         >
           Guide
         </span>
@@ -38,13 +38,13 @@ exports[`Navigation component should render social link for twitter 1`] = `
     </div>
     <button
       aria-label="hamburger menu"
-      class="sc-pVTma gSKnEc"
+      class="sc-pNWdM bEvWHc"
       display="flex,none"
       height="48px"
       width="48px"
     >
       <div
-        class="sc-furvIG iMnDab"
+        class="sc-fujyAs daZcQq"
       />
     </button>
   </nav>

@@ -3,14 +3,14 @@
 exports[`SocialLink component should render social link for twitter 1`] = `
 <div>
   <a
-    class="sc-bdvvaa jwhLTs"
+    class="sc-bdnxRM jOgPlH"
     href="https://twitter.com/_yetanotherblog"
     rel="noopener"
     target="_blank"
   >
     <span
       aria-label="twitter icon"
-      class="sc-dkPtyc hUFzds"
+      class="sc-dlnjwi XoLip"
       role="img"
     >
       
@@ -33,7 +33,7 @@ exports[`SocialLink component should render social link for twitter 1`] = `
     
     </span>
     <span
-      class="sc-gsDJrp hFEQkN"
+      class="sc-gtsrHT jhkcAt"
     >
       Twitter
     </span>
