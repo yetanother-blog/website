@@ -3,20 +3,20 @@
 exports[`List component should render correctly w/ list item 1`] = `
 <div>
   <ul
-    class="sc-bdvvaa dQCZCu"
+    class="sc-bdnxRM kDwIxt"
   >
     <li
-      class="sc-bdvvaa fuVBOB"
+      class="sc-bdnxRM cFCle"
     >
       Hello One
     </li>
     <li
-      class="sc-bdvvaa fuVBOB"
+      class="sc-bdnxRM cFCle"
     >
       Hello Two
     </li>
     <li
-      class="sc-bdvvaa fuVBOB"
+      class="sc-bdnxRM cFCle"
     >
       Hello Hundred
     </li>

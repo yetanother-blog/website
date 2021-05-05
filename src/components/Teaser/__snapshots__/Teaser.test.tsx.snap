@@ -3,26 +3,26 @@
 exports[`Teaser component should render a teaser w/ content 1`] = `
 <div>
   <div
-    class="sc-bdvvaa jpUCIR"
+    class="sc-bdnxRM kBdCFS"
     display="flex"
   >
     <span
-      class="sc-iCfLBT iWpJp"
+      class="sc-iCoGMd csFgFy"
     >
       <svg
-        class="sc-pVTma ghdccg"
+        class="sc-pNWdM bONjUQ"
         data-file-name="SvgBrowser"
       />
       <svg
-        class="sc-furvIG ezfHtA"
+        class="sc-fujyAs drLfeV"
         data-file-name="SvgBackground"
       />
     </span>
     <div
-      class="sc-jrQzUz bgLYmB"
+      class="sc-jrsJWt hwlsbJ"
     >
       <h2
-        class="sc-gsDJrp ebQNtU"
+        class="sc-gtsrHT dyVbdI"
         font-family="Source Code Pro"
         font-weight="600"
       >
