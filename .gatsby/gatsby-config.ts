@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [`/legal-details/`, `/privacy-policy/`],
+        excludes: [`/legal-details/`, `/privacy-policy/`],
       }
     },
     {
