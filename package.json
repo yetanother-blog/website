@@ -39,7 +39,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.19",
+    "react-typography": "^0.16.20",
     "styled-components": "^5.3.0",
     "styled-system": "^5.1.5",
     "typeface-source-code-pro": "^1.1.13",
