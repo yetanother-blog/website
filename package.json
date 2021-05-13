@@ -23,7 +23,7 @@
     "gatsby-plugin-sitemap": "^4.1.0",
     "gatsby-plugin-styled-components": "^4.4.0",
     "gatsby-plugin-typescript": "^3.4.0",
-    "gatsby-plugin-typography": "^3.4.0",
+    "gatsby-plugin-typography": "^3.5.0",
     "gatsby-remark-images": "^5.2.0",
     "gatsby-remark-prismjs": "^5.2.0",
     "gatsby-remark-responsive-iframe": "^4.2.0",
