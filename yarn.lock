@@ -4978,10 +4978,10 @@ babel-preset-fbjs@^3.3.0:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^1.3.0, babel-preset-gatsby@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-1.5.0.tgz#f1da38a3b8b705ad03a1cb6279315e8730c3be8a"
-  integrity sha512-XV66eQQhfTgx0V3KtIo2fSZYUpL9zXa8jO91kApYHOAqZa9vuMC1leo0X5CQQofeyaJTHIlrGnRcAhH//qADHQ==
+babel-preset-gatsby@^1.5.0, babel-preset-gatsby@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-1.6.0.tgz#2a123b38b8b0a2e92cd7d96c411e1d05d0549efe"
+  integrity sha512-d/5RhTIQo7Q66tjzhvHA3RfD037tODIA7JZwsjsrtW1cvVWB7+k60GT4lSziR2U6cZB46XXY09PBXRrrFQmjZQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.12.1"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.12.1"
@@ -4996,8 +4996,8 @@ babel-preset-gatsby@^1.3.0, babel-preset-gatsby@^1.5.0:
     babel-plugin-dynamic-import-node "^2.3.3"
     babel-plugin-macros "^2.8.0"
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
-    gatsby-core-utils "^2.5.0"
-    gatsby-legacy-polyfills "^1.5.0"
+    gatsby-core-utils "^2.6.0"
+    gatsby-legacy-polyfills "^1.6.0"
 
 babel-preset-jest@^26.6.2:
   version "26.6.2"
@@ -9265,10 +9265,10 @@ gatsby-graphiql-explorer@^1.5.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-legacy-polyfills@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-1.5.0.tgz#b65dc1d6f37b1cbf38a9f9c03dbab8adec0d3eeb"
-  integrity sha512-aRVk/ArXt7majaxlIKftybY7V6Q22MKiBaQcVWp2Sn7P5xc8M7WO4B7D2vgaEqTxfOmopcWuzHSnCbvMgSPe+A==
+gatsby-legacy-polyfills@^1.5.0, gatsby-legacy-polyfills@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-1.6.0.tgz#6d217afbbf015ad704d0253fa1de333e42e6a125"
+  integrity sha512-Qqk+THLhQhlYpdMsOcFwBmSrF06BT273rQ4he4g5YGg3l57wpzHQX2zt8yuLIE/6zzA5q/hTYg9MFIniYRBG/A==
   dependencies:
     core-js-compat "3.9.0"
 
@@ -9659,17 +9659,17 @@ gatsby-remark-smartypants@^4.3.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-source-filesystem@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.5.0.tgz#b25645c663a8c188dece11de6c9ace5872316180"
-  integrity sha512-o0JGFGHwjqgy1IciifMoMek/ulpO/lvwhpAxxjpDl3vqzO6beoAdaLrLe6zRn403XXSA14TDP9KUNfePLlp1lg==
+gatsby-source-filesystem@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.6.0.tgz#369eaef6fe8ae07739594176aedc36606a328849"
+  integrity sha512-kTWcW9LwCLOF3TMC9lBR6KbMi6A0SHNQeGNLBw8THRpDVVe5nXZG33oI1Ns23ocNDVrajIMKXPPzsrl2zjG6BQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     better-queue "^3.8.10"
     chokidar "^3.4.3"
     file-type "^16.0.0"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^2.5.0"
+    gatsby-core-utils "^2.6.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
