@@ -53,7 +53,7 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/addons": "^6.2.3",
     "@storybook/react": "^6.2.9",
-    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@types/jest": "^26.0.23",
     "@types/mdx-js__react": "^1.5.3",
@@ -72,10 +72,10 @@
     "jest-svg-transformer": "^1.0.0",
     "netlify-plugin-gatsby-cache": "^0.3.2",
     "node-fetch": "^2.6.1",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.1",
     "react-docgen-typescript-loader": "^3.7.2",
-    "ts-loader": "^9.2.2",
-    "typescript": "^4.2.4"
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.2"
   },
   "homepage": "https://yetanother.blog",
   "keywords": [
