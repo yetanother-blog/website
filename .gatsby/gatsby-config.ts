@@ -17,6 +17,10 @@ module.exports = {
       twitter: `@_yetanotherblog`,
     },
   },
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PRESERVE_WEBPACK_CACHE: true
+  },
   plugins: [
     `gatsby-transformer-yaml`,
     {
