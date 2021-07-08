@@ -32,5 +32,9 @@
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.1.0",
     "node-fetch": "^2.6.1"
+  },
+  "dependencies": {
+    "@fontsource/source-code-pro": "^4.5.0",
+    "@fontsource/source-sans-pro": "^4.5.0"
   }
 }

@@ -1,11 +1,37 @@
-/* Colors */
 :root {
-  --lightgray: #e0e0e0;
-  --gray: #c0c0c0;
-  --darkgray: #333;
-  --navy: #17050f;
-  --blue: #082840;
-  --white: #fff;
+  --font-family-primary: 'Source Sans Pro', sans-serif;
+  --font-family-secondary: 'Source Code Pro', sans-serif;
+
+  --font-size-xs: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  --color-primary: #00FF00;
+  --color-secondary: #00FF00;
+
+  --color-grey-200: #FBFBFB;
+  --color-grey-300: #F6F6F6;
+  --color-grey-400: #ACADAC;
+  --color-grey-500: #1C1C1C;
+
+  --space-zero: 0px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-l: 20px;
+  --space-xl: 40px;
+  --space-xxl: 60px;
+  --space-xxxl: 120px;
+
+  --radii-s: 4px;
+
+  --width-m: 620px;
+  --width-l: 940px;
+  --width-xl: 1200px;
 }
 
 /* Global stylesheet */
@@ -17,7 +43,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, system-ui, sans-serif;
+  font-family: var(--font-family-primary);
   color: var(--darkgray);
   background-color: var(--white);
 }
@@ -192,16 +218,6 @@ code {
 .tmpl-home .postlist-link {
   font-size: 1.1875em; /* 19px /16 */
   font-weight: 700;
-
-
-/* Warning */
-.warning {
-  background-color: #ffc;
-  padding: 1em 0.625em; /* 16px 10px /16 */
-}
-.warning ol:only-child {
-  margin: 0;
-}
 
 /* Direct Links / Markdown Headers */
 .direct-link {
