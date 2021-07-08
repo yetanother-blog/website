@@ -61,6 +61,11 @@ module.exports = function(eleventyConfig) {
     ghostMode: false
   });
 
+  eleventyConfig.addShortcode("snippet", ({ url, title, defaultTab = 'html', height = 450 }) => {
+    const encodedURL = encodeURIComponent(url);
+    return `<iframe class="indiepen" src="https://indiepen.tech/embed/?url=${encodedURL}&tab=${defaultTab}" style="width: 100%; overflow: hidden; display: block; border: 0;" title="${title}" loading="lazy" width="100%" height="${height}"></iframe>`;
+  });
+
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid

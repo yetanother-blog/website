@@ -27,13 +27,7 @@ had to come up with our solution.
 Let me introduce [Indiepen](https://indiepen.tech/): A privacy-friendly tool to
 embed HTML, CSS, and JS code examples.
 
-import { Snippet } from '../../../src/components/Snippet/Snippet';
-
-<Snippet
-  url="https://indiepen.tech/example"
-  title="Example demoing Indiepen"
-  height={500}
-/>
+{% snippet url="https://indiepen.tech/example", title="Example demoing Indiepen", height="500" %}
 
 With Indiepen, you generate a code snippet and integrate it on your website.
 Indiepen takes care of fetching the HTML, CSS, and JS files and providing a
