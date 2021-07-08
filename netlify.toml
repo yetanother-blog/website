@@ -8,9 +8,6 @@
   command = "DEBUG=* eleventy"
 
 [[plugins]]
-  package = "./.plugins/ci"
-
-[[plugins]]
   package = "./.plugins/slack"
 
 [[redirects]]
