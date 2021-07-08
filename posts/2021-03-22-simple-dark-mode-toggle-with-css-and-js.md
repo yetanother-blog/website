@@ -19,12 +19,7 @@ dark mode as well as persist the choice somehow. And here is what I got:
 
 import { Snippet } from '../../../src/components/Snippet/Snippet';
 
-<Snippet
-  url="https://examples.yetanother.blog/dark-mode-toggle/"
-  title="Example showing a dark mode toggle"
-  defaultTab="css"
-  height={400}
-/>
+{% snippet url="https://examples.yetanother.blog/dark-mode-toggle/", title="Example showing a dark mode toggle", defaultTab="css", height="400" %}
 
 Okay, I agree, it's just a button and you can click on it and it changes the
 background color. Not special at all but let's take a look at the details and

@@ -19,14 +19,7 @@ overview of the complexity and the effort. My main goal there was to focus on
 accessibility like navigating with arrows keys or tab index handling. Here's the
 result:
 
-import { Snippet } from '../../../src/components/Snippet/Snippet';
-
-<Snippet
-  url="https://examples.yetanother.blog/material-design-tab/"
-  title="Example showing a material design tab component"
-  height={450}
-  defaultTab="result"
-/>
+{% snippet url="https://examples.yetanother.blog/material-design-tab/", title="Example showing a material design tab component", defaultTab="result", height="450" %}
 
 _Source:
 [GitHub](https://github.com/yetanother-blog/examples/tree/main/material-design-tab)_

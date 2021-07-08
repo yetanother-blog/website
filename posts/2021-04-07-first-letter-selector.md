@@ -17,14 +17,7 @@ The first use case which came into my mind was a fairy tale. That's why I
 created a little code snippet where I can demonstrate how to apply styles by
 using the `::first-letter` selector:
 
-import { Snippet } from '../../../src/components/Snippet/Snippet';
-
-<Snippet
-  url="https://examples.yetanother.blog/first-letter-selector/"
-  title="First Letter CSS Selector"
-  height={400}
-  defaultTab="css"
-/>
+{% snippet url="https://examples.yetanother.blog/first-letter-selector/", title="First Letter CSS Selector", defaultTab="css", height="400" %}
 
 Check out the example on
 [GitHub](https://github.com/yetanother-blog/examples/tree/main/first-letter-selector).
