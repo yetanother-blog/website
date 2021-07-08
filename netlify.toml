@@ -8,7 +8,7 @@
   command = "DEBUG=* eleventy"
 
 [[plugins]]
-  package = "./.plugins/slack"
+  package = "./.netlify/slack"
 
 [[redirects]]
   from = "/guides/2020-05-17-collaborative-ui-development"
