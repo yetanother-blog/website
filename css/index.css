@@ -9,13 +9,13 @@
   --font-size-xl: 24px;
   --font-size-xxl: 32px;
 
-  --color-primary: #00FF00;
-  --color-secondary: #00FF00;
+  --color-primary: #00ff00;
+  --color-secondary: #00ff00;
 
-  --color-grey-200: #FBFBFB;
-  --color-grey-300: #F6F6F6;
-  --color-grey-400: #ACADAC;
-  --color-grey-500: #1C1C1C;
+  --color-grey-200: #fbfbfb;
+  --color-grey-300: #f6f6f6;
+  --color-grey-400: #acadac;
+  --color-grey-500: #1c1c1c;
 
   --space-zero: 0px;
   --space-xxs: 4px;
@@ -218,7 +218,7 @@ code {
 .tmpl-home .postlist-link {
   font-size: 1.1875em; /* 19px /16 */
   font-weight: 700;
-
+}
 /* Direct Links / Markdown Headers */
 .direct-link {
   font-family: sans-serif;
