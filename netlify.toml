@@ -4,16 +4,14 @@
     Permissions-Policy = "interest-cohort=()"
 
 [build]
-  publish = "public"
+  publish = "_site"
+  command = "DEBUG=* eleventy"
 
 [[plugins]]
   package = "./.plugins/ci"
 
 [[plugins]]
   package = "./.plugins/slack"
-
-[[plugins]]
-  package = "netlify-plugin-gatsby-cache"
 
 [[redirects]]
   from = "/guides/2020-05-17-collaborative-ui-development"
