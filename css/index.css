@@ -57,6 +57,8 @@ body {
 .container {
   margin: 0 auto;
   max-width: 940px;
+  padding-right: var(--space-l);
+  padding-left: var(--space-l);
 }
 
 /* Header */
@@ -107,7 +109,6 @@ body {
   font-size: var(--font-size-m);
   font-weight: 600;
   line-height: 1.25;
-  margin-bottom: var(--space-l);
   text-decoration: none;
   position: relative;
 }
@@ -146,6 +147,12 @@ body {
 /* Footer */
 .footer {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: var(--space-xl);
+  justify-content: center;
+  min-height: 60px;
+}
+
+@media screen and (min-width: 576px) {
+  .footer {
+    justify-content: flex-end;
+  }
 }
