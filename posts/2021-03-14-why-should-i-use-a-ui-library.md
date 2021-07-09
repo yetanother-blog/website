@@ -9,7 +9,7 @@ layout: layouts/post.njk
 In this post, I want to point out what advantages you can gain from an
 open-source UI library and how it can make your life easier.
 
-![ui components with thinking emoji](./thumbnail.png)
+![ui components with thinking emoji](/img/thumbnails/2021-03-14-why-should-i-use-a-ui-library.png)
 
 ## Material Design Tab Example
 
