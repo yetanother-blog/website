@@ -17,8 +17,6 @@ solution with pure CSS and JS. Not only should my dark mode respect the system
 preference, but it should also provide a toggle to switch between the light and
 dark mode as well as persist the choice somehow. And here is what I got:
 
-import { Snippet } from '../../../src/components/Snippet/Snippet';
-
 {% snippet url="https://examples.yetanother.blog/dark-mode-toggle/", title="Example showing a dark mode toggle", defaultTab="css", height="400" %}
 
 Okay, I agree, it's just a button and you can click on it and it changes the
