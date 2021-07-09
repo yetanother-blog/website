@@ -66,6 +66,7 @@ body {
   padding: var(--space-l);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
@@ -96,6 +97,7 @@ body {
 
 .nav__item {
   margin-right: var(--space-l);
+  line-height: 1;
 }
 
 .nav__item:last-child {
