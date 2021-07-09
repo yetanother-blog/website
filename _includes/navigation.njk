@@ -1,0 +1,9 @@
+<nav class="nav {% if navType %}nav--{{ navType }}{% endif %}">
+  <ul class="nav__list">
+  {%- for entry in navItems %}
+    <li class="nav__item">
+      <a href="{{ entry.url | url }}" class="nav__link" {% if entry.url == page.url %}aria-current="page"{% endif %}>{{ entry.title }}</a>
+    </li>
+  {%- endfor %}
+  </ul>
+</nav>

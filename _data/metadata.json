@@ -22,5 +22,19 @@
       "name": "Henrik Fricke",
       "twitter": "henrik_fricke"
     }
-  }
+  },
+  "footerLinks": [
+    {
+      "title": "Privacy Policy",
+      "url": "/privacy-policy/"
+    },
+    {
+      "title": "Legal Details",
+      "url": "/legal-details/"
+    },
+    {
+      "title": "Stats",
+      "url": "https://plausible.io/yetanother.blog"
+    }
+  ]
 }
