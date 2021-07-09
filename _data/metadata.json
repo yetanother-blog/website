@@ -1,0 +1,40 @@
+{
+  "sitename": "yetanother.blog",
+  "url": "https://yetanother.blog/",
+  "language": "en",
+  "description": "Two dudes from Hamburg wirting about web stuff.",
+  "feed": {
+    "subtitle": "Two dudes from Hamburg wirting about web stuff.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://yetanother.blog/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://yetanother.blog/feed/feed.json"
+  },
+  "authors": {
+    "andre": {
+      "name": "André Rusakow",
+      "twitter": "_andrewsecret"
+    },
+    "henrik": {
+      "name": "Henrik Fricke",
+      "twitter": "henrik_fricke"
+    }
+  },
+  "footerLinks": [
+    {
+      "title": "Privacy Policy",
+      "url": "/privacy-policy/"
+    },
+    {
+      "title": "Legal Details",
+      "url": "/legal-details/"
+    },
+    {
+      "title": "Stats",
+      "url": "https://plausible.io/yetanother.blog"
+    }
+  ]
+}

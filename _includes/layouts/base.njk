@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <title>{{ title }} | {{ metadata.sitename }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="7VN8uwagcAuD4V-4GKJqa3I2SENSccfc0Ph7LWwd1Kc">
+    <meta name="description"  property="og:description" content="{{ description or metadata.description }}">
+    <meta name="twitter:description"content="{{ description or metadata.description }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:site" content="@_yetanotherblog">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/source-code-pro/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/source-sans-pro/index.css' | url }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.sitename }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.sitename }}">
+    <script async defer data-domain="yetanother.blog" src="https://plausible.io/js/plausible.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script>if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true</script>
+  </head>
+  <body>
+    <header class="header container">
+      <a href="{{ '/' | url }}" class="header__logo" aria-label="Homepage">{{ metadata.sitename }}</a>
+
+      {% set navItems = collections.all | eleventyNavigation %}
+      {% include 'navigation.njk' %}
+    </header>
+
+    <main class="container container--narrow">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer container">
+      {% set navItems = metadata.footerLinks %}
+      {% set navType = 'secondary' %}
+      {% include 'navigation.njk' %}
+    </footer>
+  </body>
+</html>

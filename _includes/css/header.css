@@ -1,0 +1,26 @@
+.header {
+  padding: var(--space-l);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-weight: 600;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-l);
+  text-decoration: none;
+  color: var(--color-grey-500);
+}
+
+.header__logo::before {
+  content: '>> ';
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 576px) {
+  .header {
+    height: 80px;
+    margin-bottom: var(--space-xxxl);
+  }
+}
