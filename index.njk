@@ -5,6 +5,17 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+<h1 class="startpage__headline">
+  Hi 👋,<br>
+  we’re Henrik & André<br>
+  both Software Developers<br>
+  based in Hamburg.
+</h1>
+<h2 class="startpage__subheadline">
+  We would like to help you to stay up to date about the latest
+  <br>
+  trends in web development
+</h2>
 {% set postslist = collections.posts %}
 <ol reversed class="postlist">
 {% for post in postslist | reverse %}
