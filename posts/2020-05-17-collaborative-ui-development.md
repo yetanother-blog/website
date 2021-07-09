@@ -5,7 +5,7 @@ author: andre
 layout: layouts/post.njk
 ---
 
-!["illustration by some cool human"](./collaboration-illustration.png)
+!["illustration by some cool human"](/img/posts/collaboration-illustration.png)
 
 ## Introduction
 
@@ -85,7 +85,7 @@ The main difference is that a guild is a group of people who are **sharing the
 same interests**. Those people are working **across** the whole company. Let's
 take a look at this visual to get a better understanding:
 
-![](./guild-illustration.png)
+![](/img/posts/guild-illustration.png)
 
 Most important thing is to break the communication barriers between **frontend
 engineers** and **product designers**. Once this is done you should find a
