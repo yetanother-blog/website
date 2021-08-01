@@ -6,8 +6,6 @@ const markdownItAnchor = require("markdown-it-anchor");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const postcss = require("postcss");
-const postcssConfig = require('./postcss.config.js');
 
 module.exports = function(eleventyConfig) {
   // Add plugins
@@ -31,8 +29,9 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
   });
 
-  // Copy the `img` folder to the output
+  // Copy folders to the output
   eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource": "fonts" });
 
   // Customize Markdown library and settings:
@@ -69,15 +68,6 @@ module.exports = function(eleventyConfig) {
     const encodedURL = encodeURIComponent(url);
     return `<iframe class="indiepen" src="https://indiepen.tech/embed/?url=${encodedURL}&tab=${defaultTab}" style="width: 100%; overflow: hidden; display: block; border: 0;" title="${title}" loading="lazy" width="100%" height="${height}"></iframe>`;
   });
-
-  eleventyConfig.addTransform('postcss', async (content, outputPath) => {
-    if (outputPath && outputPath.endsWith('.css')) {
-      const result = await postcss(postcssConfig.plugins).process(content, { from: undefined })
-      return result.css;
-    }
-
-    return content;
-  })
 
   return {
     // Control which files Eleventy will process

@@ -13,7 +13,7 @@
     <meta property="og:title" content="{{ title }}">
     <meta property="og:type" content="website">
     <link rel="icon" href="/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/layouts/base.css' | url }}">
     <link rel="stylesheet" href="{{ '/fonts/source-code-pro/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/fonts/source-sans-pro/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.sitename }}">
@@ -23,21 +23,12 @@
     <script>if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true</script>
   </head>
   <body>
-    <header class="header container">
-      <a href="{{ '/' | url }}" class="header__logo" aria-label="Homepage">{{ metadata.sitename }}</a>
-
-      {% set navItems = collections.all | eleventyNavigation %}
-      {% include 'navigation.njk' %}
-    </header>
+    {% include 'components/header.njk' %}
 
     <main class="container container--narrow">
       {{ content | safe }}
     </main>
 
-    <footer class="footer container">
-      {% set navItems = metadata.footerLinks %}
-      {% set navType = 'secondary' %}
-      {% include 'navigation.njk' %}
-    </footer>
+    {% include 'components/footer.njk' %}
   </body>
 </html>
