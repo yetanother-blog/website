@@ -11,6 +11,8 @@ decorative initial letter without wrapping the first character into a span
 element. I prepared a code example and two possible solutions to demonstrate
 when it makes sense to use the first-letter pseudo-selector.
 
+---
+
 ## Fairy Tale Example
 
 The first use case which came into my mind was a fairy tale. That's why I

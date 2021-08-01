@@ -3,6 +3,8 @@ title: Collaborative UI Development
 date: '2020-05-17T13:37:03.284Z'
 author: andre
 layout: layouts/post.njk
+description: |
+  This guide will help frontend engineers and people from the UI community to develop a common understanding of collaboration and why this particular skill can improve the process of software development and product design in your company.
 ---
 
 !["illustration by some cool human"](/img/posts/collaboration-illustration.png)

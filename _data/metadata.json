@@ -13,16 +13,6 @@
     "path": "/feed/feed.json",
     "url": "https://yetanother.blog/feed/feed.json"
   },
-  "authors": {
-    "andre": {
-      "name": "André Rusakow",
-      "twitter": "_andrewsecret"
-    },
-    "henrik": {
-      "name": "Henrik Fricke",
-      "twitter": "henrik_fricke"
-    }
-  },
   "footerLinks": [
     {
       "title": "Privacy Policy",

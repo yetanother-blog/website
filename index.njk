@@ -17,13 +17,25 @@ eleventyNavigation:
   <br>
   trends in web development
 </h2>
+
 {% set postslist = collections.posts %}
-<ol reversed class="postlist">
+<ol class="home__posts" reversed>
 {% for post in postslist | reverse %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  <li class="home__post-item" role="article">
+    <header>
+      <h2 class="home__post-headline">
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h2>
+      <section class="home__post-meta">
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        <address>{{ authors[post.data.author].name }}</address>
+        <span>{{ post | readingTime({ raw: true })  }}min read</span>
+      </section>
+    </header>
+    <p class="home__post-excerpt">
+      {{ post.data.description or post.data.page.excerpt }}
+    </p>
+    <a href="{{ post.url | url }}" class="home__post-link">read more</a>
   </li>
 {% endfor %}
 </ol>
-
