@@ -33,8 +33,8 @@ module.exports = function(eleventyConfig) {
   });
 
   // Copy folders to the output
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy({ "src/img": "img" });
+  eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource": "fonts" });
 
   // Customize Markdown library and settings:
