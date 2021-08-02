@@ -3,7 +3,7 @@ title:
   'Introducing Indiepen: A privacy-friendly tool to embed HTML, CSS & JS code
   examples'
 author: henrik
-thumbnail: './thumbnail.png'
+thumbnail: '/img/thumbnails/2021-06-24-introducing-indiepen.png'
 date: '2021-06-24T19:01:27.699Z'
 description:
   'Indiepen is our first open-source project to embed HTML, CSS & JS code

@@ -1,7 +1,7 @@
 ---
 title: 'Why we don’t use Google Analytics anymore'
 author: henrik
-thumbnail: './thumbnail.png'
+thumbnail: '/img/humbnails/2021-03-13-why-we-dont-use-google-analytics-anymore.png'
 description: |
   Do you really need Google Analytics for your website? We used it, and we switched to another
   tool because we want to respect the privacy of our visitors, sell fewer data to one of the biggest companies in the world, and improve the usability of our blog.

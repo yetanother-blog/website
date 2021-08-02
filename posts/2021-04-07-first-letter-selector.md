@@ -1,7 +1,7 @@
 ---
 title: 'Quick Tip: First Letter Selector in CSS'
 author: andre
-thumbnail: './thumbnail.png'
+thumbnail: '/img/thumbnails/2021-04-07-first-letter-selector.png'
 date: '2021-04-07T11:50:12.613Z'
 layout: layouts/post.njk
 ---

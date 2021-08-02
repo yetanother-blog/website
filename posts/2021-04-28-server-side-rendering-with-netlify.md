@@ -1,7 +1,7 @@
 ---
 title: 'Server-side rendering (SSR) with Netlify'
 author: henrik
-thumbnail: './thumbnail.png'
+thumbnail: '/img/thumbnails/2021-04-28-server-side-rendering-with-netlify.png'
 date: '2021-04-28T09:18:03.215Z'
 description:
   'The easiest way to create a web server: A redirect rule and a simple Netlify

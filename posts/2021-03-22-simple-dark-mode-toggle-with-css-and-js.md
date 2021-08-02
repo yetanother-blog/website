@@ -6,7 +6,7 @@ solution with pure CSS and JS. Not only should my dark mode respect the system
 preference, but it should also provide a toggle to switch between the light and
 dark mode as well as persist the choice somehow.'
 author: henrik
-thumbnail: './thumbnail.png'
+thumbnail: '/img/thumbnails/2021-03-22-simple-dark-mode-toggle-with-css-and-js.png'
 date: '2021-03-22T18:00:00.000Z'
 layout: layouts/post.njk
 ---

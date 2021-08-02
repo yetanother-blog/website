@@ -2,7 +2,7 @@
 title: Why should I use a UI library?
 date: '2021-03-14T17:29:17.970Z'
 author: andre
-thumbnail: './thumbnail.png'
+thumbnail: '/img/thumbnails/2021-03-14-why-should-i-use-a-ui-library.png'
 layout: layouts/post.njk
 ---
 
