@@ -11,7 +11,7 @@
   --font-size-xxl: 32px;
 
   --color-primary: #00ff00;
-  --color-secondary: #00ff00;
+  --color-secondary: #fb00ff;
 
   --color-grey-200: #fbfbfb;
   --color-grey-300: #f6f6f6;
@@ -74,7 +74,7 @@ h1 {
   margin-bottom: 1.75rem;
   color: var(--color-grey-500);
   font-family: var(--font-family-primary);
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
 }
 
@@ -84,7 +84,7 @@ h2 {
   margin-bottom: 1.75rem;
   color: var(--color-grey-500);
   font-family: var(--font-family-primary);
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
   font-size: 1.51572rem;
   line-height: 1.1;

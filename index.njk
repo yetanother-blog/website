@@ -35,7 +35,7 @@ eleventyNavigation:
     <p class="home__post-excerpt">
       {{ post.data.description or post.data.page.excerpt }}
     </p>
-    <a href="{{ post.url | url }}" class="home__post-link">read more</a>
+    <a href="{{ post.url | url }}" class="home__post-link"><span class="home__post-link-label">read more</span></a>
   </li>
 {% endfor %}
 </ol>
