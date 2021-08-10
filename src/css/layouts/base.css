@@ -89,3 +89,30 @@ h2 {
   font-size: 1.51572rem;
   line-height: 1.1;
 }
+
+pre[class*='language-'] {
+  display: flex;
+  border-radius: var(--radii-s);
+}
+
+@media screen and (min-width: 992px) {
+  pre[class*='language-'] {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+
+/* Indiepen Snippets */
+.indiepen {
+  display: block;
+  overflow: hidden;
+  border: 0 none;
+  margin-bottom: var(--space-m);
+}
+
+@media screen and (min-width: 992px) {
+  .indiepen {
+    width: 780px;
+    margin-left: -50px;
+  }
+}
