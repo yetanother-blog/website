@@ -42,6 +42,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource": "fonts" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/prism-themes/themes/prism-shades-of-purple.css": "css/prism-shades-of-purple.css" });
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
