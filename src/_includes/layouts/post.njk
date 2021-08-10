@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 <link href="/css/layouts/post.css" rel="stylesheet">
-<h1>{{ title }}</h1>
+<h1 class="post__title">{{ title }}</h1>
 
 {% set meta = { date: page.date, author: author, content: content } %}
 {% set metaClass = 'post__meta' %}
