@@ -30,7 +30,7 @@
   position: relative;
 }
 
-.nav__link[aria-current='page']::after {
+.nav:not(.nav--secondary) .nav__link[aria-current='page']::after {
   transform: scaleY(4);
   animation: 1000ms ease 300ms 1 normal forwards running pulse;
 }
