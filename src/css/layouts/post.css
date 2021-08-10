@@ -9,6 +9,51 @@
   margin-bottom: var(--space-xl);
 }
 
+.post p {
+  font-size: var(--font-size-l);
+  margin-bottom: var(--space-l);
+}
+
+.post a {
+  color: darkmagenta;
+  cursor: pointer;
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  position: relative;
+}
+
+.post a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: var(--color-grey-300);
+  height: 4px;
+  bottom: -8px;
+  left: 0;
+  z-index: -1;
+  transform-origin: center bottom 0;
+  transition: transform 100ms ease-in 0s;
+}
+
+.post a:hover::after {
+  transform: scaleY(4);
+}
+
+.post h2 {
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-l);
+}
+
+.post ul {
+  box-sizing: border-box;
+  padding: 0px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 576px) {
   .post__title {
     font-size: 48px;

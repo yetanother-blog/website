@@ -2,10 +2,12 @@
 layout: layouts/base.njk
 ---
 <link href="/css/layouts/post.css" rel="stylesheet">
-<h1 class="post__title">{{ title }}</h1>
+<article class="post">
+  <h1 class="post__title">{{ title }}</h1>
 
-{% set meta = { date: page.date, author: author, content: content } %}
-{% set metaClass = 'post__meta' %}
-{% include 'components/post-meta.njk' %}
+  {% set meta = { date: page.date, author: author, content: content } %}
+  {% set metaClass = 'post__meta' %}
+  {% include 'components/post-meta.njk' %}
 
-{{ content | safe }}
+  {{ content | safe }}
+</article>
