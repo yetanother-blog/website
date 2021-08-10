@@ -1,0 +1,23 @@
+.post-meta {
+  font-size: var(--font-size-s);
+  color: var(--color-grey-400);
+  font-weight: 600;
+  font-family: var(--font-family-secondary);
+}
+
+.post-meta__author {
+  display: inline-block;
+  font-style: normal;
+}
+
+.post-meta__author::after,
+.post-meta__date::after {
+  content: '•';
+  margin: 0 var(--space-xs);
+}
+
+@media screen and (min-width: 576px) {
+  .post-meta {
+    display: flex;
+  }
+}

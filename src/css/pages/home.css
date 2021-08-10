@@ -42,22 +42,7 @@
 }
 
 .home__post-meta {
-  font-size: var(--font-size-s);
-  color: var(--color-grey-400);
-  font-weight: 600;
-  font-family: var(--font-family-secondary);
   margin-bottom: var(--space-l);
-}
-
-.home__post-meta address {
-  display: inline-block;
-  font-style: normal;
-}
-
-.home__post-meta address::after,
-.home__post-meta time::after {
-  content: '•';
-  margin: 0 var(--space-xs);
 }
 
 .home__post-excerpt {

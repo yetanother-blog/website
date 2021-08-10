@@ -7,6 +7,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginReadingTime = require('eleventy-plugin-reading-time');
+const util = require('util');
 
 module.exports = function(eleventyConfig) {
   // Add plugins
@@ -30,6 +31,11 @@ module.exports = function(eleventyConfig) {
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  });
+
+  // https://github.com/11ty/eleventy/issues/266#issuecomment-716176366
+  eleventyConfig.addFilter('console', function(value) {
+    return util.inspect(value);
   });
 
   // Copy folders to the output

@@ -26,11 +26,9 @@ eleventyNavigation:
       <h2 class="home__post-headline">
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </h2>
-      <section class="home__post-meta">
-        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-        <address>{{ authors[post.data.author].name }}</address>
-        <span>{{ post | readingTime({ raw: true })  }}min read</span>
-      </section>
+      {% set meta = { date: post.date, author: post.data.author, content: post } %}
+      {% set metaClass = 'home__post-meta' %}
+      {% include 'components/post-meta.njk' %}
     </header>
     <p class="home__post-excerpt">
       {{ post.data.description or post.data.page.excerpt }}
