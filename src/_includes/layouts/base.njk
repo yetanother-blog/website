@@ -27,12 +27,21 @@
     <script>if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true</script>
   </head>
   <body>
-    {% include 'components/header.njk' %}
+    <header class="header container">
+      <a href="{{ '/' | url }}" class="header__logo" aria-label="Homepage">{{ metadata.sitename }}</a>
+
+      {% set navItems = collections.all | eleventyNavigation %}
+      {% include 'components/navigation.njk' %}
+    </header>
 
     <main class="container container--narrow">
       {{ content | safe }}
     </main>
 
-    {% include 'components/footer.njk' %}
+    <footer class="footer container">
+      {% set navItems = metadata.footerLinks %}
+      {% set navType = 'secondary' %}
+      {% include 'components/navigation.njk' %}
+    </footer>
   </body>
 </html>
