@@ -79,6 +79,26 @@ module.exports = function(eleventyConfig) {
     return `<iframe class="indiepen" src="https://indiepen.tech/embed/?url=${encodedURL}&tab=${defaultTab}" title="${title}" loading="lazy" width="100%" height="${height}"></iframe>`;
   });
 
+  eleventyConfig.addPairedShortcode("stats", (content) => {
+    return `<div class="post__stats">${content}</div>`;
+  });
+
+  eleventyConfig.addShortcode("statsItem", ({ value, unit, description, source, sourceUrl }) => {
+    return `
+<div class="post__stats-item">
+  <span class="post__stats-item-number">
+    ${value}<small>${unit}</small>
+  </span>
+  <span class="post__stats-item-description">
+    ${description}
+  </span>
+  <span class="post__stats-item-source">
+    (Source:&nbsp;<a href="${sourceUrl}" target="_blank" rel="noopener noreferrer nofollow" class="post__stats-item-source-link">${source}</a>)
+  </span>
+</div>
+    `;
+  });
+
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid

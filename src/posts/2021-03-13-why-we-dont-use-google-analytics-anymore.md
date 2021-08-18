@@ -18,7 +18,7 @@ feature set we have to follow. Part of this feature set was also Google
 Analytics. We wanted to have some basic metrics about our website, so our
 decision felt straightforward.
 
-![Woman with an umbrella as a symbol for data privacy](img/posts/umbrella.png)
+![Woman with an umbrella as a symbol for data privacy](/img/posts/umbrella.png)
 
 ## Mixed feelings
 
@@ -42,23 +42,10 @@ data to one of the biggest companies in the world. And why did we do it? Because
 we want to see simple metrics like page views or referrals. Is that responsible
 action?
 
-import { Stats } from '../../../src/components/Stats/Stats'; import { StatsItem
-} from '../../../src/components/Stats/StatsItem';
-
-<Stats marginTop={['xl', 'xl', 'xl']} marginBottom={['xxl', 'xxl', 'xxl']}>
-<StatsItem
-    value="~50"
-    unit="%"
-    description="Of all top 1m websites by traffic include Google Analytics"
-    source="BuiltWith"
-    sourceUrl="https://trends.builtwith.com/analytics/Google-Analytics"
-  /> <StatsItem
-    value="~46"
-    unit="KB"
-    description="Size of the Google Analytics JavaScript Snippet"
-    source="Google"
-    sourceUrl="https://www.google-analytics.com/analytics.js"
-  /> </Stats>
+{% stats %}
+{% statsItem value="~50", unit="%", description="Of all top 1m websites by traffic include Google Analytics", source="BuiltWith", sourceUrl="https://trends.builtwith.com/analytics/Google-Analytics" %}
+{% statsItem value="~46", unit="KB", description="Size of the Google Analytics JavaScript Snippet", source="Google", sourceUrl="https://www.google-analytics.com/analytics.js" %}
+{% endstats %}
 
 ## The era of alternatives
 
@@ -86,7 +73,7 @@ cookies anymore, so we also don’t need a cookie law banner. You can just go to
 our website and enjoy our content. Also, Plausible’s JS snippet is way smaller
 (~1,34 KB), so we could even improve the performance of our website.
 
-![Plausible dashboard](img/posts/plausible-dashboard.png)
+![Plausible dashboard](/img/posts/plausible-dashboard.png)
 
 In addition to that, our experience got way better, too. Honest question: Do you
 really like the Google Analytics experience? Do you enjoy diving into your
