@@ -3,6 +3,7 @@ const externalLinks = require('eleventy-plugin-external-links')
 const fs = require("fs");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItImageLazyLoading = require('markdown-it-image-lazy-loading');
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -53,6 +54,9 @@ module.exports = function(eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
+  }).use(markdownItImageLazyLoading, {
+    image_size: true,
+    base_path: __dirname + '/src/',
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 
