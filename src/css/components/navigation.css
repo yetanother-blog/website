@@ -19,6 +19,7 @@
   text-decoration: none;
   position: relative;
   margin-right: var(--space-l);
+  word-wrap: normal;
 }
 
 .nav__link:last-child {
