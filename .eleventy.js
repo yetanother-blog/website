@@ -9,6 +9,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginReadingTime = require('eleventy-plugin-reading-time');
+const pluginCacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const util = require('util');
 
 module.exports = function(eleventyConfig) {
@@ -18,6 +19,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(externalLinks);
   eleventyConfig.addPlugin(pluginReadingTime);
+  eleventyConfig.addPlugin(pluginCacheBuster({
+    createResourceHash: () => Date.now()
+  }));
 
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
