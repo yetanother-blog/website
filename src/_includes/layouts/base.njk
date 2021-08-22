@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="{{ '/fonts/source-code-pro/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/fonts/source-sans-pro/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/layouts/base.css' | url }}">
-    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.sitename }}">
-    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.sitename }}">
+    <link rel="alternate" href="{{ '/rss.xml' | absoluteUrl(metadata.url) }}" type="application/atom+xml" title="{{ metadata.sitename }}">
     <script async defer data-domain="yetanother.blog" src="https://plausible.io/js/plausible.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     <script>if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true</script>

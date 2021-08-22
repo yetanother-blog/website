@@ -3,16 +3,6 @@
   "url": "https://yetanother.blog/",
   "language": "en",
   "description": "Two dudes from Hamburg wirting about web stuff.",
-  "feed": {
-    "subtitle": "Two dudes from Hamburg wirting about web stuff.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://yetanother.blog/"
-  },
-  "jsonfeed": {
-    "path": "/feed/feed.json",
-    "url": "https://yetanother.blog/feed/feed.json"
-  },
   "socialLinks": [
     {
       "id": "twitter",

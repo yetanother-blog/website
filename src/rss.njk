@@ -1,0 +1,31 @@
+---
+permalink: "/rss.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>{{ metadata.sitename }}</title>
+    <description>{{ metadata.description }}</description>
+    <language>{{ metadata.language }}</language>
+    <link>{{ metadata.url }}</link>
+    <atom:link href="{{ '/rss.xml' | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>{{ collections.posts | getNewestCollectionItemDate | rssDate }}</lastBuildDate>
+    {%- for post in collections.posts | reverse %}
+    {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+    <item>
+      <title>
+        <![CDATA[{{ post.data.title }}]]>
+      </title>
+      <description>
+        <![CDATA[{{ post.data.description }}]]>
+      </description>
+      <link>{{ absolutePostUrl }}?utm_source=rss-feed&amp;utm_medium=rss</link>
+      <guid isPermaLink="false">{{ absolutePostUrl }}</guid>
+      <pubDate>{{ post.date | rssDate }}</pubDate>
+      <enclosure url="{{ post.data.thumbnail | absoluteUrl(metadata.url) }}" length="0" type="image/png" />
+      <author>mail@yetanother.blog ({{ authors[post.data.author].name }})</author>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>
