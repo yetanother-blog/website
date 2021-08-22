@@ -29,6 +29,11 @@
     <header class="header container">
       <a href="{{ '/' | url }}" class="header__logo" aria-label="Homepage">{{ metadata.sitename }}</a>
 
+      <button class="header__hamburger" aria-expanded="false">
+        <i class="header__hamburger-icon"></i>
+        <span class="visually-hidden">Open navigation</span>
+      </button>
+
       <section class="header__navigation">
         {% set navItems = collections.all | eleventyNavigation %}
         {% include 'components/navigation.njk' %}
@@ -53,5 +58,7 @@
       {% set navType = 'secondary' %}
       {% include 'components/navigation.njk' %}
     </footer>
+
+    <script src="/js/navigation.js" async></script>
   </body>
 </html>

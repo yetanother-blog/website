@@ -47,6 +47,7 @@ module.exports = function(eleventyConfig) {
   // Copy folders to the output
   eleventyConfig.addPassthroughCopy({ "src/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "node_modules/@fontsource": "fonts" });
   eleventyConfig.addPassthroughCopy({ "node_modules/prism-themes/themes/prism-shades-of-purple.css": "css/prism-shades-of-purple.css" });
 

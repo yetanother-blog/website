@@ -1,6 +1,4 @@
 <link href="/css/components/post-meta.css" rel="stylesheet">
 <section class="post-meta {% if metaClass %}{{ metaClass }}{% endif %}">
-  <time class="post-meta__date" datetime="{{ meta.date | htmlDateString }}">{{ meta.date | readableDate }}</time>
-  <address class="post-meta__author">{{ authors[meta.author].name }}</address>
-  <span>{{ meta.content | readingTime({ raw: true })  }}min read</span>
+  <time class="post-meta__date" datetime="{{ meta.date | htmlDateString }}">{{ meta.date | readableDate }}</time><address class="post-meta__author">{{ authors[meta.author].name }}</address><span>{{ meta.content | readingTime({ raw: true })  }}min read</span>
 </section>
