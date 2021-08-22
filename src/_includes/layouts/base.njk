@@ -30,8 +30,19 @@
     <header class="header container">
       <a href="{{ '/' | url }}" class="header__logo" aria-label="Homepage">{{ metadata.sitename }}</a>
 
-      {% set navItems = collections.all | eleventyNavigation %}
-      {% include 'components/navigation.njk' %}
+      <section class="header__navigation">
+        {% set navItems = collections.all | eleventyNavigation %}
+        {% include 'components/navigation.njk' %}
+
+        <nav class="header__social-links">
+        {%- for entry in metadata.socialLinks %}
+          <a class="header__social-link" href="{{ entry.url | url }}" title="{{ entry.title }}" rel="noopener">
+              <i aria-hidden="true">{% include 'icons/' + entry.id + '.njk' %}</i>
+              <span class="visually-hidden">{{ entry.title }}</span>
+            </a>
+        {%- endfor %}
+        </nav>
+      </section>
     </header>
 
     <main class="container container--narrow">

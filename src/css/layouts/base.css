@@ -66,6 +66,23 @@ body {
   max-width: 720px;
 }
 
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  width: auto;
+}
+
 h1 {
   font-size: 2rem;
   line-height: 1.1;
@@ -122,6 +139,38 @@ pre[class*='language-'] {
 .header__logo::before {
   content: '>> ';
   color: var(--color-primary);
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header__social-links {
+  display: flex;
+  margin-left: var(--space-l);
+}
+
+.header__social-link {
+  color: var(--color-grey-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 48px;
+  height: 48px;
+  transition: color 200ms ease-in 0s;
+  margin-right: 0;
+}
+
+.header__social-link i {
+  width: 24px;
+  height: 24px;
+}
+
+.header__social-link:hover {
+  outline: currentcolor none medium;
+  color: var(--color-secondary);
 }
 
 @media screen and (min-width: 576px) {

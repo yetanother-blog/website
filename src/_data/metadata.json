@@ -13,6 +13,18 @@
     "path": "/feed/feed.json",
     "url": "https://yetanother.blog/feed/feed.json"
   },
+  "socialLinks": [
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/_yetanotherblog"
+    },
+    {
+      "id": "github",
+      "title": "GitHub",
+      "url": "https://github.com/yetanother-blog"
+    }
+  ],
   "footerLinks": [
     {
       "title": "Privacy Policy",

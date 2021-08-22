@@ -3,23 +3,8 @@
   color: var(--color-grey-400);
 }
 
-.nav__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-.nav__item {
-  margin-right: var(--space-l);
-  line-height: 1;
-}
-
-.nav__item:last-child {
-  margin-right: 0;
-}
-
 .nav__link {
+  display: block;
   color: var(--color-grey-500);
   cursor: pointer;
   font-family: var(--font-family-secondary);
@@ -28,6 +13,11 @@
   line-height: 1.25;
   text-decoration: none;
   position: relative;
+  margin-right: var(--space-l);
+}
+
+.nav__link:last-child {
+  margin-right: 0;
 }
 
 .nav:not(.nav--secondary) .nav__link[aria-current='page']::after {
