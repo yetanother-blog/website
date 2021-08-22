@@ -6,12 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="google-site-verification" content="7VN8uwagcAuD4V-4GKJqa3I2SENSccfc0Ph7LWwd1Kc">
     <meta name="description"  property="og:description" content="{{ description or metadata.description }}">
+    <meta content="website" property="og:type">
     <meta name="twitter:description"content="{{ description or metadata.description }}">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:site" content="@_yetanotherblog">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:type" content="website">
+    <meta name="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
+    {% if author %}
+    <meta name="twitter:creator" content="@{{ authors[author].twitter }}">
+    <meta name="author" content="{{ authors[author].name }}">
+    {% endif %}
+    {% if thumbnail %}
+    <meta name="image" property="og:image" content="{{ thumbnail | absoluteUrl(metadata.url) }}">
+    <meta name="twitter:image" content="{{ thumbnail | absoluteUrl(metadata.url) }}">
+    {% endif %}
     {% if noIndex %}
       <meta name="robots" content="noindex, nofollow">
     {% endif %}
@@ -20,6 +30,7 @@
     <link rel="stylesheet" href="{{ '/fonts/source-code-pro/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/fonts/source-sans-pro/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/layouts/base.css' | url }}">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="alternate" href="{{ '/rss.xml' | absoluteUrl(metadata.url) }}" type="application/atom+xml" title="{{ metadata.sitename }}">
     <script async defer data-domain="yetanother.blog" src="https://plausible.io/js/plausible.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
