@@ -1,3 +1,8 @@
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
 .nav--secondary .nav__link {
   font-size: var(--font-size-s);
   color: var(--color-grey-400);
