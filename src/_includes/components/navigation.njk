@@ -1,0 +1,8 @@
+<link href="/css/components/navigation.css" rel="stylesheet">
+<nav class="nav{% if navType %} nav--{{ navType }}{% endif %}">
+  {%- for entry in navItems %}
+    <a href="{{ entry.url | url }}" class="nav__link" {% if entry.url == page.url %}aria-current="page"{% endif %}>
+      {{ entry.title }}
+    </a>
+  {%- endfor %}
+</nav>

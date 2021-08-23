@@ -1,125 +1,48 @@
 {
   "name": "yetanother.blog",
-  "description": "Yet another blog build w/ gatsby, styled-components and mdx",
-  "version": "0.1.0",
-  "author": "mail@yetanother.blog",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "description": "Two dudes from Hamburg wirting about web stuff.",
+  "scripts": {
+    "build": "NODE_ENV=production eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
-  "dependencies": {
-    "@mdx-js/mdx": "^1.0.0",
-    "@mdx-js/react": "^1.0.0",
-    "babel-plugin-styled-components": "^1.13.2",
-    "gatsby": "^3.11.1",
-    "gatsby-plugin-feed": "^3.11.0",
-    "gatsby-plugin-graphql-codegen": "^3.0.0",
-    "gatsby-plugin-image": "^1.11.0",
-    "gatsby-plugin-manifest": "^3.11.0",
-    "gatsby-plugin-mdx": "^2.11.0",
-    "gatsby-plugin-offline": "^4.11.0",
-    "gatsby-plugin-react-helmet": "^4.11.0",
-    "gatsby-plugin-react-svg": "^3.0.1",
-    "gatsby-plugin-sharp": "^3.11.0",
-    "gatsby-plugin-sitemap": "^4.7.0",
-    "gatsby-plugin-styled-components": "^4.11.0",
-    "gatsby-plugin-typescript": "^3.11.0",
-    "gatsby-plugin-typography": "^3.11.0",
-    "gatsby-remark-images": "^5.8.0",
-    "gatsby-remark-prismjs": "^5.8.0",
-    "gatsby-remark-responsive-iframe": "^4.8.0",
-    "gatsby-remark-slug": "^0.1.0",
-    "gatsby-remark-smartypants": "^4.8.0",
-    "gatsby-source-filesystem": "^3.11.0",
-    "gatsby-source-iubenda": "^1.0.2",
-    "gatsby-transformer-sharp": "^3.11.0",
-    "gatsby-transformer-yaml": "^3.11.0",
-    "graphql": "^15.5.1",
-    "prism-themes": "^1.8.0",
-    "prismjs": "^1.24.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-typography": "^0.16.20",
-    "styled-components": "^5.3.0",
-    "styled-system": "^5.1.5",
-    "typeface-source-code-pro": "^1.1.13",
-    "typeface-source-sans-pro": "^1.1.13",
-    "typography": "^0.16.21"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@storybook/addon-actions": "^6.3.7",
-    "@storybook/addon-docs": "^6.3.7",
-    "@storybook/addon-links": "^6.3.7",
-    "@storybook/addons": "^6.3.7",
-    "@storybook/react": "^6.3.7",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@types/jest": "^26.0.24",
-    "@types/mdx-js__react": "^1.5.4",
-    "@types/react": "^17.0.18",
-    "@types/react-dom": "^17.0.9",
-    "@types/react-helmet": "^6.1.2",
-    "@types/styled-components": "^5.1.12",
-    "@types/styled-system": "^5.1.13",
-    "@types/testing-library__jest-dom": "^5.14.1",
-    "@types/typography": "^0.16.4",
-    "babel-jest": "^26.6.3",
-    "babel-loader": "^8.2.2",
-    "babel-preset-gatsby": "^1.11.0",
-    "gatsby-plugin-ts-config": "^1.1.6",
-    "jest": "^26.6.3",
-    "jest-svg-transformer": "^1.0.0",
-    "netlify-plugin-gatsby-cache": "^0.3.2",
-    "node-fetch": "^2.6.1",
-    "prettier": "^2.3.2",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.3.5"
-  },
-  "homepage": "https://yetanother.blog",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yetanother-blog/website.git"
+    "url": "git://github.com/yetanother-blog/website.git"
   },
-  "scripts": {
-    "build": "gatsby build --log-pages",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "test": "jest --watchAll",
-    "test:ci": "jest --maxWorkers=50%",
-    "tsc": "tsc --noEmit",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+  "contributors": [
+    {
+      "name": "André Rusakow",
+      "url": "https://twitter.com/_andrewsecret"
+    },
+    {
+      "name": "Henrik Fricke",
+      "email": "henrikfricke@web.de",
+      "url": "https://twitter.com/henrik_fricke"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yetanother-blog/website#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0",
+    "@mightyplow/eleventy-plugin-cache-buster": "^1.1.3",
+    "eleventy-plugin-external-links": "^1.1.2",
+    "eleventy-plugin-reading-time": "^0.0.1",
+    "luxon": "^1.26.0",
+    "markdown-it": "^12.0.4",
+    "markdown-it-anchor": "^7.1.0",
+    "markdown-it-for-inline": "^0.1.1",
+    "markdown-it-image-lazy-loading": "^1.1.0",
+    "node-fetch": "^2.6.1"
   },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests/setupTests.ts"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).ts?(x)"
-    ],
-    "globals": {
-      "__PATH_PREFIX__": ""
-    },
-    "testEnvironment": "jsdom",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.[jt]sx?$": "<rootDir>/src/setupTests/jest-preprocess.ts",
-      "^.+\\.svg$": "jest-svg-transformer"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!(gatsby)/)"
-    ],
-    "testPathIgnorePatterns": [
-      "node_modules",
-      ".cache"
-    ]
+  "dependencies": {
+    "@fontsource/source-code-pro": "^4.5.0",
+    "@fontsource/source-sans-pro": "^4.5.0",
+    "prism-themes": "^1.8.0"
   }
 }

@@ -1,0 +1,39 @@
+---
+title: Hi 👋
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+<link href="/css/pages/home.css" rel="stylesheet">
+<h1 class="home__headline">
+  Hi 👋,<br>
+  we’re Henrik & André<br>
+  both Software Developers<br>
+  based in Hamburg.
+</h1>
+<h2 class="home__subheadline">
+  We would like to help you to stay up to date about the latest
+  <br>
+  trends in web development
+</h2>
+
+{% set postslist = collections.posts %}
+<ol class="home__posts" reversed>
+{% for post in postslist | reverse %}
+  <li class="home__post-item" role="article">
+    <header>
+      <h2 class="home__post-headline">
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      </h2>
+      {% set meta = { date: post.date, author: post.data.author, content: post } %}
+      {% set metaClass = 'home__post-meta' %}
+      {% include 'components/post-meta.njk' %}
+    </header>
+    <p class="home__post-excerpt">
+      {{ post.data.description or post.data.page.excerpt }}
+    </p>
+    <a href="{{ post.url | url }}" class="home__post-link"><span class="home__post-link-label">read more</span></a>
+  </li>
+{% endfor %}
+</ol>

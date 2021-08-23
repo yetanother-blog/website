@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <title>{{ title }} | {{ metadata.sitename }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="7VN8uwagcAuD4V-4GKJqa3I2SENSccfc0Ph7LWwd1Kc">
+    <meta name="description"  property="og:description" content="{{ description or metadata.description }}">
+    <meta content="website" property="og:type">
+    <meta name="twitter:description"content="{{ description or metadata.description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:site" content="@_yetanotherblog">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:type" content="website">
+    <meta name="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
+    {% if author %}
+    <meta name="twitter:creator" content="@{{ authors[author].twitter }}">
+    <meta name="author" content="{{ authors[author].name }}">
+    {% endif %}
+    {% if thumbnail %}
+    <meta name="image" property="og:image" content="{{ thumbnail | absoluteUrl(metadata.url) }}">
+    <meta name="twitter:image" content="{{ thumbnail | absoluteUrl(metadata.url) }}">
+    {% endif %}
+    {% if noIndex %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="{{ '/css/prism-shades-of-purple.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/source-code-pro/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/fonts/source-sans-pro/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/layouts/base.css' | url }}">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="alternate" href="{{ '/rss.xml' | absoluteUrl(metadata.url) }}" type="application/atom+xml" title="{{ metadata.sitename }}">
+    <script async defer data-domain="yetanother.blog" src="https://plausible.io/js/plausible.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script>if (document.location.hostname.indexOf('netlify.app') != -1) localStorage.plausible_ignore = true</script>
+  </head>
+  <body>
+    <header class="header container">
+      <a href="{{ '/' | url }}" class="header__logo" aria-label="Homepage">{{ metadata.sitename }}</a>
+
+      <button class="header__hamburger" aria-expanded="false">
+        <i class="header__hamburger-icon"></i>
+        <span class="visually-hidden">Open navigation</span>
+      </button>
+
+      <section class="header__navigation">
+        {% set navItems = collections.all | eleventyNavigation %}
+        {% include 'components/navigation.njk' %}
+
+        <nav class="header__social-links">
+        {%- for entry in metadata.socialLinks %}
+          <a class="header__social-link" href="{{ entry.url | url }}" title="{{ entry.title }}" rel="noopener">
+              <i aria-hidden="true">{% include 'icons/' + entry.id + '.njk' %}</i>
+              <span class="visually-hidden">{{ entry.title }}</span>
+            </a>
+        {%- endfor %}
+        </nav>
+      </section>
+    </header>
+
+    <main class="container container--narrow">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer container">
+      {% set navItems = metadata.footerLinks %}
+      {% set navType = 'secondary' %}
+      {% include 'components/navigation.njk' %}
+    </footer>
+
+    <script src="/js/navigation.js" async></script>
+  </body>
+</html>

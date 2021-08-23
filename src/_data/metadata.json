@@ -1,0 +1,32 @@
+{
+  "sitename": "yetanother.blog",
+  "url": "https://yetanother.blog/",
+  "language": "en",
+  "description": "Two dudes from Hamburg wirting about web stuff.",
+  "socialLinks": [
+    {
+      "id": "twitter",
+      "title": "Twitter",
+      "url": "https://twitter.com/_yetanotherblog"
+    },
+    {
+      "id": "github",
+      "title": "GitHub",
+      "url": "https://github.com/yetanother-blog"
+    }
+  ],
+  "footerLinks": [
+    {
+      "title": "Privacy Policy",
+      "url": "/privacy-policy/"
+    },
+    {
+      "title": "Legal Details",
+      "url": "/legal-details/"
+    },
+    {
+      "title": "Stats",
+      "url": "https://plausible.io/yetanother.blog"
+    }
+  ]
+}
