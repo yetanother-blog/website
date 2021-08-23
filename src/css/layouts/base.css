@@ -42,6 +42,8 @@
 
 html {
   font: 125%/1.75 'Source Sans Pro', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {

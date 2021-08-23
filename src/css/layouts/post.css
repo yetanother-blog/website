@@ -60,11 +60,6 @@
   height: auto;
 }
 
-.post code {
-  font-size: 0.85rem;
-  line-height: 1.75rem;
-}
-
 .post__stats {
   display: flex;
   flex-direction: column;
