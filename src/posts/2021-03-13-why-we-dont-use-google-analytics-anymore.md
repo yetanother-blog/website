@@ -18,7 +18,7 @@ feature set we have to follow. Part of this feature set was also Google
 Analytics. We wanted to have some basic metrics about our website, so our
 decision felt straightforward.
 
-![Woman with an umbrella as a symbol for data privacy](/img/posts/umbrella.png)
+{% image "./src/img/posts/umbrella.png", "Woman with an umbrella as a symbol for data privacy" %}
 
 ## Mixed feelings
 
@@ -73,7 +73,7 @@ cookies anymore, so we also don’t need a cookie law banner. You can just go to
 our website and enjoy our content. Also, Plausible’s JS snippet is way smaller
 (~1,34 KB), so we could even improve the performance of our website.
 
-![Plausible dashboard](/img/posts/plausible-dashboard.png)
+{% image "./src/img/posts/plausible-dashboard.png", "Plausible dashboard" %}
 
 In addition to that, our experience got way better, too. Honest question: Do you
 really like the Google Analytics experience? Do you enjoy diving into your

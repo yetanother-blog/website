@@ -11,7 +11,7 @@ open-source UI library and how it can make your life easier.
 
 ---
 
-![ui components with thinking emoji](/img/thumbnails/2021-03-14-why-should-i-use-a-ui-library.png)
+{% image "./src/img/thumbnails/2021-03-14-why-should-i-use-a-ui-library.png", "ui components with thinking emoji" %}
 
 ## Material Design Tab Example
 
