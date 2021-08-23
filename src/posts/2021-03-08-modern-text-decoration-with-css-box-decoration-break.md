@@ -12,13 +12,13 @@ layout: layouts/post.njk
 I recently stumbled across the [hey.com](https://hey.com) website and noticed
 the cool highlight effect they use for quotes.
 
-![Screenshot hey.com](/img/posts/hey.png)
+{% image "./src/img/posts/hey.png", "Screenshot hey.com" %}
 
 The effect got my attention because they decorated text across multiple lines.
 To be honest, I didn't know how to do it, so I did some research and came up
 with my own solution for a simple yet beautiful card.
 
-![Card example](/img/posts/card.png)
+{% image "./src/img/posts/card.png", "Card example" %}
 
 The trick is the CSS property **box-decoration-break**. It lets you clone some
 CSS properties, like the background or the border, to every line of the text

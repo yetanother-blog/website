@@ -11,6 +11,24 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginReadingTime = require('eleventy-plugin-reading-time');
 const pluginCacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const util = require('util');
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt) {
+  let metadata = await Image(src, {
+    widths: [1360],
+    outputDir: './_site/img/'
+  });
+
+  let imageAttributes = {
+    alt,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  return Image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: "inline"
+  });
+}
 
 module.exports = function(eleventyConfig) {
   // Add plugins
@@ -90,6 +108,8 @@ module.exports = function(eleventyConfig) {
     ui: false,
     ghostMode: false
   });
+
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   eleventyConfig.addShortcode("snippet", ({ url, title, defaultTab = 'html', height = 450 }) => {
     const encodedURL = encodeURIComponent(url);
