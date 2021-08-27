@@ -1,141 +1,30 @@
+# yetanother.blog 📝
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/83f6cc34-3f27-414e-ba85-19b756e35e37/deploy-status)](https://app.netlify.com/sites/yetanotherblog/deploys)
+[![Depfu](https://badges.depfu.com/badges/a23b031f6f58f09afe5d8a46d48b55b0/overview.svg)](https://depfu.com/github/yetanother-blog/website?project_id=30673)
 
-# Yet Another Blog
+## Development setup 🤓
 
-Yet another Gatsby Blog build with **Typescript**, **Storybook**, **StyledComponents** with **Styled System** and **MDX**
+### Prerequisites
 
-## Features
+- [Node.js](https://nodejs.org/en/)
+- [NVM](https://github.com/nvm-sh/nvm) (recommended)
 
-- [Typescript](http://www.typescriptlang.org/)
-- [Styled Components](https://www.styled-components.com/)
-- [Graphql Codegen](https://github.com/dotansimha/graphql-code-generator)
-- [MDX](https://www.gatsbyjs.org/docs/mdx/writing-pages/)
-- [Prism](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
-- [Storybook](https://storybook.js.org/)
+### Get started
 
-## Getting Started
+```sh
+git clone git@github.com:yetanother-blog/website.git
+cd website
 
-```
-yarn
-```
+# Install dependencies
+npm install
 
-**Local Development**
-
-```
-yarn start
+# Start 11ty
+npm start
 ```
 
-The Blog is available at:
+Go to http://localhost:8080.
 
-```
-http://localhost:8000/
-```
+## License 👩‍⚖️
 
-GraphQL Schema
-
-```
-http://localhost:8000/___graphql
-```
-
-**Build for Production**
-
-```
-yarn build
-```
-
-**Testing**
-
-```
-yarn test
-```
-
-## Blog Structure and Convention
-
-The structure for the blog posts enables to create posts for several formats at scale. For our two formats we have seperate folders:
-
-```
-📦website
- ┣ 📂content
- ┃ ┗ 📂posts
- ┗ 📂...
-```
-
-**Blog Post Structure**
-
-We’re going to structure our posts in years. In each one of those we’re going to have another folder relating to the post with the (correct) date format for the beginning of the file followed by the title of the post.
-
-```
-📂guides
- ┣ 📂content
- ┃ ┃ 📂assets
- ┃ ┗ 📂blog
- ┃   ┗ 📂guides
- ┃      ┗ 📂2020
- ┃        ┗ 📂2020-03-25-hello-world
- ┃           ┗ 📜index.mdx
- ┗ 📂...
-```
-
-**Frontmatter**
-
-In order to create content, each `index.mdx` file should have `frontmatter`. Frontmatter is a way to assign properties to the contents, in this case, a title, slug, format, published date and a published flag (true or false).
-
-```mdx
----
-title: Hello World
-date: '2020-05-25T23:36:03.284Z'
-slug: '/hello-world'
-desription: 'some description'
-pubslished: true
----
-
-# Hello World
-```
-
-## Storybook
-
-We use Storybook for developing UI components in isolation.
-
-**Local Development**
-
-Before you can use Storybook ensure you already run:
-
-```bash
-yarn build
-```
-
-
-```bash
-yarn storybook
-```
-
-That's it. Storybook is available at:
-
-```bash
-http://localhost:6006/
-```
-
-## Contribution
-
-You want to help us and fix bugs, improve our docs or provide some feedback. Feel free to open an issue ✨❤️
-
-## Gatsby Plugin Overview
-
-- [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/?=mdx)
-- [gatsby-remark-smartypants](https://www.gatsbyjs.org/packages/gatsby-remark-smartypants/)
-- [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/)
-- [gatsby-remark-prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/)
-- [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/)
-- [gatsby-transformer-sharp](https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/)
-- [gatsby-plugin-sharp](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/)
-- [gatsby-plugin-google-analytics](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/)
-- [gatsby-plugin-manifest](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/)
-- [gatsby-plugin-offline](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/)
-- [gatsby-plugin-react-helmet](https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/)
-- [gatsby-plugin-typography](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/)
-- [gatsby-plugin-typescript](https://www.gatsbyjs.org/packages/gatsby-plugin-typescript/)
-- [gatsby-plugin-styled-components](https://www.gatsbyjs.org/packages/gatsby-plugin-styled-components/)
-- [gatsby-plugin-react-svg](https://www.gatsbyjs.org/packages/gatsby-plugin-react-svg/)
-- [gatsby-remark-slug](https://www.gatsbyjs.org/packages/gatsby-remark-slug/)
-
-Licensed under the [MIT License](./LICENSE).
+Just a simple [MIT license](./LICENSE). 🤷
