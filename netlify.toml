@@ -7,6 +7,15 @@
   publish = "_site"
   command = "DEBUG=* eleventy"
 
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = false
+  minify = true
+[build.processing.js]
+  bundle = false
+  minify = true
+
 [[plugins]]
   package = "./.netlify/slack"
 
