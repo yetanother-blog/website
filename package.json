@@ -35,7 +35,7 @@
     "eleventy-plugin-external-links": "^1.1.2",
     "eleventy-plugin-reading-time": "^0.0.1",
     "luxon": "^1.28.0",
-    "markdown-it": "^12.2.0",
+    "markdown-it": "^12.3.0",
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-for-inline": "^0.1.1",
     "node-fetch": "^2.6.1"
