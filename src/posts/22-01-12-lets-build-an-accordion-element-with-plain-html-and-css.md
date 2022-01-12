@@ -2,7 +2,6 @@
 title:
   "Let's build an accordion with plain HTML and CSS"
 author: andre
-thumbnail: '/img/thumbnails/2021-06-24-introducing-indiepen.png'
 date: '2022-01-12T22:23:40.631Z'
 description:
   "This article is about how to build an accordion element with plain HTML and CSS. There will be no JavaScript, I promise. I'll explain why you should use semantic HTML and how to customize it with CSS."
