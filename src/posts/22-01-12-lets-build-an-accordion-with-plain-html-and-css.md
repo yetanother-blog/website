@@ -2,7 +2,8 @@
 title:
   "Let's build an accordion with plain HTML and CSS"
 author: andre
-date: '2022-01-12T22:23:40.631Z'
+thumbnail: '/img/thumbnails/2022-01-13-lets-build-an-accordion-with-plain-html-and-css.png'
+date: '2022-01-13T15:55:17.241Z'
 description:
   "This article is about how to build an accordion element with plain HTML and CSS. There will be no JavaScript, I promise. I'll explain why you should use semantic HTML and how to customize it with CSS."
 layout: layouts/post.njk
@@ -12,7 +13,7 @@ Today, I'll show you how to build an accordion with plain HTML and CSS. There wi
 
 ## Let's look into the details
 
-By details, I mean the actual HTML **details** element and the **summary** element. All you need to do here is to put the summary element into the details element as a first child:
+By details, I mean the actual HTML **details** element and the **summary** element. All you need to do here is to put the **summary** element into the **details** element as a first child:
 
 {% snippet url="https://examples.yetanother.blog/accordion/first-example/", title="Example showing a accordion with plain HTML and CSS – first example", defaultTab="result", height="150" %}
 
@@ -103,7 +104,7 @@ details.addEventListener('toggle', event => {
 });
 ```
 
-For further information, just read the MDN article, it's a good source of truth.
+For further information, just read the [MDN article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details), it's a good source of truth.
 
 <details>
   <summary>Developer hint ‼️</summary>
@@ -114,7 +115,7 @@ For further information, just read the MDN article, it's a good source of truth.
 
 You can build a clean and accessible accordion without any JavaScript by just using two HTML elements and a bit of CSS. For further information, just read the MDN article, it's a good source of truth.
 
-It definitely makes sense to do some research in advance before you want to start building a new UI element. That was my personal learning. Just take the time and do that. Thank you for reading my article. I hope you enjoyed it. If you got any question or improvements, feel free to hit me up on Twitter or GitHub.
+It definitely makes sense to do some research in advance before you want to start building a new UI element. That was my personal learning. Just take the time and do that. Thank you for reading my article. I hope you enjoyed it. If you got any questions or improvements, feel free to hit me up on [Twitter](https://twitter.com/_andrewsecret) or [GitHub](https://github.com/andrew-secret).
 
 ## Links
 
@@ -122,3 +123,4 @@ It definitely makes sense to do some research in advance before you want to star
 - [First example](https://examples.yetanother.blog/accordion/first-example/)
 - [Second example](https://examples.yetanother.blog/accordion/second-example/)
 - [Final example](https://examples.yetanother.blog/accordion/)
+- [Code on GitHub](https://github.com/yetanother-blog/examples/tree/main/accordion)
