@@ -117,7 +117,6 @@ pre[class*='language-'] {
 :not(pre) > code[class*='language-'] {
   border-radius: 0.2em;
   padding: 0.1em 0.3em;
-  /* font-size: var(--font-size-m); */
 }
 
 @media screen and (min-width: 992px) {
